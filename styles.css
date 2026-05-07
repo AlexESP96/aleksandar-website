@@ -1023,3 +1023,77 @@ img[src*="tailored-workshops"]{
   background:transparent !important;
   border-radius:999px !important;
 }
+
+
+/* ===== FINAL BUTTON COLORS + LOTUS ICON FIX ===== */
+
+/* Force the final lotus image to display cleanly */
+.icon-circle img[src*="wellbeing-final-lotus"],
+.company-icon img[src*="wellbeing-final-lotus"]{
+  width:82px !important;
+  height:82px !important;
+  object-fit:cover !important;
+  display:block !important;
+  border-radius:999px !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  filter:none !important;
+}
+
+/* Home + companies page buttons: dark green like the reference */
+.nav-button,
+.book-button,
+.primary-button,
+.dark-button,
+.companies-get-touch,
+.get-in-touch,
+.gold-button,
+.companies-cta{
+  background:linear-gradient(135deg,#1d2a1b 0%, #2b3c27 100%) !important;
+  color:#f6efe6 !important;
+  border:none !important;
+  box-shadow:0 12px 28px rgba(12,22,12,.20) !important;
+}
+
+.nav-button:hover,
+.book-button:hover,
+.primary-button:hover,
+.dark-button:hover,
+.companies-get-touch:hover,
+.get-in-touch:hover,
+.gold-button:hover,
+.companies-cta:hover{
+  background:linear-gradient(135deg,#263825 0%, #385134 100%) !important;
+  color:#fff8ee !important;
+}
+
+/* Work With Me page: both main buttons use the exact dark button color from that page reference */
+.work-page .book-button,
+.work-page .primary-button,
+.work-page .dark-button,
+.work-page .outline-button,
+.work-page .availability-button,
+.work-page a[href*="mailto"],
+.work-page .option-card a{
+  background:#182019 !important;
+  color:#f6efe6 !important;
+  border:1px solid #182019 !important;
+  box-shadow:0 10px 24px rgba(18,24,18,.18) !important;
+}
+
+.work-page .book-button:hover,
+.work-page .primary-button:hover,
+.work-page .dark-button:hover,
+.work-page .outline-button:hover,
+.work-page .availability-button:hover,
+.work-page a[href*="mailto"]:hover,
+.work-page .option-card a:hover{
+  background:#233022 !important;
+  border-color:#233022 !important;
+  color:#fff8ee !important;
+}
+
+/* Header book button on Work With Me stays same dark reference color */
+.work-page .nav-button{
+  background:#182019 !important;
+}
