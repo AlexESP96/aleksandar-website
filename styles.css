@@ -98,7 +98,7 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
 }
 
 
-/* Final hero image-icon sizing: uses supplied PNG circles cleanly */
+/* Final hero icon image treatment */
 .icon-circle {
   width: 82px !important;
   height: 82px !important;
@@ -109,6 +109,7 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
   align-items: center !important;
   justify-content: center !important;
   margin: 0 auto 12px !important;
+  box-shadow: none !important;
 }
 .icon-circle img {
   width: 82px !important;
