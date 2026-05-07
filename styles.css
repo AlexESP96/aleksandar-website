@@ -337,3 +337,77 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
   .company-pillars{grid-template-columns:1fr}
   .company-pillar{border-right:0}
 }
+
+
+/* ===== COMPANIES PAGE HEADER + HERO IMAGE FIX ===== */
+.companies-header{
+  background:linear-gradient(90deg,#182217,#202a1d 56%,#1b2419) !important;
+  color:#f6efe6 !important;
+  border-bottom:1px solid rgba(246,239,230,.08) !important;
+}
+.companies-header .brand-name,
+.companies-header .brand-subtitle,
+.companies-header .nav a{
+  color:#f6efe6 !important;
+}
+.companies-header .brand{
+  min-width:260px;
+}
+.companies-header .brand-name{
+  font-size:22px;
+  letter-spacing:.03em;
+  font-family:"Cormorant Garamond",serif;
+  text-transform:none;
+}
+.companies-header .brand-subtitle{
+  font-size:11px;
+  letter-spacing:.28em;
+}
+.companies-header .nav{
+  gap:44px;
+}
+.companies-header .nav a{
+  opacity:.9;
+}
+.companies-header .nav a:hover,
+.companies-header .nav a.active{
+  color:#f6efe6 !important;
+  opacity:1;
+}
+.companies-header .nav a::after{
+  background:rgba(196,185,143,.72);
+}
+.companies-nav-button{
+  background:linear-gradient(135deg,#827b4f,#5f603f) !important;
+  color:#f6efe6 !important;
+  min-width:154px;
+  height:48px;
+  border-radius:10px !important;
+  font-family:"Cormorant Garamond",serif;
+  font-size:19px;
+  letter-spacing:0;
+}
+.companies-visual{
+  background:
+    linear-gradient(90deg,rgba(27,36,25,.22),rgba(27,36,25,.04)),
+    url("assets/companies-boardroom.png") center / cover no-repeat !important;
+  filter:saturate(.78) brightness(.86) !important;
+}
+.wall-logo{
+  top:31% !important;
+  left:48% !important;
+  width:150px !important;
+  height:150px !important;
+  background:rgba(31,38,23,.38) !important;
+  color:rgba(246,239,230,.92) !important;
+}
+.companies-hero{
+  min-height:450px !important;
+}
+.companies-copy{
+  padding-top:60px !important;
+  padding-bottom:52px !important;
+}
+.companies-copy h1{
+  font-size:60px !important;
+}
