@@ -787,3 +787,96 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
     );
     pointer-events:none;
 }
+
+
+/* ===== FINAL COMPANIES HERO EXACT IMAGE + PAGE POLISH ===== */
+
+/* use the exact office image provided, with no added cloudy AP overlay */
+.companies-visual{
+  background:
+    linear-gradient(90deg, rgba(20,28,18,.28) 0%, rgba(20,28,18,.06) 28%, rgba(20,28,18,0) 100%),
+    url("assets/companies-boardroom.png") center center / cover no-repeat !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+/* remove generated wall-logo layer entirely because the image already contains the logo */
+.wall-logo,
+.wall-logo::before{
+  display:none !important;
+}
+
+/* subtle loading/navigation polish */
+@keyframes pageFadeIn{
+  from{opacity:0; transform:translateY(8px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+main{
+  animation:pageFadeIn .45s ease both;
+}
+
+a, button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.nav a,
+.companies-top-nav a,
+.footer-nav a{
+  transition:color .22s ease, opacity .22s ease, transform .22s ease;
+}
+
+.nav a:hover,
+.companies-top-nav a:hover,
+.footer-nav a:hover{
+  transform:translateY(-1px);
+}
+
+.primary-button,
+.dark-button,
+.nav-button,
+.companies-get-touch,
+.gold-button{
+  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+
+.primary-button:hover,
+.dark-button:hover,
+.nav-button:hover,
+.companies-get-touch:hover,
+.gold-button:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.04);
+}
+
+.primary-button:active,
+.dark-button:active,
+.nav-button:active,
+.companies-get-touch:active,
+.gold-button:active{
+  transform:translateY(0);
+  filter:brightness(.98);
+}
+
+.company-pillar,
+.service-card,
+.option-card,
+.trust-strip article{
+  transition:transform .22s ease, opacity .22s ease;
+}
+
+.company-pillar:hover,
+.service-card:hover,
+.option-card:hover{
+  transform:translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce){
+  main,
+  *,
+  *::before,
+  *::after{
+    animation:none !important;
+    transition:none !important;
+  }
+}
