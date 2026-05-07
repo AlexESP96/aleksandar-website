@@ -745,3 +745,45 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
     width:100% !important;
   }
 }
+
+
+/* ===== HERO VISUAL CLEANUP ===== */
+
+/* remove cloudy/glow effect around AP wall logo */
+.wall-logo{
+    background:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    border:1px solid rgba(255,255,255,.10) !important;
+}
+
+.wall-logo::before{
+    opacity:.88 !important;
+    filter:none !important;
+}
+
+/* sharpen office image */
+.companies-hero-image,
+.hero-office-image,
+.companies-hero-right img{
+    filter: brightness(.92) contrast(1.12) saturate(1.04) sharpness(1.1) !important;
+    opacity:1 !important;
+}
+
+/* ensure right hero area is clearer */
+.companies-hero-right{
+    overflow:hidden;
+}
+
+.companies-hero-right::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(9,16,10,.12) 0%,
+        rgba(9,16,10,.03) 18%,
+        rgba(9,16,10,.02) 100%
+    );
+    pointer-events:none;
+}
