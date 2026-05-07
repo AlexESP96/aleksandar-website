@@ -1439,3 +1439,71 @@ body:has(.work-hero) .outline-button:hover,
 /* 8) American spelling consistency in companies visible section cannot be done in CSS,
    but styles remain compatible after HTML replacement. */
 
+
+
+/* ===== FINAL SPECIFIC FIXES ===== */
+
+/* Companies hero: use exact supplied boardroom image, fitted and blended */
+.companies-visual{
+  background:
+    linear-gradient(90deg,
+      #182217 0%,
+      rgba(24,34,23,.96) 10%,
+      rgba(24,34,23,.70) 24%,
+      rgba(24,34,23,.30) 42%,
+      rgba(24,34,23,.06) 63%,
+      rgba(24,34,23,0) 100%),
+    url("assets/companies-boardroom.png") center center / cover no-repeat !important;
+  filter:contrast(1.06) saturate(1.03) brightness(1.02) !important;
+}
+
+/* Companies: fix Tailored Workshops & Sessions icon exactly like removed Well-being icon */
+.remove-tailored-icon{
+  visibility:hidden !important;
+}
+
+/* Home hero central Book a Session button: beige frame/background, dark green text */
+.hero .book-button,
+.hero-panel .book-button,
+.hero-copy .book-button,
+.hero-right .book-button,
+.hero-text .book-button,
+.hero-content .book-button,
+.pillars + .book-button,
+main .hero a.book-button{
+  background:#f4eee4 !important;
+  background-image:none !important;
+  color:#1d2a1b !important;
+  border:1px solid rgba(29,42,27,.16) !important;
+  box-shadow:none !important;
+}
+
+.hero .book-button span,
+.hero-panel .book-button span,
+.hero-copy .book-button span,
+.hero-right .book-button span,
+.hero-text .book-button span,
+.hero-content .book-button span,
+main .hero a.book-button span{
+  color:#1d2a1b !important;
+}
+
+.hero .book-button:hover,
+.hero-panel .book-button:hover,
+.hero-copy .book-button:hover,
+.hero-right .book-button:hover,
+.hero-text .book-button:hover,
+.hero-content .book-button:hover,
+.pillars + .book-button:hover,
+main .hero a.book-button:hover{
+  background:#fff8ef !important;
+  color:#1d2a1b !important;
+}
+
+/* Keep header Book a Session button dark green */
+.site-header > .nav-button,
+header.site-header .nav-button{
+  background:#1d2a1b !important;
+  background-image:none !important;
+  color:#f6efe6 !important;
+}
