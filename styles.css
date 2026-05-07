@@ -944,3 +944,42 @@ a, button{
 .option-card{
   border-color:rgba(30,30,26,.08) !important;
 }
+
+
+/* ===== FINAL POLISH ===== */
+
+/* greener buttons on Work With Me */
+.work-page .primary-button,
+.work-page .book-button,
+.work-page .availability-button,
+.work-page .dark-button,
+.work-page .outline-button{
+  background:linear-gradient(135deg,#3d5b35 0%, #587c49 100%) !important;
+  color:#f6f2e9 !important;
+  border:none !important;
+  box-shadow:0 10px 24px rgba(44,77,38,.18);
+}
+
+/* greener get in touch button on companies */
+.companies-get-touch,
+.get-in-touch,
+.nav-button{
+  background:linear-gradient(135deg,#546d3f 0%, #738f57 100%) !important;
+  color:#f7f2e8 !important;
+  border:none !important;
+}
+
+/* fix broken line */
+.hero-divider,
+.hero-line{
+  display:none !important;
+}
+
+/* ensure lotus icon renders properly */
+img[src*="wellbeing"],
+img[src*="tailored-workshops"]{
+  object-fit:cover !important;
+  image-rendering:auto;
+  border-radius:999px;
+  background:transparent !important;
+}
