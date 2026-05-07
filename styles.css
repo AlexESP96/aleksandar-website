@@ -530,3 +530,218 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
   background:url("assets/logo-white.png") center/62% no-repeat;
   opacity:.92;
 }
+
+
+/* ===== FINAL COMPANIES NAV + CTA BANNER FIX ===== */
+
+/* Hide/neutralize previous conflicting companies header rules */
+.companies-header,
+.companies-header .header-inner{
+  all:unset;
+}
+
+/* Top bar matching the reference */
+.companies-page-header{
+  height:84px;
+  padding:0 48px;
+  background:linear-gradient(90deg,#111a10 0%,#182217 52%,#172015 100%);
+  border-bottom:1px solid rgba(246,239,230,.07);
+  display:grid;
+  grid-template-columns:270px 1fr 170px;
+  align-items:center;
+  gap:28px;
+  color:#f6efe6;
+  position:sticky;
+  top:0;
+  z-index:9999;
+}
+
+.companies-logo-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-decoration:none;
+  color:#f6efe6;
+  min-width:0;
+}
+
+.companies-logo-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:.015em;
+  line-height:.95;
+  color:#f6efe6;
+  white-space:nowrap;
+}
+
+.companies-logo-role{
+  margin-top:6px;
+  font-family:"Inter",sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.36em;
+  color:rgba(246,239,230,.82);
+  line-height:1;
+}
+
+.companies-top-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:42px;
+  height:100%;
+}
+
+.companies-top-nav a{
+  position:relative;
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+  font-weight:600;
+  color:rgba(246,239,230,.9);
+  text-decoration:none;
+  line-height:1;
+  transition:opacity .22s ease, transform .22s ease, color .22s ease;
+}
+
+.companies-top-nav a:hover{
+  opacity:1;
+  transform:translateY(-1px);
+  color:#fffaf1;
+}
+
+.companies-top-nav a.active{
+  color:#fffaf1;
+}
+
+.companies-top-nav a.active::after,
+.companies-top-nav a:hover::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-13px;
+  height:2px;
+  background:#9b9460;
+  border-radius:2px;
+}
+
+.companies-get-touch{
+  justify-self:end;
+  width:150px;
+  height:48px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#817b4d,#6b6741);
+  color:#f6efe6;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:21px;
+  font-weight:600;
+  box-shadow:0 10px 26px rgba(0,0,0,.16);
+  transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.companies-get-touch:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px rgba(0,0,0,.24);
+  background:linear-gradient(135deg,#8d8655,#746f46);
+}
+
+/* Hero spacing under fixed header */
+.companies-hero{
+  margin-top:0 !important;
+}
+
+/* Bottom investment banner: stronger, cleaner, like reference */
+.company-banner{
+  max-width:1120px !important;
+  min-height:88px !important;
+  display:grid !important;
+  grid-template-columns:76px 1fr 220px !important;
+  align-items:center !important;
+  gap:26px !important;
+  margin:34px auto 0 !important;
+  padding:22px 34px !important;
+  border-radius:18px !important;
+  background:linear-gradient(90deg,rgba(246,239,230,.075),rgba(246,239,230,.045)) !important;
+  border:1px solid rgba(246,239,230,.095) !important;
+  box-shadow:0 20px 60px rgba(0,0,0,.18) !important;
+}
+
+.company-banner .banner-icon{
+  width:62px !important;
+  height:62px !important;
+  color:#f6efe6 !important;
+  opacity:.95 !important;
+}
+
+.company-banner .banner-icon svg{
+  width:46px !important;
+  height:46px !important;
+  stroke-width:1.8 !important;
+}
+
+.company-banner h2{
+  font-family:"Cormorant Garamond",serif !important;
+  font-size:31px !important;
+  font-weight:600 !important;
+  color:#f6efe6 !important;
+  margin:0 0 6px !important;
+  line-height:1.05 !important;
+}
+
+.company-banner p{
+  font-size:15px !important;
+  color:rgba(246,239,230,.8) !important;
+  margin:0 !important;
+  line-height:1.35 !important;
+}
+
+.company-banner .gold-button{
+  width:190px !important;
+  height:48px !important;
+  min-height:48px !important;
+  border-radius:10px !important;
+  background:linear-gradient(135deg,#817b4d,#6b6741) !important;
+  color:#f6efe6 !important;
+  font-family:"Cormorant Garamond",serif !important;
+  font-size:21px !important;
+  font-weight:600 !important;
+  text-decoration:none !important;
+  justify-self:end !important;
+  padding:0 !important;
+  box-shadow:none !important;
+}
+
+.company-banner .gold-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(0,0,0,.18) !important;
+}
+
+@media (max-width: 900px){
+  .companies-page-header{
+    grid-template-columns:1fr;
+    height:auto;
+    gap:18px;
+    padding:22px 24px;
+    position:relative;
+  }
+  .companies-top-nav{
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .companies-get-touch{
+    justify-self:center;
+  }
+  .company-banner{
+    grid-template-columns:1fr !important;
+    text-align:center;
+  }
+  .company-banner .gold-button{
+    justify-self:center !important;
+    width:100% !important;
+  }
+}
