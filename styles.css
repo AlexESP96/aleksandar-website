@@ -118,3 +118,222 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
   object-fit: cover !important;
   border-radius: 999px !important;
 }
+
+
+/* ===== FOR COMPANIES PAGE ===== */
+.companies-hero{
+  min-height:475px;
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  background:linear-gradient(90deg,#1b2419 0%,#1f2a1d 54%,#283222 100%);
+  color:var(--cream);
+  overflow:hidden;
+  border-top:1px solid rgba(246,239,230,.06);
+}
+.companies-copy{
+  padding:70px 62px 58px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  max-width:660px;
+}
+.companies-copy .eyebrow{
+  font-size:14px;
+  letter-spacing:.34em;
+  margin:0 0 26px;
+  color:rgba(246,239,230,.82);
+}
+.companies-copy h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:64px;
+  font-weight:600;
+  line-height:.98;
+  margin:0;
+  color:var(--cream);
+}
+.small-rule{
+  width:46px;
+  height:1px;
+  background:rgba(196,185,143,.62);
+  margin:26px 0 22px;
+}
+.companies-lead{
+  font-size:18px;
+  line-height:1.62;
+  max-width:560px;
+  color:rgba(246,239,230,.88);
+  margin:0 0 30px;
+}
+.companies-cta{
+  width:max-content;
+  padding:15px 30px;
+  background:linear-gradient(135deg,#827b4f,#5f603f);
+}
+.companies-visual{
+  position:relative;
+  min-height:475px;
+  background:
+    linear-gradient(90deg,rgba(27,36,25,.25),rgba(27,36,25,.05)),
+    url("assets/hero-photo.png") center / cover no-repeat;
+  filter:saturate(.74) brightness(.82);
+}
+.companies-photo-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(27,36,25,.35),rgba(27,36,25,.08)),
+    radial-gradient(circle at 55% 34%,rgba(246,239,230,.14),transparent 24%);
+}
+.wall-logo{
+  position:absolute;
+  top:30%;
+  left:48%;
+  transform:translate(-50%,-50%);
+  width:155px;
+  height:155px;
+  border-radius:999px;
+  border:1px solid rgba(246,239,230,.12);
+  background:rgba(31,38,23,.46);
+  box-shadow:0 22px 70px rgba(0,0,0,.28), inset 0 1px 18px rgba(246,239,230,.04);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Cormorant Garamond",serif;
+  font-weight:700;
+  font-size:64px;
+  letter-spacing:-.06em;
+  color:rgba(246,239,230,.9);
+}
+.companies-support{
+  background:linear-gradient(180deg,#202a1d 0%,#1b2419 100%);
+  color:var(--cream);
+  padding:46px 58px 56px;
+}
+.section-kicker{
+  font-family:"Cormorant Garamond",serif;
+  font-size:36px;
+  line-height:1;
+  text-align:center;
+  margin:0;
+  color:var(--cream);
+}
+.support-rule{
+  width:48px;
+  height:1px;
+  background:rgba(196,185,143,.62);
+  margin:18px auto 34px;
+}
+.company-pillars{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin-bottom:42px;
+}
+.company-pillar{
+  text-align:center;
+  padding:0 34px;
+  border-right:1px solid rgba(246,239,230,.16);
+}
+.company-pillar:last-child{border-right:0}
+.company-icon{
+  width:84px;
+  height:84px;
+  border-radius:999px;
+  overflow:hidden;
+  margin:0 auto 20px;
+  background:rgba(246,239,230,.08);
+}
+.company-icon img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:999px;
+}
+.company-pillar h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+  font-weight:600;
+  line-height:1.08;
+  margin:0 0 12px;
+}
+.company-pillar p{
+  font-size:15px;
+  line-height:1.55;
+  color:rgba(246,239,230,.8);
+  margin:0;
+}
+.company-banner{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:28px;
+  max-width:1080px;
+  margin:0 auto;
+  padding:24px 34px;
+  border:1px solid rgba(246,239,230,.08);
+  border-radius:22px;
+  background:rgba(246,239,230,.055);
+  box-shadow:0 20px 70px rgba(0,0,0,.12);
+}
+.banner-icon{
+  width:70px;
+  height:70px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--cream);
+}
+.banner-icon svg{
+  width:48px;
+  height:48px;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:1.75;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.company-banner h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  line-height:1.05;
+  margin:0 0 8px;
+}
+.company-banner p{
+  font-size:16px;
+  color:rgba(246,239,230,.78);
+  margin:0;
+}
+.gold-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 30px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#827b4f,#5f603f);
+  color:var(--cream);
+  font-family:"Cormorant Garamond",serif;
+  font-size:20px;
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.gold-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+@media (max-width:900px){
+  .companies-hero{grid-template-columns:1fr}
+  .companies-copy{padding:56px 28px}
+  .companies-copy h1{font-size:48px}
+  .companies-visual{min-height:300px}
+  .company-pillars{grid-template-columns:1fr 1fr; row-gap:34px}
+  .company-pillar:nth-child(2){border-right:0}
+  .company-banner{grid-template-columns:1fr; text-align:center}
+  .gold-button{width:100%}
+}
+@media (max-width:620px){
+  .company-pillars{grid-template-columns:1fr}
+  .company-pillar{border-right:0}
+}
