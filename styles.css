@@ -880,3 +880,67 @@ a, button{
     transition:none !important;
   }
 }
+
+
+/* ===== FINAL ROUND FIXES ===== */
+
+/* Consistent nav, including Home */
+.site-header .nav,
+.nav{
+  gap:42px;
+}
+.site-header .nav a,
+.nav a{
+  color:#252720;
+  font-weight:600;
+}
+
+/* Companies image clarity */
+.companies-visual{
+  background:
+    linear-gradient(90deg, rgba(20,28,18,.20) 0%, rgba(20,28,18,.04) 26%, rgba(20,28,18,0) 100%),
+    url("assets/companies-boardroom.png") center center / cover no-repeat !important;
+  filter:contrast(1.08) saturate(1.04) brightness(1.03) !important;
+}
+
+/* Keep final icon images neat */
+.company-icon img,
+.icon-circle img{
+  object-fit:cover !important;
+  border-radius:999px !important;
+}
+
+/* Work With Me page: align green tones with companies visual */
+.work-hero{
+  background:linear-gradient(90deg,#182217 0%,#1f2a1d 55%,#263120 100%) !important;
+}
+.work-copy{
+  background:linear-gradient(135deg,#1b2419 0%,#263120 100%) !important;
+  color:#f6efe6 !important;
+}
+.work-copy h1,
+.work-copy .eyebrow,
+.work-copy p{
+  color:#f6efe6 !important;
+}
+.service-options{
+  background:linear-gradient(180deg,#f8f3ea 0%,#f1eadf 100%) !important;
+}
+.work-page .footer,
+.footer{
+  background:linear-gradient(90deg,#202a1d,#182217) !important;
+}
+
+/* Work With Me cards/buttons with same olive button tone */
+.option-card .dark-button,
+.option-card .outline-button,
+.work-page .dark-button,
+.work-page .outline-button{
+  background:linear-gradient(135deg,#817b4d,#6b6741) !important;
+  color:#f6efe6 !important;
+  border:0 !important;
+  text-decoration:none !important;
+}
+.option-card{
+  border-color:rgba(30,30,26,.08) !important;
+}
