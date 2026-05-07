@@ -1097,3 +1097,150 @@ img[src*="tailored-workshops"]{
 .work-page .nav-button{
   background:#182019 !important;
 }
+
+
+/* ===== REQUESTED POLISH ROUND ===== */
+
+/* Home page: center hero button beige with dark green letters */
+.hero-panel .book-button,
+.hero-copy .book-button,
+.hero .book-button,
+.pillars + .book-button,
+a.book-button{
+  background:#f4eee4 !important;
+  color:#1d2a1b !important;
+  border:1px solid rgba(29,42,27,.12) !important;
+  box-shadow:none !important;
+}
+.hero-panel .book-button:hover,
+.hero-copy .book-button:hover,
+.hero .book-button:hover,
+.pillars + .book-button:hover,
+a.book-button:hover{
+  background:#fff8ee !important;
+  color:#1d2a1b !important;
+}
+
+/* Home page: remove stray unfinished divider line between logo/name and headline */
+.hero-divider,
+.hero-line,
+.logo-rule,
+.brand-rule,
+.ap-rule,
+.hero-logo-rule,
+.hero-panel .rule,
+.hero-copy .rule{
+  display:none !important;
+}
+
+/* Home page: remove only the Well-being icon, keep spacing clean */
+.remove-wellbeing-icon{
+  visibility:hidden !important;
+}
+
+/* Work With Me page: all main/action buttons dark green matching footer */
+.work-page .nav-button,
+.work-page .book-button,
+.work-page .primary-button,
+.work-page .dark-button,
+.work-page .outline-button,
+.work-page .availability-button,
+.work-page .option-card a,
+body:has(.work-hero) .nav-button,
+body:has(.work-hero) .option-card a,
+body:has(.work-hero) .dark-button,
+body:has(.work-hero) .outline-button{
+  background:#182217 !important;
+  color:#f6efe6 !important;
+  border:1px solid #182217 !important;
+  box-shadow:0 12px 28px rgba(13,26,14,.18) !important;
+}
+.work-page .nav-button:hover,
+.work-page .book-button:hover,
+.work-page .primary-button:hover,
+.work-page .dark-button:hover,
+.work-page .outline-button:hover,
+.work-page .availability-button:hover,
+.work-page .option-card a:hover,
+body:has(.work-hero) .nav-button:hover,
+body:has(.work-hero) .option-card a:hover,
+body:has(.work-hero) .dark-button:hover,
+body:has(.work-hero) .outline-button:hover{
+  background:#22331f !important;
+  border-color:#22331f !important;
+  color:#fff8ee !important;
+}
+
+/* Companies page: smoother fade between left text and office photo */
+.companies-hero{
+  background:linear-gradient(90deg,#182217 0%,#1b261a 46%,#1b2419 100%) !important;
+  position:relative;
+}
+.companies-visual{
+  position:relative;
+  background:
+    linear-gradient(90deg,
+      #182217 0%,
+      rgba(24,34,23,.98) 8%,
+      rgba(24,34,23,.72) 20%,
+      rgba(24,34,23,.32) 38%,
+      rgba(24,34,23,.04) 60%,
+      rgba(24,34,23,0) 100%),
+    url("assets/companies-boardroom.png") center center / cover no-repeat !important;
+  filter:contrast(1.08) saturate(1.04) brightness(1.03) !important;
+}
+.companies-visual::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 -190px;
+  width:360px;
+  background:linear-gradient(90deg,#182217 0%,rgba(24,34,23,.96) 25%,rgba(24,34,23,.55) 62%,rgba(24,34,23,0) 100%);
+  pointer-events:none;
+  z-index:2;
+}
+.companies-visual::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 -2px 0;
+  height:120px;
+  background:linear-gradient(180deg,rgba(24,34,23,0) 0%,#182217 100%);
+  pointer-events:none;
+  z-index:2;
+}
+
+/* Companies page: fade transition into the support/cards section */
+.companies-support{
+  background:
+    linear-gradient(180deg,#182217 0%,#1b261a 18%,#1b2419 100%) !important;
+  margin-top:0 !important;
+  border-top:0 !important;
+  position:relative;
+}
+.companies-support::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-80px;
+  height:80px;
+  background:linear-gradient(180deg,rgba(24,34,23,0) 0%,#182217 94%);
+  pointer-events:none;
+}
+
+/* Companies page: remove Tailored Workshops & Sessions icon only */
+.remove-tailored-icon{
+  visibility:hidden !important;
+}
+
+/* Companies page: Get in touch button in darker green */
+.companies-get-touch,
+.companies-page-header .companies-get-touch{
+  background:#263823 !important;
+  color:#f6efe6 !important;
+  border:1px solid rgba(246,239,230,.08) !important;
+}
+.companies-get-touch:hover,
+.companies-page-header .companies-get-touch:hover{
+  background:#30472c !important;
+  color:#fff8ee !important;
+}
