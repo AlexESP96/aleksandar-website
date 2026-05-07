@@ -983,3 +983,43 @@ img[src*="tailored-workshops"]{
   border-radius:999px;
   background:transparent !important;
 }
+
+
+/* ===== DARKER GREEN BUTTONS ===== */
+
+.book-button,
+.primary-button,
+.work-page .primary-button,
+.work-page .book-button,
+.work-page .availability-button,
+.work-page .dark-button,
+.work-page .outline-button,
+.nav-button,
+.companies-get-touch,
+.get-in-touch,
+.gold-button{
+  background:linear-gradient(135deg,#284327 0%, #355734 100%) !important;
+  color:#f5f1e8 !important;
+  border:none !important;
+  box-shadow:0 12px 28px rgba(17,33,18,.22) !important;
+}
+
+.book-button:hover,
+.primary-button:hover,
+.work-page .primary-button:hover,
+.work-page .book-button:hover,
+.work-page .availability-button:hover,
+.nav-button:hover,
+.companies-get-touch:hover,
+.get-in-touch:hover,
+.gold-button:hover{
+  background:linear-gradient(135deg,#315230 0%, #416a40 100%) !important;
+}
+
+/* force correct lotus icon rendering */
+img[src*="wellbeing"],
+img[src*="tailored-workshops"]{
+  object-fit:contain !important;
+  background:transparent !important;
+  border-radius:999px !important;
+}
