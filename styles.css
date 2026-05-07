@@ -98,37 +98,22 @@ body{margin:0;background:#111;color:var(--ink);font-family:Inter,system-ui,sans-
 }
 
 
-/* ===== HERO ICON POLISH FIX ===== */
-
-.hero-feature img,
-.feature-icon img {
-    width: 78px;
-    height: 78px;
-    object-fit: contain;
-    border-radius: 50%;
-    background: transparent !important;
-    box-shadow: none !important;
-    mix-blend-mode: screen;
+/* Final hero image-icon sizing: uses supplied PNG circles cleanly */
+.icon-circle {
+  width: 82px !important;
+  height: 82px !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 12px !important;
 }
-
-.hero-feature,
-.feature-icon {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-/* smoother visual spacing */
-.hero-features-grid {
-    gap: 22px;
-    align-items: flex-start;
-}
-
-/* subtle hover polish */
-.nav-links a {
-    transition: all 0.25s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.75;
-    transform: translateY(-1px);
+.icon-circle img {
+  width: 82px !important;
+  height: 82px !important;
+  display: block !important;
+  object-fit: cover !important;
+  border-radius: 999px !important;
 }
