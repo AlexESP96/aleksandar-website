@@ -2711,3 +2711,54 @@ margin:0 0 6px;
     justify-self:center !important;
   }
 }
+
+
+/* ===== FINAL BUTTON COLOR FIX ===== */
+
+/* HOME PAGE HERO BUTTON -> beige background + dark green text */
+.hero-panel .book-button,
+.hero-inner .book-button,
+.hero a.book-button,
+.hero-panel a[href*="work-with-me"],
+.hero-inner a[href*="work-with-me"]{
+  background:#e7dcc8 !important;
+  background-image:none !important;
+  color:#1d2a1b !important;
+  border:1px solid rgba(29,42,27,.10) !important;
+  box-shadow:0 10px 22px rgba(0,0,0,.10) !important;
+}
+
+.hero-panel .book-button span,
+.hero-inner .book-button span,
+.hero a.book-button span,
+.hero-panel a[href*="work-with-me"] span,
+.hero-inner a[href*="work-with-me"] span{
+  color:#1d2a1b !important;
+}
+
+.hero-panel .book-button:hover,
+.hero-inner .book-button:hover,
+.hero a.book-button:hover,
+.hero-panel a[href*="work-with-me"]:hover,
+.hero-inner a[href*="work-with-me"]:hover{
+  background:#efe5d4 !important;
+  color:#1d2a1b !important;
+}
+
+/* FOR COMPANIES PAGE BUTTONS -> same green as Let's Work Together */
+.companies-page .hero .secondary-button,
+.companies-page .hero .primary-button,
+.companies-page a[href*="contact"],
+.companies-page a[href*="work-with-me"]{
+  background:#556b3f !important;
+  color:#f6efe6 !important;
+  border:none !important;
+}
+
+.companies-page .hero .secondary-button:hover,
+.companies-page .hero .primary-button:hover,
+.companies-page a[href*="contact"]:hover,
+.companies-page a[href*="work-with-me"]:hover{
+  background:#647d49 !important;
+  color:#fffaf2 !important;
+}
