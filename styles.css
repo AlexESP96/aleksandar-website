@@ -2319,3 +2319,16 @@ header .nav-button{
     justify-self:center !important;
   }
 }
+
+
+.package-offer-box{
+margin-top:14px;
+padding:14px 16px;
+border-radius:14px;
+background:rgba(79,95,57,.10);
+border:1px solid rgba(79,95,57,.25);
+}
+
+.package-offer-box p{
+margin:0 0 6px;
+}
