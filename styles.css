@@ -2046,3 +2046,140 @@ header .nav-button{
     display:none !important;
   }
 }
+
+
+/* ===== CONTACT TAB UNDERLINE + HERO FADE + WORK GDPR ===== */
+
+/* Contact page: clean active underline under Contact tab */
+.contact-header .nav a.active{
+  position:relative !important;
+}
+
+.contact-header .nav a.active::after{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  right:auto !important;
+  bottom:-11px !important;
+  width:48px !important;
+  height:2px !important;
+  transform:translateX(-50%) !important;
+  background:#9b9460 !important;
+  border-radius:999px !important;
+  opacity:1 !important;
+}
+
+/* Hide any older duplicated underline rules/elements */
+.contact-header .nav a.active::before,
+.contact-header .nav .active-line,
+.contact-header .nav .underline{
+  display:none !important;
+  content:none !important;
+}
+
+/* Contact hero: smoother transition, same approach as For Companies */
+.contact-hero{
+  background:linear-gradient(90deg,#182217 0%,#182217 44%,#1a2418 58%,#1b2419 100%) !important;
+  overflow:hidden !important;
+  position:relative !important;
+}
+
+.contact-hero-copy{
+  background:linear-gradient(90deg,#182217 0%,#182217 76%,rgba(24,34,23,.94) 100%) !important;
+  position:relative !important;
+  z-index:3 !important;
+}
+
+.contact-hero-visual{
+  position:relative !important;
+  overflow:hidden !important;
+  margin-left:-165px !important;
+  padding-left:165px !important;
+  background:
+    linear-gradient(90deg,
+      #182217 0%,
+      rgba(24,34,23,1) 13%,
+      rgba(24,34,23,.88) 26%,
+      rgba(24,34,23,.58) 42%,
+      rgba(24,34,23,.25) 58%,
+      rgba(24,34,23,.08) 72%,
+      rgba(24,34,23,0) 88%),
+    url("assets/contact-chair-hero.png") center center / cover no-repeat !important;
+  filter:saturate(.82) brightness(.78) contrast(1.04) !important;
+}
+
+.contact-hero-visual::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  top:0 !important;
+  bottom:0 !important;
+  left:0 !important;
+  width:470px !important;
+  background:linear-gradient(90deg,
+    #182217 0%,
+    rgba(24,34,23,.98) 26%,
+    rgba(24,34,23,.74) 52%,
+    rgba(24,34,23,.34) 78%,
+    rgba(24,34,23,0) 100%) !important;
+  pointer-events:none !important;
+  z-index:2 !important;
+}
+
+/* Slight vertical fade into next Contact section */
+.contact-hero::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:-1px !important;
+  height:82px !important;
+  background:linear-gradient(180deg,rgba(24,34,23,0) 0%,rgba(24,34,23,.56) 58%,#1b2419 100%) !important;
+  pointer-events:none !important;
+  z-index:4 !important;
+}
+
+/* Work With Me GDPR trigger below Private & Confidential */
+.work-gdpr-trigger{
+  margin-top:10px !important;
+  border:0 !important;
+  padding:0 !important;
+  background:transparent !important;
+  color:#1d2a1b !important;
+  font:600 13px "Inter",sans-serif !important;
+  text-decoration:underline !important;
+  text-underline-offset:4px !important;
+  cursor:pointer !important;
+}
+
+.work-gdpr-trigger:hover{
+  color:#8b8452 !important;
+}
+
+/* Reuse GDPR popover styling on Work With Me */
+.work-gdpr-popover{
+  background:rgba(18,25,17,.96) !important;
+  color:#f6efe6 !important;
+}
+
+/* Make sure GDPR popover opens above all pages */
+.gdpr-popover{
+  z-index:99999 !important;
+}
+
+@media (max-width:820px){
+  .contact-header .nav a.active::after{
+    bottom:-7px !important;
+    width:40px !important;
+  }
+
+  .contact-hero-visual{
+    margin-left:0 !important;
+    padding-left:0 !important;
+  }
+
+  .contact-hero-visual::before,
+  .contact-hero::after{
+    display:none !important;
+  }
+}
