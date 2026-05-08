@@ -1308,3 +1308,46 @@ header .nav-button{
   visibility:visible !important;
   filter:none !important;
 }
+
+
+/* FINAL BUTTON COLOR MATCH FIX */
+/* Match Work with me + Get in touch to same lighter green as Let's work together */
+
+.companies-copy .cta-button,
+.companies-copy .work-button,
+.companies-copy a[href*="work"],
+.companies-hero .cta-button,
+.companies-hero .work-button,
+.companies-hero a[href*="work"]{
+  background:#8b8452 !important;
+  background-image:none !important;
+  color:#f6efe6 !important;
+  border:none !important;
+}
+
+.companies-copy .cta-button:hover,
+.companies-copy .work-button:hover,
+.companies-copy a[href*="work"]:hover,
+.companies-hero .cta-button:hover,
+.companies-hero .work-button:hover,
+.companies-hero a[href*="work"]:hover{
+  background:#9a9360 !important;
+}
+
+/* Top-right Get in touch button */
+.header .nav-button,
+.site-header .nav-button,
+header .nav-button,
+.companies-header .nav-button{
+  background:#8b8452 !important;
+  background-image:none !important;
+  color:#f6efe6 !important;
+  border:none !important;
+}
+
+.header .nav-button:hover,
+.site-header .nav-button:hover,
+header .nav-button:hover,
+.companies-header .nav-button:hover{
+  background:#9a9360 !important;
+}
