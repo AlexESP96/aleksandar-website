@@ -2183,3 +2183,26 @@ header .nav-button{
     display:none !important;
   }
 }
+
+/* ===== PRIVACY + COOKIE PAGES ===== */
+.legal-page{background:#182217;color:#f6efe6;}
+.legal-header{background:linear-gradient(90deg,#111a10,#182217 56%,#172015)!important;border-bottom:1px solid rgba(246,239,230,.08);}
+.legal-header .brand-name,.legal-header .brand-subtitle,.legal-header .nav a{color:#f6efe6!important;}
+.legal-top-button{background:#f4eee4!important;color:#1d2a1b!important;}
+.legal-main{background:radial-gradient(circle at 85% 15%,rgba(246,239,230,.08),transparent 28%),linear-gradient(180deg,#182217 0%,#1b2419 100%);}
+.legal-hero{padding:76px 70px 52px;border-bottom:1px solid rgba(246,239,230,.08);}
+.legal-eyebrow{margin:0 0 22px;font-size:13px;font-weight:600;letter-spacing:.34em;color:rgba(246,239,230,.72);}
+.legal-hero h1{font-family:"Cormorant Garamond",serif;font-size:64px;line-height:.98;margin:0 0 22px;font-weight:600;}
+.legal-hero p{max-width:720px;color:rgba(246,239,230,.82);font-size:17px;line-height:1.6;margin:0;}
+.legal-content{max-width:980px;padding:54px 70px 80px;}
+.legal-content article{padding:28px 0;border-bottom:1px solid rgba(246,239,230,.10);}
+.legal-content article:first-child{padding-top:0;}
+.legal-content h2{font-family:"Cormorant Garamond",serif;font-size:32px;line-height:1.05;margin:0 0 14px;color:#f6efe6;}
+.legal-content p,.legal-content li{color:rgba(246,239,230,.82);font-size:15px;line-height:1.68;}
+.legal-content ul{margin:12px 0 0 22px;padding:0;}
+.legal-content a{color:#f6efe6;text-underline-offset:4px;}
+.privacy-link,.work-gdpr-trigger{display:inline-block;}
+.privacy-trigger.privacy-link{border:0;padding:0;background:transparent;color:#f6efe6;text-decoration:underline;text-underline-offset:4px;font:inherit;cursor:pointer;}
+.work-gdpr-trigger{margin-top:10px!important;color:#1d2a1b!important;font:600 13px "Inter",sans-serif!important;text-decoration:underline!important;text-underline-offset:4px!important;}
+.work-gdpr-trigger:hover{color:#8b8452!important;}
+@media (max-width:820px){.legal-hero{padding:52px 24px 38px;text-align:center}.legal-hero h1{font-size:44px}.legal-content{padding:38px 24px 58px}.legal-content h2{font-size:28px}}
