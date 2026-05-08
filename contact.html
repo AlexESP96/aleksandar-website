@@ -115,17 +115,7 @@
         </div>
       </section>
     </main>
-
-    <div class="gdpr-popover" id="gdpr-popover" role="dialog" aria-modal="false" aria-labelledby="gdpr-title">
-      <button class="gdpr-close" type="button" aria-label="Close privacy information">×</button>
-      <h2 id="gdpr-title">Your privacy matters</h2>
-      <p>I comply with the General Data Protection Regulation (GDPR). Your data is collected and processed only to respond to your inquiry and provide requested services.</p>
-      <p><strong>Legal bases:</strong> Article 6(1)(a) consent, Article 6(1)(b) pre-contractual or contractual steps, and Article 6(1)(f) legitimate interests.</p>
-      <p><strong>Principles applied:</strong> Article 5(1)(a) lawfulness, fairness and transparency; Article 5(1)(b) purpose limitation; Article 5(1)(c) data minimization; Article 5(1)(d) accuracy; Article 5(1)(e) storage limitation; Article 5(1)(f) integrity and confidentiality; and Article 5(2) accountability.</p>
-      <p><strong>Your rights:</strong> access, rectification, erasure, restriction, portability, and objection under Articles 15–22, plus the right to withdraw consent under Article 7(3). Appropriate security measures are applied under Article 32.</p>
-    </div>
-
-    <footer class="footer">
+<footer class="footer">
       <div class="footer-main">
         <div class="footer-slogan"><span class="psi">Ψ</span><span>Science-based.<br>Practical. Human.</span></div>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -147,17 +137,5 @@
     </footer>
   </div>
 
-  <script>
-    const trigger = document.querySelector(".privacy-trigger");
-    const popover = document.querySelector("#gdpr-popover");
-    const closeBtn = document.querySelector(".gdpr-close");
-    function openPrivacy(){ popover?.classList.add("is-open"); }
-    function closePrivacy(){ popover?.classList.remove("is-open"); }
-    trigger?.addEventListener("mouseenter", openPrivacy);
-    trigger?.addEventListener("focus", openPrivacy);
-    trigger?.addEventListener("click", openPrivacy);
-    closeBtn?.addEventListener("click", closePrivacy);
-    document.addEventListener("keydown", e => { if(e.key === "Escape") closePrivacy(); });
-  </script>
 </body>
 </html>
