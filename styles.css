@@ -2762,3 +2762,39 @@ margin:0 0 6px;
   background:#647d49 !important;
   color:#fffaf2 !important;
 }
+
+
+/* ===== REAL FINAL FIX: FOR COMPANIES BUTTONS EXACT SAME COLOR ===== */
+/* These selectors target the actual For Companies header, hero, and bottom CTA buttons. */
+
+.companies-page-header .companies-get-touch,
+.companies-get-touch,
+.companies-header .companies-nav-button,
+.companies-nav-button,
+.companies-copy .companies-cta,
+.companies-cta,
+.company-banner .gold-button,
+.gold-button[href*="mailto:info@aleksandarplavsic.com?subject=Company"],
+.company-banner a[href*="Company%20consultation%20inquiry"]{
+  background:#8b8452 !important;
+  background-color:#8b8452 !important;
+  background-image:none !important;
+  color:#f6efe6 !important;
+  border:1px solid rgba(246,239,230,.08) !important;
+  box-shadow:0 12px 26px rgba(0,0,0,.16) !important;
+}
+
+.companies-page-header .companies-get-touch:hover,
+.companies-get-touch:hover,
+.companies-header .companies-nav-button:hover,
+.companies-nav-button:hover,
+.companies-copy .companies-cta:hover,
+.companies-cta:hover,
+.company-banner .gold-button:hover,
+.gold-button[href*="mailto:info@aleksandarplavsic.com?subject=Company"]:hover,
+.company-banner a[href*="Company%20consultation%20inquiry"]:hover{
+  background:#9a9360 !important;
+  background-color:#9a9360 !important;
+  background-image:none !important;
+  color:#fffaf2 !important;
+}
