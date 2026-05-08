@@ -13,17 +13,23 @@
 <body>
   <main class="site-shell">
     <header class="header">
-      <a class="brand" href="/" aria-label="Aleksandar Plavsic home">
+      <a class="brand" href="index.html" aria-label="Aleksandar Plavsic home">
         <span class="brand-name">Aleksandar Plavsic</span>
         <span class="brand-role">Psychologist</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="work-with-me.html">Work With Me</a>
+        <a href="about.html">About</a>
+        <a href="who-i-work-with.html">Who I Work With</a>
+          <a href="work-with-me.html">Work With Me</a>
         <a href="companies.html">For Companies</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="language-switch" aria-label="Language switcher">
+        <button class="lang-active" type="button">EN</button>
+        <button type="button">ES</button>
+        <button type="button">SR</button>
+      </div>
       <a class="nav-button" href="work-with-me.html">Book a Session <span aria-hidden="true">↗</span></a>
     </header>
 
@@ -95,11 +101,33 @@
       </article>
     </section>
 
+
+    <section class="faq-section home-faq reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions people often ask</h2>
+      <div class="faq-grid">
+        <details open><summary>Is this therapy or coaching?</summary><p>This is non-clinical psychological support and coaching-style guidance, grounded in psychology and workplace wellbeing. It is not a substitute for medical or psychiatric care.</p></details>
+        <details><summary>How long is each session?</summary><p>Individual sessions are 50 minutes, a common structure in therapy, coaching, and psychologically informed support.</p></details>
+        <details><summary>Who do you usually work with?</summary><p>I work with individuals, professionals, leaders, and organizations navigating pressure, emotional clarity, decisions, resilience, and workplace wellbeing.</p></details>
+        <details><summary>Are sessions online?</summary><p>Yes, sessions are online by video call.</p></details>
+      </div>
+      <a class="subtle-link centered-link" href="who-i-work-with.html">Learn who this is for ↗</a>
+    </section>
+
+    <section class="testimonials-section home-testimonials reveal">
+      <p class="eyebrow">Testimonials</p>
+      <h2>Early professional feedback</h2>
+      <div class="testimonial-grid">
+        <article><p>“Clear, thoughtful, and grounded. Aleksandar makes complex psychological topics feel practical.”</p><span>Professional collaborator</span></article>
+        <article><p>“A calm and structured approach to wellbeing, pressure, and workplace challenges.”</p><span>Workplace context</span></article>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="footer-main">
         <div class="footer-slogan"><span class="psi">Ψ</span><span>Science-based.<br>Practical. Human.</span></div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html#about">About</a>
+          <a href="about.html">About</a>
           <a href="work-with-me.html">Work With Me</a>
           <a href="companies.html">For Companies</a>
           <a href="contact.html">Contact</a>
@@ -119,5 +147,16 @@
       </div>
     </footer>
   </main>
+<script>
+document.querySelectorAll(".language-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
+    button.classList.add("lang-active");
+    if (button.textContent.trim() !== "EN") {
+      alert("This language version is coming soon.");
+    }
+  });
+});
+</script>
 </body>
 </html>

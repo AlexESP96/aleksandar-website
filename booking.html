@@ -22,13 +22,19 @@
 
 <nav class="nav">
 <a href="index.html">Home</a>
-<a href="index.html#about">About</a>
-<a href="work-with-me.html">Work With Me</a>
+<a href="about.html">About</a>
+<a href="who-i-work-with.html">Who I Work With</a>
+          <a href="work-with-me.html">Work With Me</a>
 <a href="companies.html">For Companies</a>
 <a href="contact.html">Contact</a>
 </nav>
 
-<a class="nav-button booking-top-button" href="contact.html">Contact ↗</a>
+<div class="language-switch" aria-label="Language switcher">
+        <button class="lang-active" type="button">EN</button>
+        <button type="button">ES</button>
+        <button type="button">SR</button>
+      </div>
+      <a class="nav-button booking-top-button" href="contact.html">Contact ↗</a>
 </header>
 
 <main>
@@ -48,7 +54,7 @@
 <h2>Single session</h2>
 <p class="booking-price">€60 <span>+ VAT if applicable</span></p>
 <ul>
-<li>60 minutes</li>
+<li>50 minutes</li>
 <li>Online video call</li>
 <li>Personalized support</li>
 </ul>
@@ -60,7 +66,7 @@
 <h2>4-session package</h2>
 <p class="booking-price">€200 <span>+ VAT if applicable</span></p>
 <ul>
-<li>Four 60-minute sessions</li>
+<li>Four 50-minute sessions</li>
 <li>Best for ongoing support</li>
 <li>Flexible scheduling</li>
 </ul>
@@ -107,5 +113,16 @@
 </footer>
 
 </div>
+<script>
+document.querySelectorAll(".language-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
+    button.classList.add("lang-active");
+    if (button.textContent.trim() !== "EN") {
+      alert("This language version is coming soon.");
+    }
+  });
+});
+</script>
 </body>
 </html>

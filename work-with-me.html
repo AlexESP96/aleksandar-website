@@ -19,11 +19,16 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
+        <a href="about.html">About</a>
         <a class="active" href="work-with-me.html">Work With Me</a>
         <a href="companies.html">For Companies</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="language-switch" aria-label="Language switcher">
+        <button class="lang-active" type="button">EN</button>
+        <button type="button">ES</button>
+        <button type="button">SR</button>
+      </div>
       <a class="nav-button" href="work-with-me.html">Book a Session <span aria-hidden="true">↗</span></a>
     </header>
 
@@ -45,7 +50,7 @@
         <div class="card-rule"></div>
         <p class="option-description">Support for stress, emotions, relationships, clarity, and personal challenges.</p>
         <ul>
-          <li>60 minutes</li>
+          <li>50 minutes</li>
           <li>Online (Video Call)</li>
           <li>Personalized support</li>
         </ul>
@@ -93,11 +98,24 @@
       </article>
     </section>
 
+
+    <section class="faq-section work-faq reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Before booking</h2>
+      <div class="faq-grid">
+        <details open><summary>How long is a session?</summary><p>Individual sessions are 50 minutes.</p></details>
+        <details><summary>Can I book more than one session?</summary><p>Yes. You can book a single session or choose a 4-session package for ongoing support.</p></details>
+        <details><summary>What happens in the first session?</summary><p>We clarify what you want support with, identify patterns and priorities, and agree on practical next steps.</p></details>
+        <details><summary>Is it confidential?</summary><p>Yes. Confidentiality is a priority, with data handled according to the Privacy & GDPR Policy.</p></details>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="footer-main">
         <div class="footer-slogan"><span class="psi">Ψ</span><span>Science-based.<br>Practical. Human.</span></div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html#about">About</a>
+          <a href="about.html">About</a>
+          <a href="who-i-work-with.html">Who I Work With</a>
           <a href="work-with-me.html">Work With Me</a>
           <a href="companies.html">For Companies</a>
           <a href="contact.html">Contact</a>
@@ -118,5 +136,16 @@
       </div>
     </footer>
   </main>
+<script>
+document.querySelectorAll(".language-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
+    button.classList.add("lang-active");
+    if (button.textContent.trim() !== "EN") {
+      alert("This language version is coming soon.");
+    }
+  });
+});
+</script>
 </body>
 </html>

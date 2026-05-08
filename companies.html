@@ -22,11 +22,18 @@
 
   <nav class="companies-top-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="work-with-me.html">Work With Me</a>
+    <a href="about.html">About</a>
+    <a href="who-i-work-with.html">Who I Work With</a>
+          <a href="work-with-me.html">Work With Me</a>
     <a class="active" href="companies.html">For Companies</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <div class="language-switch companies-lang" aria-label="Language switcher">
+        <button class="lang-active" type="button">EN</button>
+        <button type="button">ES</button>
+        <button type="button">SR</button>
+      </div>
 
   <a class="companies-get-touch" href="mailto:info@aleksandarplavsic.com?subject=Company%20consultation%20inquiry">Get in touch</a>
 </header>
@@ -96,7 +103,7 @@
       <div class="footer-main">
         <div class="footer-slogan"><span class="psi">Ψ</span><span>Science-based.<br>Practical. Human.</span></div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="index.html#about">About</a>
+          <a href="about.html">About</a>
           <a href="work-with-me.html">Work With Me</a>
           <a href="companies.html">For Companies</a>
           <a href="contact.html">Contact</a>
@@ -117,5 +124,16 @@
       </div>
     </footer>
   </div>
+<script>
+document.querySelectorAll(".language-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
+    button.classList.add("lang-active");
+    if (button.textContent.trim() !== "EN") {
+      alert("This language version is coming soon.");
+    }
+  });
+});
+</script>
 </body>
 </html>

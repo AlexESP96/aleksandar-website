@@ -15,11 +15,17 @@
 </a>
 <nav class="nav">
 <a href="index.html">Home</a>
-<a href="work-with-me.html">Work With Me</a>
+<a href="who-i-work-with.html">Who I Work With</a>
+          <a href="work-with-me.html">Work With Me</a>
 <a href="companies.html">For Companies</a>
 <a href="contact.html">Contact</a>
 </nav>
-<a class="nav-button legal-top-button" href="contact.html">Contact ↗</a>
+<div class="language-switch" aria-label="Language switcher">
+        <button class="lang-active" type="button">EN</button>
+        <button type="button">ES</button>
+        <button type="button">SR</button>
+      </div>
+      <a class="nav-button legal-top-button" href="contact.html">Contact ↗</a>
 </header>
 
 <main class="legal-main">
@@ -32,7 +38,7 @@
 <section class="legal-content">
 <article><h2>Services</h2><p>Services may include individual sessions, workshops, wellbeing support, leadership support, and consulting services.</p></article>
 
-<article><h2>Pricing</h2><ul><li>Single session: €60 + VAT (if applicable)</li><li>4-session package: €200 + VAT (if applicable)</li></ul></article>
+<article><h2>Pricing</h2><ul><li>Single session: €50 + VAT (if applicable)</li><li>4-session package: €200 + VAT (if applicable)</li></ul></article>
 
 <article><h2>Cancellation policy</h2><p>Sessions may be canceled or rescheduled with at least 24 hours notice. Late cancellations or missed sessions may be charged in full.</p></article>
 
@@ -51,5 +57,16 @@
 </div>
 </footer>
 </div>
+<script>
+document.querySelectorAll(".language-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
+    button.classList.add("lang-active");
+    if (button.textContent.trim() !== "EN") {
+      alert("This language version is coming soon.");
+    }
+  });
+});
+</script>
 </body>
 </html>
