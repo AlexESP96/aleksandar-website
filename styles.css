@@ -3873,3 +3873,19 @@ body.contact-page .header .nav-button{
     padding:24px;
   }
 }
+
+/* ===== BOOKING MULTILINGUAL PAGE FINAL POLISH ===== */
+.booking-header{grid-template-columns:minmax(250px,.8fr) auto auto minmax(170px,.45fr)!important}
+.booking-header .nav a,.booking-header .booking-top-button{font-weight:700!important}
+.booking-header .booking-top-button{color:#1d2a1b!important;margin-left:24px!important}
+.booking-lang-switch a{border:0;border-radius:999px;padding:6px 9px;background:transparent;color:inherit;font:700 11px/1 "Inter",sans-serif;letter-spacing:.06em;cursor:pointer;text-decoration:none;transition:background .2s ease,transform .2s ease,color .2s ease}
+.booking-lang-switch a.lang-active{background:#e7dcc8;color:#1d2a1b}
+.booking-lang-switch a:hover{transform:translateY(-1px);background:rgba(231,220,200,.28)}
+.booking-event-options{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;align-items:stretch!important}
+.booking-event-options .booking-card{height:100%!important;display:flex!important;flex-direction:column!important}
+.booking-event-options .booking-card ul{flex:1!important}
+.booking-event-options .booking-button{margin-top:auto!important}
+.centered-note-grid{max-width:1080px!important;margin-left:auto!important;margin-right:auto!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;align-items:stretch!important}
+.centered-note-grid article{width:100%!important;min-height:170px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:28px!important;box-sizing:border-box!important}
+.centered-note-grid h3,.centered-note-grid p{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+@media (max-width:820px){.booking-header{grid-template-columns:1fr!important}.booking-header .booking-top-button{margin-left:0!important}.booking-event-options,.centered-note-grid{grid-template-columns:1fr!important}.centered-note-grid article{min-height:auto!important}}
