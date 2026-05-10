@@ -3909,3 +3909,35 @@ justify-content:center;
 line-height:1.8;
 }
 }
+
+
+/* ===== REAL LANGUAGE SWITCH LINKS ===== */
+.language-switch a{
+  border:0;
+  border-radius:999px;
+  padding:6px 9px;
+  background:transparent;
+  color:inherit;
+  font:700 11px/1 "Inter",sans-serif;
+  letter-spacing:.06em;
+  cursor:pointer;
+  text-decoration:none !important;
+  transition:background .2s ease, transform .2s ease, color .2s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.language-switch a.lang-active{
+  background:#e7dcc8;
+  color:#1d2a1b;
+}
+
+.language-switch a:hover{
+  transform:translateY(-1px);
+  background:rgba(231,220,200,.28);
+}
+
+.language-switch button{
+  display:none !important;
+}

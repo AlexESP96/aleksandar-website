@@ -25,9 +25,9 @@
         <a href="contact.html">Kontakt</a>
       </nav>
       <div class="language-switch" aria-label="Language switcher">
-        <button class="lang-active" type="button">EN</button>
-        <button type="button">ES</button>
-        <button type="button" class="lang-active">SR</button>
+        <a href="who-i-work-with.html">EN</a>
+        <a href="who-i-work-with-es.html">ES</a>
+        <a class="lang-active" href="who-i-work-with-sr.html">SR</a>
       </div>
       <a class="nav-button" href="work-with-me.html">Zakažite sesiju <span aria-hidden="true">↗</span></a>
     </header>
@@ -96,16 +96,5 @@
       </div>
     </footer>
   </main>
-<script>
-document.querySelectorAll(".language-switch button").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
-    button.classList.add("lang-active");
-    if (button.textContent.trim() !== "EN") {
-      alert("This language version is coming soon.");
-    }
-  });
-});
-</script>
 </body>
 </html>

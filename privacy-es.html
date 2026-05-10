@@ -25,9 +25,9 @@
         <a href="contact.html">Contacto</a>
       </nav>
       <div class="language-switch" aria-label="Language switcher">
-        <button class="lang-active" type="button">EN</button>
-        <button type="button" class="lang-active">ES</button>
-        <button type="button">SR</button>
+        <a href="privacy.html">EN</a>
+        <a class="lang-active" href="privacy-es.html">ES</a>
+        <a href="privacy-sr.html">SR</a>
       </div>
       <a class="nav-button legal-top-button" href="contact.html">Contacto <span aria-hidden="true">↗</span></a>
     </header>
@@ -104,16 +104,5 @@
       </div>
     </footer>
   </div>
-<script>
-document.querySelectorAll(".language-switch button").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".language-switch button").forEach((b) => b.classList.remove("lang-active"));
-    button.classList.add("lang-active");
-    if (button.textContent.trim() !== "EN") {
-      alert("This language version is coming soon.");
-    }
-  });
-});
-</script>
 </body>
 </html>
