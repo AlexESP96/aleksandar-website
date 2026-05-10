@@ -3889,3 +3889,23 @@ body.contact-page .header .nav-button{
 .centered-note-grid article{width:100%!important;min-height:170px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:28px!important;box-sizing:border-box!important}
 .centered-note-grid h3,.centered-note-grid p{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
 @media (max-width:820px){.booking-header{grid-template-columns:1fr!important}.booking-header .booking-top-button{margin-left:0!important}.booking-event-options,.centered-note-grid{grid-template-columns:1fr!important}.centered-note-grid article{min-height:auto!important}}
+
+
+/* ===== MULTILINGUAL SITE IMPROVEMENTS ===== */
+.language-switch a{
+font-weight:700!important;
+text-decoration:none!important;
+}
+
+.footer-bottom p:last-child{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+@media (max-width:820px){
+.footer-bottom p:last-child{
+line-height:1.8;
+}
+}
