@@ -3739,3 +3739,137 @@ body.contact-page .header .nav-button{
     grid-template-columns:1fr !important;
   }
 }
+
+
+/* ===== CAL LINKS / BOOKING FLOW UPDATE ===== */
+
+.booking-main-events{
+  grid-template-columns:1fr !important;
+  gap:34px !important;
+}
+
+.booking-event-options{
+  grid-template-columns:repeat(3,1fr) !important;
+  display:grid !important;
+  gap:24px !important;
+}
+
+.package-info-panel{
+  max-width:860px;
+  margin:0 auto;
+  text-align:center;
+  background:#1d2a1b;
+  color:#f6efe6;
+  border-radius:22px;
+  padding:34px 38px;
+  box-shadow:0 22px 55px rgba(0,0,0,.14);
+}
+
+.package-info-panel h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:36px;
+  line-height:1;
+  margin:0 0 14px;
+}
+
+.package-info-panel p{
+  max-width:680px;
+  margin:0 auto 12px;
+  color:rgba(246,239,230,.82);
+  line-height:1.58;
+}
+
+.package-contact-button{
+  margin-top:16px;
+  background:#e7dcc8 !important;
+  color:#1d2a1b !important;
+}
+
+.centered-note-grid{
+  align-items:start !important;
+  text-align:center !important;
+}
+
+.centered-note-grid article{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:center !important;
+}
+
+.centered-note-grid h3,
+.centered-note-grid p{
+  text-align:center !important;
+}
+
+.insurance-note{
+  max-width:760px;
+  margin:34px auto 0;
+  text-align:center;
+  color:rgba(246,239,230,.78);
+  line-height:1.6;
+}
+
+.payment-info-strip{
+  background:#f4eee4;
+  color:#1d2a1b;
+  padding:26px 70px;
+  text-align:center;
+  border-top:1px solid rgba(29,42,27,.10);
+  border-bottom:1px solid rgba(29,42,27,.10);
+}
+
+.payment-info-strip p{
+  max-width:880px;
+  margin:0 auto;
+  line-height:1.6;
+  color:rgba(29,42,27,.76);
+}
+
+.package-note{
+  margin-top:12px;
+  color:rgba(29,42,27,.76);
+  line-height:1.55;
+}
+
+.package-note a{
+  color:#1d2a1b;
+  text-underline-offset:4px;
+}
+
+/* Work With Me mobile spacing: prevent hero text from blending into following section */
+@media (max-width:820px){
+  .work-copy{
+    padding-bottom:58px !important;
+  }
+
+  .work-hero{
+    margin-bottom:0 !important;
+  }
+
+  .service-options{
+    padding-top:44px !important;
+  }
+
+  .booking-event-options{
+    grid-template-columns:1fr !important;
+  }
+
+  .booking-main-events{
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+
+  .package-info-panel{
+    padding:30px 24px;
+  }
+
+  .package-info-panel h2{
+    font-size:32px;
+  }
+
+  .payment-info-strip{
+    padding:24px;
+  }
+}
