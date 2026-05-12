@@ -5009,3 +5009,411 @@ line-height:1.8;
   .work-footer-improved .footer-main{grid-template-columns:1fr !important; text-align:center !important; justify-items:center !important;}
   .footer-contact-icons{align-items:center !important;}
 }
+
+/* =========================================================
+   SITE-WIDE UNIFORM VISUAL SYSTEM — May 2026
+   Work With Me used as reference; beige top bar across pages
+   ========================================================= */
+:root{
+  --brand-dark-green:#2F382B;
+  --brand-deep-green:#20281C;
+  --brand-olive:#59613D;
+  --brand-light-olive:#75815A;
+  --brand-gold:#9B8558;
+  --brand-beige:#D8CBB7;
+  --brand-cream:#F8F3EA;
+  --brand-paper:#FBF7EF;
+  --brand-ink:#2F382B;
+}
+
+body{background:#11160f !important;color:var(--brand-ink) !important;}
+.site-shell,.page-shell{background:var(--brand-cream) !important;}
+
+/* Universal top navigation: always beige */
+.header,
+.site-header,
+.work-header,
+.contact-header,
+.booking-header,
+.legal-header,
+.companies-page-header{
+  background:linear-gradient(90deg,var(--brand-cream) 0%,var(--brand-beige) 100%) !important;
+  color:var(--brand-dark-green) !important;
+  border-bottom:1px solid rgba(47,56,43,.16) !important;
+  box-shadow:0 8px 28px rgba(47,56,43,.05) !important;
+}
+
+.header .brand,
+.site-header .brand,
+.work-header .brand,
+.contact-header .brand,
+.booking-header .brand,
+.legal-header .brand,
+.companies-logo-text{
+  color:var(--brand-dark-green) !important;
+}
+
+.header .brand-name,
+.header .brand-role,
+.header .brand-subtitle,
+.site-header .brand-name,
+.site-header .brand-role,
+.site-header .brand-subtitle,
+.work-header .brand-name,
+.work-header .brand-subtitle,
+.contact-header .brand-name,
+.contact-header .brand-subtitle,
+.booking-header .brand-name,
+.booking-header .brand-subtitle,
+.legal-header .brand-name,
+.legal-header .brand-subtitle,
+.companies-logo-name,
+.companies-logo-role{
+  color:var(--brand-dark-green) !important;
+}
+
+.nav a,
+.header .nav a,
+.site-header .nav a,
+.work-header .nav a,
+.contact-header .nav a,
+.booking-header .nav a,
+.legal-header .nav a,
+.companies-top-nav a{
+  color:var(--brand-dark-green) !important;
+  font-weight:600 !important;
+}
+
+.nav a:hover,
+.header .nav a:hover,
+.site-header .nav a:hover,
+.work-header .nav a:hover,
+.contact-header .nav a:hover,
+.booking-header .nav a:hover,
+.legal-header .nav a:hover,
+.companies-top-nav a:hover{
+  color:var(--brand-olive) !important;
+}
+
+.nav a.active::after,
+.contact-header .nav a.active::after,
+.companies-top-nav a.active::after,
+.work-header .nav a.active::after{
+  background:var(--brand-gold) !important;
+}
+
+.language-switch,
+.companies-lang,
+.booking-header .language-switch,
+.legal-header .language-switch,
+.contact-header .language-switch{
+  background:rgba(47,56,43,.08) !important;
+  border-color:rgba(47,56,43,.18) !important;
+  color:var(--brand-dark-green) !important;
+}
+.language-switch a,
+.language-switch button{color:var(--brand-dark-green) !important;}
+.language-switch .lang-active,
+.language-switch a.lang-active,
+.booking-lang-switch a.lang-active{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+}
+
+/* Main header buttons: dark green, with beige hover */
+.nav-button,
+.work-top-button,
+.contact-top-button,
+.booking-top-button,
+.legal-top-button,
+.companies-get-touch,
+.companies-nav-button{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+  border:1px solid rgba(47,56,43,.12) !important;
+  border-radius:999px !important;
+  box-shadow:0 10px 24px rgba(47,56,43,.16) !important;
+}
+.nav-button:hover,
+.work-top-button:hover,
+.contact-top-button:hover,
+.booking-top-button:hover,
+.legal-top-button:hover,
+.companies-get-touch:hover,
+.companies-nav-button:hover{
+  background:var(--brand-olive) !important;
+  color:var(--brand-cream) !important;
+}
+
+/* Hero areas: consistent dark green fields with beige text */
+.hero-panel,
+.work-hero,
+.work-copy,
+.companies-hero,
+.companies-copy,
+.companies-support,
+.embedded-company-support,
+.contact-hero,
+.contact-hero-copy,
+.contact-main,
+.booking-hero,
+.legal-main,
+.legal-hero,
+.blog-hero,
+.who-hero,
+.about-story,
+.fit-section,
+.work-company-panel,
+.booking-note,
+.footer{
+  background:linear-gradient(135deg,var(--brand-dark-green) 0%,var(--brand-deep-green) 100%) !important;
+  color:var(--brand-beige) !important;
+}
+
+.hero-panel h1,.hero-panel h2,.hero-name,.headline,
+.work-copy h1,.work-copy p,
+.companies-copy h1,.companies-copy p,.companies-lead,
+.contact-hero h1,.contact-hero p,
+.booking-copy h1,.booking-copy p,
+.legal-hero h1,.legal-hero p,
+.blog-hero h1,.blog-hero p,
+.who-hero h1,.who-hero p,
+.about-story h2,.about-story p,
+.fit-section h2,.fit-section p,
+.footer,.footer a{
+  color:var(--brand-beige) !important;
+}
+
+.eyebrow,.contact-eyebrow,.booking-eyebrow,.legal-eyebrow,.section-kicker{
+  color:rgba(216,203,183,.82) !important;
+}
+.small-rule,.short-rule,.contact-rule,.booking-rule,.support-rule,.centered-rule{
+  background:var(--brand-gold) !important;
+}
+
+/* Beige / paper content sections */
+.cards,
+.work-pathways,
+.process-section,
+.faq-teaser,
+.principles,
+.testimonials-section,
+.audience-grid,
+.not-fit-section,
+.blog-menu-section,
+.blog-article,
+.booking-main,
+.payment-info-strip,
+.response-section,
+.legal-content,
+.faq-page-content,
+.faq-teaser,
+.cred-strip{
+  background:linear-gradient(180deg,var(--brand-cream) 0%,var(--brand-beige) 100%) !important;
+  color:var(--brand-dark-green) !important;
+}
+
+/* Cards */
+.service-card,
+.option-card,
+.pathway-card,
+.process-grid article,
+.principle-grid article,
+.testimonial-grid article,
+.audience-grid article,
+.blog-index-card,
+.blog-article article,
+.booking-card,
+.faq-grid details,
+.company-banner,
+.package-info-panel,
+.organization-card,
+.response-grid article{
+  background:rgba(251,247,239,.86) !important;
+  border:1px solid rgba(47,56,43,.16) !important;
+  box-shadow:0 18px 44px rgba(47,56,43,.08) !important;
+  color:var(--brand-dark-green) !important;
+}
+
+.service-card h3,
+.option-card h2,
+.pathway-card h2,
+.process-grid h3,
+.principle-grid h3,
+.testimonial-grid p,
+.audience-grid h2,
+.blog-index-card h3,
+.blog-article h2,
+.booking-card h2,
+.faq-grid summary,
+.company-banner h2,
+.package-info-panel h2,
+.organization-card h3,
+.response-grid h3{
+  color:var(--brand-dark-green) !important;
+}
+
+.service-card p,
+.option-card p,
+.pathway-card p,
+.pathway-card li,
+.process-grid p,
+.principle-grid p,
+.testimonial-grid span,
+.audience-grid p,
+.audience-grid li,
+.blog-index-card p,
+.blog-article p,
+.booking-card li,
+.faq-grid p,
+.company-banner p,
+.package-info-panel p,
+.organization-card p,
+.response-grid p,
+.cred-strip span{
+  color:rgba(47,56,43,.78) !important;
+}
+
+/* Icons and accent chips */
+.service-icon,
+.option-icon,
+.trust-icon,
+.method-icon,
+.response-icon,
+.footer-icon,
+.company-icon,
+.icon-circle{
+  background:rgba(89,97,61,.16) !important;
+  color:var(--brand-dark-green) !important;
+}
+.pathway-meta span,
+.blog-category,
+.booking-label,
+.blog-date,
+.blog-source{
+  color:var(--brand-gold) !important;
+}
+
+/* Buttons: primary green, secondary beige/gold */
+.dark-green-button,
+.dark-button,
+.booking-button,
+.send-button,
+.companies-cta,
+.gold-button,
+.organization-card a,
+.cta-dark{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+  border:1px solid rgba(47,56,43,.14) !important;
+  border-radius:999px !important;
+  box-shadow:0 12px 28px rgba(47,56,43,.16) !important;
+}
+.dark-green-button:hover,
+.dark-button:hover,
+.booking-button:hover,
+.send-button:hover,
+.companies-cta:hover,
+.gold-button:hover,
+.organization-card a:hover,
+.cta-dark:hover{
+  background:var(--brand-olive) !important;
+  color:var(--brand-cream) !important;
+}
+
+.outline-button,
+.package-contact-button,
+.primary-button,
+.hero-panel .book-button,
+.hero-inner .book-button,
+.hero-panel a[href*="work-with-me"],
+.hero-inner a[href*="work-with-me"]{
+  background:var(--brand-beige) !important;
+  color:var(--brand-dark-green) !important;
+  border:1px solid rgba(47,56,43,.18) !important;
+  box-shadow:0 10px 22px rgba(47,56,43,.10) !important;
+}
+.outline-button:hover,
+.package-contact-button:hover,
+.primary-button:hover,
+.hero-panel .book-button:hover,
+.hero-inner .book-button:hover,
+.hero-panel a[href*="work-with-me"]:hover,
+.hero-inner a[href*="work-with-me"]:hover{
+  background:var(--brand-cream) !important;
+  color:var(--brand-dark-green) !important;
+}
+
+/* Companies section on Work With Me: keep dark/olive but align card treatment */
+.company-pillar h2,
+.company-pillar h3{color:var(--brand-beige) !important;}
+.company-pillar p{color:rgba(216,203,183,.82) !important;}
+.company-pillar{border-right-color:rgba(216,203,183,.16) !important;}
+.company-banner{
+  background:rgba(216,203,183,.08) !important;
+  border-color:rgba(216,203,183,.18) !important;
+}
+.company-banner h2,.company-banner p{color:var(--brand-beige) !important;}
+
+/* About page: keep profile top consistent and improve experience strip */
+.about-hero{
+  background:linear-gradient(135deg,var(--brand-dark-green),var(--brand-deep-green)) !important;
+  color:var(--brand-beige) !important;
+}
+.about-hero-copy{background:transparent !important;color:var(--brand-beige) !important;}
+.about-hero-copy h1,.about-hero-copy p{color:var(--brand-beige) !important;}
+.cred-strip div{
+  background:var(--brand-paper) !important;
+  border-right:1px solid rgba(47,56,43,.12) !important;
+}
+.cred-strip strong{color:var(--brand-dark-green) !important;}
+.about-link-row .subtle-link{color:var(--brand-beige) !important;}
+.principles h2,.testimonials-section h2,.faq-teaser h2,.not-fit-section h2{color:var(--brand-dark-green) !important;}
+
+/* Footer consistency */
+.footer{
+  background:linear-gradient(90deg,var(--brand-dark-green),var(--brand-deep-green)) !important;
+  color:var(--brand-beige) !important;
+}
+.footer-contact a,
+.footer-nav a,
+.footer-bottom a{color:var(--brand-beige) !important;}
+.footer-bottom{border-top-color:rgba(216,203,183,.18) !important;color:rgba(216,203,183,.72) !important;}
+.footer-contact a:hover,
+.footer-nav a:hover,
+.footer-bottom a:hover{
+  background:transparent !important;
+  color:var(--brand-cream) !important;
+  box-shadow:none !important;
+}
+.footer-contact svg,.socials svg{stroke:var(--brand-beige) !important;}
+.socials a{background:rgba(216,203,183,.10) !important;}
+
+/* Contact form and legal text fields */
+.contact-form input,.contact-form select,.contact-form textarea{
+  background:rgba(248,243,234,.08) !important;
+  border-color:rgba(216,203,183,.20) !important;
+  color:var(--brand-cream) !important;
+}
+.privacy-trigger,.privacy-note,.contact-method p,.contact-method a{color:var(--brand-beige) !important;}
+.legal-content article{border-bottom-color:rgba(47,56,43,.16) !important;}
+.legal-content h2,.legal-content p,.legal-content li,.legal-content a{color:var(--brand-dark-green) !important;}
+
+/* Blog index cards */
+.featured-blog-card{border-color:rgba(155,133,88,.35) !important;}
+.blog-index-card .research-link,.blog-menu-head .research-link,.back-to-blog a{color:var(--brand-dark-green) !important;}
+.blog-takeaway{background:var(--brand-dark-green) !important;color:var(--brand-beige) !important;}
+.blog-takeaway h3,.blog-takeaway p{color:var(--brand-beige) !important;}
+
+/* Reduce overly dark/awkward page transitions */
+.contact-hero-visual::before,
+.contact-hero::after,
+.companies-visual::before,
+.companies-support::before{opacity:.72 !important;}
+
+@media (max-width:820px){
+  .header,.site-header,.work-header,.contact-header,.booking-header,.legal-header,.companies-page-header{
+    background:linear-gradient(180deg,var(--brand-cream),var(--brand-beige)) !important;
+  }
+  .work-pathways,.process-section,.blog-menu-section,.blog-article,.booking-main,.faq-page-content{padding-left:22px !important;padding-right:22px !important;}
+}
