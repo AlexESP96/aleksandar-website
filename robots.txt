@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aleksandarplavsic.com/sitemap.xml
