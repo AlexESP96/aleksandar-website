@@ -5485,3 +5485,204 @@ body{background:#11160f !important;color:var(--brand-ink) !important;}
   .response-section{padding:42px 22px !important;}
   .unified-footer .footer-nav{gap:22px !important;}
 }
+
+/* ===== TARGETED REFINEMENTS — MAY 13 REQUEST ===== */
+:root{
+  --brand-dark-green:#2F382B;
+  --brand-deep-green:#20281C;
+  --brand-olive:#59613D;
+  --brand-light-olive:#75815A;
+  --brand-gold:#9B8558;
+  --brand-beige:#D8CBB7;
+  --brand-cream:#F8F3EA;
+}
+
+/* Work With Me: language switch buttons fixed to match beige header */
+.work-page .work-header .language-switch,
+.work-page .header .language-switch{
+  background:rgba(47,56,43,.06) !important;
+  border:1px solid rgba(47,56,43,.12) !important;
+  box-shadow:none !important;
+}
+.work-page .work-header .language-switch a,
+.work-page .header .language-switch a{
+  background:transparent !important;
+  color:var(--brand-dark-green) !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+.work-page .work-header .language-switch a.lang-active,
+.work-page .header .language-switch a.lang-active{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+}
+.work-page .pathway-meta span{background:rgba(216,203,183,.42) !important;}
+.work-page .individual-pathway .pathway-meta span:nth-child(2){background:rgba(155,133,88,.16) !important;}
+
+/* Work With Me: smoother transition between company text and photo */
+.embedded-companies-hero{
+  background:linear-gradient(90deg,var(--brand-deep-green) 0%,var(--brand-dark-green) 50%,var(--brand-deep-green) 100%) !important;
+}
+.embedded-companies-hero .companies-copy{
+  position:relative !important;
+  z-index:2 !important;
+  background:linear-gradient(90deg,var(--brand-deep-green) 0%,var(--brand-dark-green) 78%,rgba(47,56,43,.82) 100%) !important;
+}
+.embedded-companies-hero .companies-copy::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-150px;
+  width:180px;
+  height:100%;
+  background:linear-gradient(90deg,rgba(47,56,43,.82) 0%,rgba(47,56,43,.36) 55%,rgba(47,56,43,0) 100%);
+  pointer-events:none;
+}
+.embedded-companies-hero .companies-visual{
+  position:relative !important;
+  background:url("assets/companies-boardroom.png") center/cover no-repeat !important;
+}
+.embedded-companies-hero .companies-visual::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(90deg,rgba(47,56,43,.88) 0%,rgba(47,56,43,.52) 22%,rgba(47,56,43,.18) 48%,rgba(47,56,43,.02) 76%) !important;
+  opacity:1 !important;
+}
+
+/* Contact: button colors */
+body.contact-page .contact-top-button,
+body.contact-page .header .nav-button,
+body.contact-page .site-header .nav-button{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+  border:1px solid rgba(47,56,43,.18) !important;
+}
+body.contact-page .send-button{
+  background:var(--brand-beige) !important;
+  color:var(--brand-dark-green) !important;
+  border:1px solid rgba(47,56,43,.12) !important;
+  box-shadow:0 12px 28px rgba(47,56,43,.12) !important;
+}
+body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
+
+/* Contact: smooth chair image fade into left text */
+.contact-hero{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr) !important;
+  background:linear-gradient(90deg,var(--brand-deep-green) 0%,var(--brand-dark-green) 52%,var(--brand-deep-green) 100%) !important;
+  overflow:hidden !important;
+}
+.contact-hero-copy{
+  position:relative !important;
+  z-index:2 !important;
+  background:linear-gradient(90deg,var(--brand-deep-green) 0%,var(--brand-dark-green) 82%,rgba(47,56,43,.88) 100%) !important;
+}
+.contact-hero-copy::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-170px;
+  width:190px;
+  height:100%;
+  background:linear-gradient(90deg,rgba(47,56,43,.88) 0%,rgba(47,56,43,.42) 55%,rgba(47,56,43,0) 100%);
+  pointer-events:none;
+}
+.contact-hero-visual{
+  background:url("assets/contact-chair-hero.png") center/cover no-repeat !important;
+  position:relative !important;
+  filter:saturate(.95) contrast(1.04) !important;
+}
+.contact-hero-visual::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(90deg,rgba(47,56,43,.9) 0%,rgba(47,56,43,.54) 24%,rgba(47,56,43,.20) 52%,rgba(47,56,43,.04) 78%) !important;
+  opacity:1 !important;
+}
+
+/* Contact: restore polished other-ways cards */
+.contact-side{
+  background:linear-gradient(180deg,var(--brand-dark-green),var(--brand-deep-green)) !important;
+  color:var(--brand-cream) !important;
+}
+.contact-side h2{color:var(--brand-cream) !important;}
+.contact-side-rule{background:var(--brand-gold) !important;}
+.contact-methods{display:grid !important;gap:14px !important;}
+.contact-method{
+  display:grid !important;
+  grid-template-columns:48px 1fr !important;
+  align-items:center !important;
+  gap:16px !important;
+  background:rgba(248,243,234,.08) !important;
+  border:1px solid rgba(216,203,183,.18) !important;
+  border-radius:20px !important;
+  padding:16px 18px !important;
+  box-shadow:none !important;
+}
+.contact-method h3{color:var(--brand-beige) !important;margin:0 0 4px !important;}
+.contact-method a,.contact-method p{color:var(--brand-cream) !important;margin:0 !important;text-decoration:none !important;}
+.contact-method .method-icon,
+.organization-card .organization-icon{
+  width:48px !important;
+  height:48px !important;
+  background:var(--brand-beige) !important;
+  color:var(--brand-dark-green) !important;
+  border-radius:50% !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.organization-card{
+  background:rgba(216,203,183,.12) !important;
+  border:1px solid rgba(216,203,183,.18) !important;
+  border-radius:24px !important;
+  padding:24px !important;
+  color:var(--brand-cream) !important;
+}
+.organization-card h3{color:var(--brand-beige) !important;}
+.organization-card p,.organization-card a{color:var(--brand-cream) !important;}
+
+/* Contact: expectation icons centered above text */
+.response-grid article{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:center !important;
+  gap:0 !important;
+}
+.response-grid article .response-icon{
+  margin:0 auto 16px !important;
+  width:52px !important;
+  height:52px !important;
+  border-radius:50% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:var(--brand-beige) !important;
+  color:var(--brand-dark-green) !important;
+}
+.response-grid article h3,
+.response-grid article p{
+  grid-column:auto !important;
+  width:100% !important;
+}
+.response-grid article h3{margin:0 0 10px !important;}
+.response-grid article p{margin:0 !important;}
+
+/* Booking: top-right Contact button */
+.booking-page .booking-top-button,
+.booking-page .header .nav-button,
+.booking-page .site-header .nav-button{
+  background:var(--brand-dark-green) !important;
+  color:var(--brand-cream) !important;
+  border:1px solid rgba(47,56,43,.18) !important;
+}
+.booking-page .booking-top-button:hover{background:var(--brand-olive) !important;}
+
+@media (max-width:820px){
+  .contact-hero{grid-template-columns:1fr !important;}
+  .contact-hero-copy::after,.embedded-companies-hero .companies-copy::after{display:none !important;}
+  .contact-method{grid-template-columns:44px 1fr !important;}
+}
