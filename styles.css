@@ -6030,3 +6030,104 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     white-space:normal !important;
   }
 }
+
+
+/* ===== FINAL PATCH: reference-style Work With Me company image + restored home hero logo ===== */
+.hero-mark{
+  filter:drop-shadow(0 1px 8px rgba(0,0,0,.25)) !important;
+  opacity:1 !important;
+}
+
+/* Home hero AP mark now uses the cream logo asset; keep it visually consistent with the hero text. */
+.hero-panel .hero-mark{
+  width:104px !important;
+}
+
+/* Use the provided For Companies reference image crop inside Work With Me and make the join almost invisible. */
+.embedded-companies-hero{
+  grid-template-columns:minmax(0, 1fr) minmax(430px, 1fr) !important;
+  min-height:500px !important;
+  background:#20281C !important;
+  overflow:hidden !important;
+}
+.embedded-companies-hero .companies-copy{
+  position:relative !important;
+  z-index:3 !important;
+  background:linear-gradient(90deg,#20281C 0%,#20281C 58%,rgba(32,40,28,.97) 78%,rgba(32,40,28,.90) 100%) !important;
+}
+.embedded-companies-hero .companies-copy::after{
+  content:"" !important;
+  position:absolute !important;
+  top:0 !important;
+  right:-520px !important;
+  width:620px !important;
+  height:100% !important;
+  background:linear-gradient(90deg,
+    rgba(32,40,28,.98) 0%,
+    rgba(32,40,28,.90) 26%,
+    rgba(32,40,28,.68) 48%,
+    rgba(32,40,28,.36) 68%,
+    rgba(32,40,28,.12) 84%,
+    rgba(32,40,28,0) 100%) !important;
+  pointer-events:none !important;
+  z-index:4 !important;
+}
+.embedded-companies-hero .companies-visual{
+  position:relative !important;
+  margin-left:-220px !important;
+  padding-left:220px !important;
+  min-height:500px !important;
+  background:url("assets/work-companies-hero-reference.png") center center/cover no-repeat !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+.embedded-companies-hero .companies-visual::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(90deg,
+    rgba(32,40,28,.82) 0%,
+    rgba(32,40,28,.56) 18%,
+    rgba(32,40,28,.28) 38%,
+    rgba(32,40,28,.08) 62%,
+    rgba(32,40,28,0) 82%) !important;
+  pointer-events:none !important;
+}
+.embedded-companies-hero .companies-photo-overlay{
+  display:none !important;
+}
+
+/* Keep the two pathway buttons aligned and force the organization button onto one centered line. */
+.pathway-card .dark-green-button{
+  width:320px !important;
+  max-width:100% !important;
+  white-space:nowrap !important;
+  text-align:center !important;
+}
+.company-pathway .pathway-meta{
+  min-height:70px !important;
+}
+.company-pathway .pathway-meta span{
+  max-width:260px !important;
+}
+
+@media (max-width:900px){
+  .embedded-companies-hero{
+    grid-template-columns:1fr !important;
+  }
+  .embedded-companies-hero .companies-copy::after{
+    display:none !important;
+  }
+  .embedded-companies-hero .companies-visual{
+    margin-left:0 !important;
+    padding-left:0 !important;
+    min-height:320px !important;
+  }
+  .embedded-companies-hero .companies-visual::before{
+    background:linear-gradient(180deg,rgba(32,40,28,.28) 0%,rgba(32,40,28,.08) 42%,rgba(32,40,28,0) 100%) !important;
+  }
+  .pathway-card .dark-green-button{
+    width:min(100%,320px) !important;
+    white-space:normal !important;
+  }
+}
