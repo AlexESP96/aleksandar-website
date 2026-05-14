@@ -6131,3 +6131,95 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     white-space:normal !important;
   }
 }
+
+/* ===== FINAL USER PATCH: new home hero photo, softer company image, uniform who-I-work-with cards ===== */
+.hero-image{
+  background-image:linear-gradient(rgba(0,0,0,.03),rgba(0,0,0,.10)),url('assets/hero-window-laptop.png') !important;
+  background-position:center center !important;
+}
+.hero-panel .hero-mark{
+  content:url('assets/ap-mark-beige.png') !important;
+  filter:drop-shadow(0 1px 8px rgba(0,0,0,.20)) !important;
+}
+
+/* Make the Work With Me embedded company visual closer to the supplied reference, with a softer blend. */
+.embedded-companies-hero .companies-visual{
+  background:url("assets/work-companies-hero-reference.png") center center/cover no-repeat !important;
+}
+.embedded-companies-hero .companies-copy::after{
+  right:-600px !important;
+  width:720px !important;
+  background:linear-gradient(90deg,
+    rgba(32,40,28,1) 0%,
+    rgba(32,40,28,.96) 22%,
+    rgba(32,40,28,.78) 44%,
+    rgba(32,40,28,.48) 63%,
+    rgba(32,40,28,.20) 82%,
+    rgba(32,40,28,0) 100%) !important;
+}
+.embedded-companies-hero .companies-visual::before{
+  background:linear-gradient(90deg,
+    rgba(32,40,28,.92) 0%,
+    rgba(32,40,28,.72) 16%,
+    rgba(32,40,28,.46) 34%,
+    rgba(32,40,28,.20) 56%,
+    rgba(32,40,28,.06) 76%,
+    rgba(32,40,28,0) 100%) !important;
+}
+
+/* Who I Work With: equal card rhythm, cleaner bullets, beige CTA. */
+.audience-grid{
+  align-items:stretch !important;
+}
+.audience-grid article{
+  display:flex !important;
+  flex-direction:column !important;
+  min-height:390px !important;
+}
+.audience-grid article p{
+  min-height:92px !important;
+}
+.audience-grid article ul{
+  margin-top:auto !important;
+  display:grid !important;
+  gap:10px !important;
+}
+.audience-grid article li{
+  line-height:1.35 !important;
+}
+.cta-beige{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 26px;
+  border-radius:999px;
+  background:#D8CBB7;
+  color:#20281C;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(32,40,28,.12);
+  transition:transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.cta-beige:hover{
+  transform:translateY(-2px);
+  background:#9B8558;
+  color:#F8F3EA;
+  box-shadow:0 14px 28px rgba(32,40,28,.16);
+}
+@media (max-width:900px){
+  .audience-grid article,
+  .audience-grid article p{
+    min-height:0 !important;
+  }
+}
+@media (max-width:620px){
+  .hero-image{
+    background-position:center top !important;
+    min-height:420px !important;
+  }
+  .cta-beige{
+    width:100%;
+    max-width:320px;
+  }
+}
