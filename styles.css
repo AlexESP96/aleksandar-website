@@ -6464,3 +6464,171 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     font-size:30px;
   }
 }
+
+/* ===== MAY 18 FOLLOW-UP: Work hero image, green treatment, mobile header/nav fixes ===== */
+.work-page .combined-work-hero{
+  display:grid !important;
+  grid-template-columns:minmax(360px,48%) minmax(420px,52%) !important;
+  min-height:520px !important;
+  background:linear-gradient(135deg,#20281C 0%,#2F382B 58%,#59613D 100%) !important;
+  color:#F8F3EA !important;
+  overflow:hidden !important;
+}
+.work-page .combined-work-hero .work-photo{
+  display:block !important;
+  min-height:520px !important;
+  background:
+    linear-gradient(90deg,rgba(32,40,28,.05) 0%,rgba(32,40,28,.05) 54%,rgba(32,40,28,.55) 82%,#2F382B 100%),
+    linear-gradient(0deg,rgba(32,40,28,.16),rgba(32,40,28,.03)),
+    url('assets/work-support-portrait.png') center center/cover no-repeat !important;
+  opacity:1 !important;
+}
+.work-page .combined-work-hero .work-copy{
+  max-width:760px !important;
+  margin:0 !important;
+  padding:86px 7vw 86px 6vw !important;
+  text-align:left !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  background:
+    radial-gradient(circle at 18% 22%,rgba(216,203,183,.12),transparent 34%),
+    linear-gradient(90deg,rgba(47,56,43,.90),rgba(32,40,28,.98)) !important;
+  color:#F8F3EA !important;
+}
+.work-page .combined-work-hero .eyebrow,
+.work-page .combined-work-hero h1,
+.work-page .combined-work-hero p{
+  color:#F8F3EA !important;
+}
+.work-page .combined-work-hero .work-intro{
+  color:rgba(248,243,234,.84) !important;
+  max-width:650px !important;
+}
+.work-page .combined-work-hero .small-rule{
+  background:#D8CBB7 !important;
+  margin-left:0 !important;
+}
+
+/* Work With Me desktop header: keep nav, language switch, and CTA in one clean row. */
+.work-page .work-header{
+  grid-template-columns:auto minmax(430px,1fr) auto auto !important;
+  gap:20px !important;
+  align-items:center !important;
+}
+.work-page .work-header .nav{
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  justify-content:center !important;
+  gap:24px !important;
+  white-space:nowrap !important;
+  min-width:0 !important;
+}
+.work-page .work-header .language-switch{
+  justify-self:center !important;
+  margin:0 !important;
+}
+.work-page .work-header .work-top-button{
+  justify-self:end !important;
+  white-space:nowrap !important;
+}
+
+/* Home pillar underlines: complete and consistent with the main centered line. */
+.pillar h3::after{
+  width:70px !important;
+  min-width:70px !important;
+  height:1px !important;
+  background:#D8CBB7 !important;
+  opacity:.88 !important;
+}
+
+/* Mobile: keep header nav in one row instead of wrapping Contact below. */
+@media (max-width:1050px){
+  .header .nav,
+  .site-header .nav,
+  .work-header .nav,
+  .contact-header .nav,
+  .booking-header .nav,
+  .legal-header .nav,
+  .companies-page-header .nav{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:18px !important;
+    white-space:nowrap !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    scrollbar-width:none !important;
+    padding:0 4px 2px !important;
+    font-size:13px !important;
+  }
+  .header .nav::-webkit-scrollbar,
+  .site-header .nav::-webkit-scrollbar,
+  .work-header .nav::-webkit-scrollbar,
+  .contact-header .nav::-webkit-scrollbar,
+  .booking-header .nav::-webkit-scrollbar,
+  .legal-header .nav::-webkit-scrollbar,
+  .companies-page-header .nav::-webkit-scrollbar{display:none !important;}
+
+  .work-page .work-header,
+  .header,.site-header,.contact-header,.booking-header,.legal-header,.companies-page-header{
+    justify-items:center !important;
+    text-align:center !important;
+  }
+  .language-switch,
+  .work-page .work-header .language-switch,
+  .work-page .header .language-switch{
+    justify-self:center !important;
+    align-self:center !important;
+    margin:0 auto !important;
+    width:auto !important;
+    transform:none !important;
+  }
+
+  .work-page .combined-work-hero{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+  }
+  .work-page .combined-work-hero .work-photo{
+    min-height:390px !important;
+    background:
+      linear-gradient(0deg,#2F382B 0%,rgba(47,56,43,.46) 18%,rgba(47,56,43,.03) 55%),
+      url('assets/work-support-portrait.png') center center/cover no-repeat !important;
+  }
+  .work-page .combined-work-hero .work-copy{
+    text-align:center !important;
+    align-items:center !important;
+    padding:58px 7vw 60px !important;
+    background:linear-gradient(180deg,#2F382B,#20281C) !important;
+  }
+  .work-page .combined-work-hero .small-rule{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
+
+@media (max-width:620px){
+  .header .nav,
+  .site-header .nav,
+  .work-header .nav,
+  .contact-header .nav,
+  .booking-header .nav,
+  .legal-header .nav,
+  .companies-page-header .nav{
+    gap:13px !important;
+    font-size:12px !important;
+    justify-content:flex-start !important;
+  }
+  .pillar h3::after{
+    width:70px !important;
+    min-width:70px !important;
+    margin:10px auto 0 !important;
+  }
+  .work-page .combined-work-hero .work-photo{
+    min-height:340px !important;
+    background-position:center top !important;
+  }
+}
