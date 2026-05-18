@@ -6632,3 +6632,86 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     background-position:center top !important;
   }
 }
+
+/* ===== MAY 18 DESKTOP WORK HERO + HEADER SPACING FIX ===== */
+@media (min-width: 901px){
+  .work-page .work-header,
+  .site-header.work-header{
+    display:grid !important;
+    grid-template-columns:minmax(270px,auto) 1fr auto auto !important;
+    column-gap:38px !important;
+    align-items:center !important;
+    padding-left:48px !important;
+    padding-right:42px !important;
+  }
+
+  .work-page .work-header .nav,
+  .site-header.work-header .nav{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:42px !important;
+    white-space:nowrap !important;
+    width:100% !important;
+  }
+
+  .work-page .work-header .language-switch,
+  .site-header.work-header .language-switch{
+    justify-self:end !important;
+    margin-left:12px !important;
+  }
+
+  .work-page .work-header .nav-button,
+  .site-header.work-header .nav-button{
+    justify-self:end !important;
+    margin-left:0 !important;
+  }
+
+  .work-page .combined-work-hero{
+    grid-template-columns:48% 52% !important;
+    background:#20281C !important;
+  }
+
+  .work-page .combined-work-hero .work-copy{
+    width:100% !important;
+    max-width:none !important;
+    min-height:520px !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+    padding:86px clamp(70px,7vw,128px) 86px clamp(72px,7vw,122px) !important;
+    background:
+      radial-gradient(circle at 20% 22%,rgba(216,203,183,.12),transparent 34%),
+      linear-gradient(90deg,rgba(47,56,43,.96) 0%,#20281C 72%,#20281C 100%) !important;
+  }
+
+  .work-page .combined-work-hero .work-copy::after{
+    display:none !important;
+    content:none !important;
+  }
+}
+
+/* keep mobile nav in one horizontal row instead of wrapping Contact below */
+@media (max-width:900px){
+  .header .nav,
+  .site-header .nav,
+  .work-header .nav,
+  .contact-header .nav,
+  .booking-header .nav,
+  .legal-header .nav{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    justify-content:flex-start !important;
+    gap:22px !important;
+    padding:4px max(18px,calc((100vw - 100%) / 2)) 6px !important;
+    scrollbar-width:none !important;
+  }
+  .header .nav::-webkit-scrollbar,
+  .site-header .nav::-webkit-scrollbar,
+  .work-header .nav::-webkit-scrollbar,
+  .contact-header .nav::-webkit-scrollbar,
+  .booking-header .nav::-webkit-scrollbar,
+  .legal-header .nav::-webkit-scrollbar{
+    display:none !important;
+  }
+}
