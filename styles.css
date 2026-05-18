@@ -6223,3 +6223,29 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     max-width:320px;
   }
 }
+
+
+/* Portrait refresh: May 2026 */
+.hero-image{
+  background-image:linear-gradient(rgba(0,0,0,.02),rgba(0,0,0,.08)),url('assets/home-hero-new.jpg') !important;
+  background-position:56% center !important;
+  background-size:cover !important;
+}
+.about-hero-image{
+  background:linear-gradient(90deg,rgba(47,56,43,.08),rgba(248,243,234,.06)),url('assets/about-portrait-new.jpg') center center/cover no-repeat !important;
+}
+.contact-hero-visual{
+  background:linear-gradient(90deg,#182217 0%,rgba(24,34,23,.62) 18%,rgba(24,34,23,.10) 46%,rgba(24,34,23,0) 100%),radial-gradient(circle at 70% 58%,rgba(246,239,230,.14),transparent 26%),url('assets/contact-reflective-new.jpg') center center/cover no-repeat !important;
+  filter:saturate(.86) brightness(.82) !important;
+}
+.who-hero{
+  background:linear-gradient(90deg,rgba(248,243,234,.96),rgba(248,243,234,.84)),url('assets/olive-portrait-new.jpg') right center/auto 100% no-repeat;
+}
+@media (max-width:1050px){
+  .hero-image{background-position:56% center !important;}
+  .who-hero{background-image:linear-gradient(90deg,rgba(248,243,234,.98),rgba(248,243,234,.94)),url('assets/olive-portrait-new.jpg');background-size:cover;background-position:center;}
+}
+@media (max-width:620px){
+  .hero-image{min-height:430px;background-position:58% center !important;}
+  .about-hero-image,.contact-hero-visual{min-height:360px;background-position:center top !important;}
+}
