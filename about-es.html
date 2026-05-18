@@ -123,5 +123,15 @@
       </div>
     </footer>
   </main>
+
+<div class="construction-modal" role="dialog" aria-modal="true" aria-labelledby="construction-title-es">
+  <div class="construction-card">
+    <button class="construction-close" type="button" aria-label="Cerrar">×</button>
+    <p class="section-kicker">Aviso</p>
+    <h2 id="construction-title-es">Esta versión todavía está en construcción.</h2>
+    <p>La página en español se está terminando y puede contener textos o ajustes pendientes. La versión en inglés es la más actualizada por ahora.</p>
+  </div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
 </body>
 </html>

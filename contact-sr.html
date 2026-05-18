@@ -149,5 +149,15 @@
     </footer>
   </div>
 
+
+<div class="construction-modal" role="dialog" aria-modal="true" aria-labelledby="construction-title-sr">
+  <div class="construction-card">
+    <button class="construction-close" type="button" aria-label="Zatvori">×</button>
+    <p class="section-kicker">Obaveštenje</p>
+    <h2 id="construction-title-sr">Ova verzija je još u izradi.</h2>
+    <p>Stranica na srpskom se još završava i može sadržati privremene tekstove ili detalje koje treba doraditi. Engleska verzija je trenutno najpotpunija.</p>
+  </div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
 </body>
 </html>
