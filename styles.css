@@ -7471,3 +7471,173 @@ button:focus-visible{
     padding: 30px 20px 36px !important;
   }
 }
+
+
+/* =========================================================
+   ABOUT PAGE FINAL LAYOUT FIX
+   Compact hero, clean header section, balanced page flow.
+   ========================================================= */
+
+.about-page .about-hero-compact-final{
+  display:grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  align-items:stretch !important;
+  min-height:390px !important;
+  max-height:430px !important;
+  padding:0 !important;
+  gap:0 !important;
+  overflow:hidden !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-image{
+  min-height:390px !important;
+  max-height:430px !important;
+  height:100% !important;
+  background-size:cover !important;
+  background-position:center center !important;
+  border-radius:0 !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-copy{
+  min-height:390px !important;
+  max-height:430px !important;
+  padding:clamp(36px, 4vw, 64px) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-copy h1{
+  font-size:clamp(2.25rem, 3.8vw, 4.15rem) !important;
+  line-height:1.02 !important;
+  max-width:680px !important;
+  margin:0 0 18px !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-copy p{
+  font-size:1rem !important;
+  line-height:1.72 !important;
+  max-width:620px !important;
+  margin:0 !important;
+}
+
+.about-page .about-hero-compact-final .short-rule{
+  margin:0 0 22px !important;
+}
+
+.about-intro-panel{
+  padding:clamp(52px, 7vw, 86px) clamp(24px, 6vw, 86px) !important;
+  background:linear-gradient(180deg, #F8F3EA 0%, rgba(216,203,183,.24) 100%) !important;
+  text-align:center !important;
+}
+
+.about-intro-panel .centered-heading{
+  margin-bottom:26px !important;
+}
+
+.about-intro-panel h2{
+  max-width:780px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.about-intro-text{
+  max-width:860px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:18px !important;
+}
+
+.about-intro-text p{
+  margin:0 !important;
+  color:rgba(47,56,43,.82) !important;
+  font-size:1.03rem !important;
+  line-height:1.82 !important;
+}
+
+.about-cred-tight{
+  padding-top:34px !important;
+  padding-bottom:34px !important;
+}
+
+.about-story-polished{
+  padding-top:clamp(58px, 7vw, 92px) !important;
+}
+
+.about-story-polished .about-section-heading{
+  gap:12px !important;
+}
+
+.about-story-polished .section-intro{
+  margin-top:4px !important;
+}
+
+.about-foundation-section,
+.about-final-cta{
+  margin-top:clamp(42px, 6vw, 76px) !important;
+}
+
+.about-final-cta{
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) auto !important;
+  gap:32px !important;
+  align-items:center !important;
+}
+
+@media (max-width: 900px){
+  .about-page .about-hero-compact-final{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+    max-height:none !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-image{
+    min-height:280px !important;
+    max-height:320px !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy{
+    min-height:auto !important;
+    max-height:none !important;
+    padding:34px 24px 42px !important;
+    text-align:center !important;
+    align-items:center !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy h1{
+    font-size:clamp(2.1rem, 9vw, 3.4rem) !important;
+    max-width:100% !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy p{
+    max-width:100% !important;
+  }
+
+  .about-intro-panel{
+    padding:44px 22px !important;
+  }
+
+  .about-intro-text p{
+    font-size:.98rem !important;
+    line-height:1.76 !important;
+  }
+
+  .about-final-cta{
+    grid-template-columns:1fr !important;
+    text-align:center !important;
+    justify-items:center !important;
+  }
+}
+
+@media (max-width: 520px){
+  .about-page .about-hero-compact-final .about-hero-image{
+    min-height:240px !important;
+    max-height:270px !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy{
+    padding:30px 20px 36px !important;
+  }
+}
