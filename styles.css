@@ -7189,3 +7189,75 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     font-size: clamp(2rem, 9vw, 3.2rem) !important;
   }
 }
+
+
+/* FINAL RESTORE: About hero back to previous full balanced layout */
+.about-page .about-hero{
+  grid-template-columns: 1fr 1fr !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: auto !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.about-page .about-hero-image{
+  height: auto !important;
+  min-height: 620px !important;
+  max-height: none !important;
+  align-self: stretch !important;
+  border-radius: 0 !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.about-page .about-hero-copy{
+  min-height: 620px !important;
+  max-width: none !important;
+  padding: clamp(52px, 6vw, 92px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.about-page .about-hero-copy h1{
+  font-size: clamp(3.1rem, 5.6vw, 5.8rem) !important;
+  line-height: 0.98 !important;
+  max-width: 820px !important;
+  margin-bottom: 28px !important;
+}
+
+.about-page .about-hero-copy p{
+  font-size: 1rem !important;
+  line-height: 1.82 !important;
+  max-width: 720px !important;
+}
+
+@media (max-width: 900px){
+  .about-page .about-hero{
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-page .about-hero-image{
+    min-height: 360px !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+  }
+
+  .about-page .about-hero-copy{
+    min-height: auto !important;
+    padding: 42px 24px 52px !important;
+  }
+
+  .about-page .about-hero-copy h1{
+    font-size: clamp(2.35rem, 11vw, 4rem) !important;
+    max-width: 100% !important;
+  }
+
+  .about-page .about-hero-copy p{
+    max-width: 100% !important;
+  }
+}
