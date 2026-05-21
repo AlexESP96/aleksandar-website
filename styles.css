@@ -7641,3 +7641,163 @@ button:focus-visible{
     padding:30px 20px 36px !important;
   }
 }
+
+
+/* =========================================================
+   GLOBAL HEADER HOVER FIX + ABOUT POLISH
+   ========================================================= */
+
+/* Reset broken underline behaviour globally */
+.nav a::after,
+.site-header .nav a::after,
+.companies-top-nav a::after{
+  display:none !important;
+  content:none !important;
+}
+
+.nav a,
+.site-header .nav a,
+.companies-top-nav a{
+  position:relative !important;
+  border-bottom:1px solid transparent !important;
+  padding-bottom:7px !important;
+  text-decoration:none !important;
+  transition:color .22s ease, border-color .22s ease, opacity .22s ease !important;
+}
+
+.nav a:hover,
+.site-header .nav a:hover,
+.companies-top-nav a:hover{
+  transform:none !important;
+  color:#59613D !important;
+  border-bottom-color:rgba(155,133,88,.72) !important;
+}
+
+.nav a.active,
+.site-header .nav a.active,
+.companies-top-nav a.active{
+  border-bottom-color:#9B8558 !important;
+}
+
+/* About hero: keep photo size, make right copy smaller/cleaner */
+.about-page .about-hero-compact-final .about-hero-copy{
+  padding:clamp(30px, 3.5vw, 52px) !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-copy h1{
+  font-size:clamp(2rem, 3.2vw, 3.55rem) !important;
+  line-height:1.04 !important;
+  max-width:580px !important;
+  margin-bottom:16px !important;
+}
+
+.about-page .about-hero-compact-final .about-hero-copy p{
+  font-size:.96rem !important;
+  line-height:1.68 !important;
+  max-width:560px !important;
+}
+
+.about-page .about-hero-compact-final .eyebrow{
+  color:#D8CBB7 !important;
+  letter-spacing:.22em !important;
+}
+
+/* Human grounded approach: premium olive block */
+.about-intro-panel{
+  background:linear-gradient(135deg, #20281C 0%, #2F382B 58%, #59613D 100%) !important;
+  color:#F8F3EA !important;
+  padding:clamp(56px, 7vw, 92px) clamp(24px, 6vw, 90px) !important;
+  border-top:1px solid rgba(216,203,183,.22) !important;
+  border-bottom:1px solid rgba(216,203,183,.22) !important;
+}
+
+.about-intro-panel .eyebrow{
+  color:#D8CBB7 !important;
+}
+
+.about-intro-panel h2{
+  color:#F8F3EA !important;
+  font-size:clamp(2rem, 4vw, 3.75rem) !important;
+  line-height:1.04 !important;
+}
+
+.about-intro-text{
+  max-width:900px !important;
+  gap:20px !important;
+}
+
+.about-intro-text p{
+  color:rgba(248,243,234,.88) !important;
+  font-size:1.04rem !important;
+  line-height:1.86 !important;
+}
+
+/* Smooth transition back into light sections */
+.about-cred-tight{
+  background:#F8F3EA !important;
+  border-bottom:1px solid rgba(47,56,43,.10) !important;
+}
+
+.about-story-polished{
+  background:#F8F3EA !important;
+  padding-top:clamp(64px, 7vw, 96px) !important;
+  padding-bottom:clamp(64px, 7vw, 96px) !important;
+  gap:clamp(34px, 5vw, 72px) !important;
+}
+
+.about-story-polished .about-section-heading{
+  background:rgba(216,203,183,.22) !important;
+  border:1px solid rgba(155,133,88,.22) !important;
+  border-radius:24px !important;
+  padding:clamp(28px, 4vw, 42px) !important;
+}
+
+.about-story-polished .about-section-heading h2{
+  margin:0 !important;
+}
+
+.about-story-polished .section-intro{
+  color:rgba(47,56,43,.74) !important;
+}
+
+.about-story-text{
+  background:#fffaf2 !important;
+  border:1px solid rgba(155,133,88,.20) !important;
+  border-radius:24px !important;
+  padding:clamp(28px, 4vw, 44px) !important;
+  box-shadow:0 22px 48px rgba(32,40,28,.08) !important;
+}
+
+.about-story-text p{
+  line-height:1.82 !important;
+}
+
+.about-link-row{
+  margin-top:28px !important;
+}
+
+@media (max-width:900px){
+  .nav a,
+  .site-header .nav a,
+  .companies-top-nav a{
+    padding-bottom:5px !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy{
+    padding:30px 22px 36px !important;
+  }
+
+  .about-page .about-hero-compact-final .about-hero-copy h1{
+    font-size:clamp(2rem, 9vw, 3.2rem) !important;
+    max-width:100% !important;
+  }
+
+  .about-intro-panel{
+    padding:48px 22px !important;
+  }
+
+  .about-story-polished .about-section-heading,
+  .about-story-text{
+    padding:26px 22px !important;
+  }
+}
