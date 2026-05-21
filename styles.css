@@ -6983,3 +6983,40 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     text-align:left;
   }
 }
+
+
+/* Native English polish + slightly smaller About hero */
+.about-page .about-hero{
+  min-height:72vh !important;
+  padding-top:64px !important;
+  padding-bottom:64px !important;
+}
+
+.about-page .about-hero-image{
+  min-height:520px !important;
+}
+
+.about-page .about-hero-copy h1{
+  font-size:clamp(2.8rem, 5vw, 4.8rem) !important;
+  max-width:760px !important;
+}
+
+.about-page .about-hero-copy p{
+  max-width:760px;
+}
+
+@media (max-width: 820px){
+  .about-page .about-hero{
+    min-height:auto !important;
+    padding-top:48px !important;
+    padding-bottom:48px !important;
+  }
+
+  .about-page .about-hero-image{
+    min-height:340px !important;
+  }
+
+  .about-page .about-hero-copy h1{
+    font-size:clamp(2.2rem, 10vw, 3.6rem) !important;
+  }
+}
