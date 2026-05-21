@@ -6869,3 +6869,117 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
   .about-page .fit-section{ text-align:center; }
   .about-page .about-hero-copy h1{ font-size: clamp(2.35rem, 11vw, 4rem); }
 }
+
+
+/* Warm About + Who I Work With refinement */
+.about-section-heading{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.about-section-heading .section-intro{
+  color:rgba(47,56,43,.78);
+  font-size:1.02rem;
+  line-height:1.75;
+  margin:0;
+  max-width:620px;
+}
+.centered-heading{
+  align-items:center;
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 34px;
+}
+.centered-heading .section-intro{
+  margin-left:auto;
+  margin-right:auto;
+}
+.about-story-polished{
+  align-items:start;
+}
+.about-foundation-section{
+  text-align:center;
+}
+.about-foundation-section .testimonial-grid article{
+  text-align:left;
+}
+.about-final-cta{
+  align-items:center;
+}
+.about-final-cta h2{
+  max-width:720px;
+}
+.about-link-row{
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.audience-grid-warmer article{
+  display:flex;
+  flex-direction:column;
+}
+.audience-grid-warmer article p{
+  min-height:96px;
+}
+.audience-grid-warmer article ul{
+  margin-top:auto;
+}
+.who-fit-polished{
+  align-items:center;
+}
+
+@media (max-width: 900px){
+  .about-story-polished{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+  .about-section-heading,
+  .about-section-heading .section-intro{
+    text-align:center;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .about-story-text{
+    text-align:left;
+  }
+  .about-final-cta,
+  .who-fit-polished{
+    text-align:center;
+  }
+  .about-foundation-section .testimonial-grid article{
+    text-align:center;
+  }
+  .audience-grid-warmer article{
+    text-align:center;
+    align-items:center;
+  }
+  .audience-grid-warmer article p{
+    min-height:auto;
+  }
+  .audience-grid-warmer article ul{
+    text-align:left;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media (max-width: 520px){
+  .about-page .about-hero-copy p,
+  .who-page .who-hero p{
+    font-size:.98rem !important;
+    line-height:1.72 !important;
+  }
+  .about-page .about-hero-copy h1,
+  .who-page .who-hero h1{
+    font-size:clamp(2.25rem, 11vw, 3.5rem) !important;
+  }
+  .cred-strip div span{
+    max-width:220px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .about-story-text{
+    text-align:left;
+  }
+}
