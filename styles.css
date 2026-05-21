@@ -7020,3 +7020,100 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     font-size:clamp(2.2rem, 10vw, 3.6rem) !important;
   }
 }
+
+
+/* Smaller About hero + simplified Who I Work With */
+.about-page .about-hero{
+  min-height:58vh !important;
+  padding-top:40px !important;
+  padding-bottom:40px !important;
+  gap:40px !important;
+  align-items:center !important;
+}
+
+.about-page .about-hero-image{
+  min-height:420px !important;
+  max-height:500px !important;
+}
+
+.about-page .about-hero-copy{
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+
+.about-page .about-hero-copy h1{
+  font-size:clamp(2.5rem, 4.5vw, 4.2rem) !important;
+  line-height:1.04 !important;
+  max-width:680px !important;
+  margin-bottom:18px !important;
+}
+
+.about-page .about-hero-copy p{
+  max-width:680px !important;
+  line-height:1.78 !important;
+}
+
+.audience-grid-two{
+  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  gap:34px !important;
+}
+
+.audience-grid-two article{
+  display:flex !important;
+  flex-direction:column !important;
+  padding:42px !important;
+}
+
+.audience-grid-two article p{
+  min-height:120px !important;
+}
+
+.audience-grid-two article ul{
+  margin-top:auto !important;
+}
+
+@media (max-width: 900px){
+
+  .about-page .about-hero{
+    min-height:auto !important;
+    gap:24px !important;
+    padding-top:28px !important;
+    padding-bottom:32px !important;
+  }
+
+  .about-page .about-hero-image{
+    min-height:280px !important;
+    max-height:320px !important;
+  }
+
+  .about-page .about-hero-copy h1{
+    font-size:clamp(2rem, 9vw, 3.4rem) !important;
+    max-width:100% !important;
+  }
+
+  .about-page .about-hero-copy p{
+    max-width:100% !important;
+  }
+
+  .audience-grid-two{
+    grid-template-columns:1fr !important;
+    gap:22px !important;
+  }
+
+  .audience-grid-two article{
+    padding:30px 24px !important;
+    text-align:center !important;
+    align-items:center !important;
+  }
+
+  .audience-grid-two article p{
+    min-height:auto !important;
+  }
+
+  .audience-grid-two article ul{
+    text-align:left !important;
+    width:fit-content !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
