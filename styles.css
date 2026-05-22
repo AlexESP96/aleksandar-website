@@ -7192,3 +7192,92 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     font-size:0.95rem !important;
   }
 }
+
+
+/* FINAL ABOUT HERO FIT FIX
+   Full width preserved. Hero is slightly taller, text is smaller, and clipping is removed. */
+.about-page .about-hero{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  transform:none !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  align-items:stretch !important;
+  gap:0 !important;
+  min-height:525px !important;
+  max-height:none !important;
+  overflow:visible !important;
+}
+
+.about-page .about-hero-image{
+  min-height:525px !important;
+  height:auto !important;
+  max-height:none !important;
+  align-self:stretch !important;
+  background-size:cover !important;
+  background-position:center center !important;
+}
+
+.about-page .about-hero-copy{
+  min-height:525px !important;
+  height:auto !important;
+  max-height:none !important;
+  padding:38px 50px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  overflow:visible !important;
+}
+
+.about-page .about-hero-copy h1{
+  font-size:clamp(2.15rem, 3.35vw, 3.65rem) !important;
+  line-height:1.06 !important;
+  max-width:620px !important;
+  margin:0 0 18px !important;
+  letter-spacing:-0.015em !important;
+}
+
+.about-page .about-hero-copy .short-rule{
+  margin:0 0 18px !important;
+}
+
+.about-page .about-hero-copy p{
+  font-size:0.9rem !important;
+  line-height:1.55 !important;
+  max-width:620px !important;
+  margin:0 0 11px !important;
+}
+
+.about-page .about-hero-copy p:last-child{
+  margin-bottom:0 !important;
+}
+
+@media (max-width:900px){
+  .about-page .about-hero{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+  }
+
+  .about-page .about-hero-image{
+    min-height:300px !important;
+  }
+
+  .about-page .about-hero-copy{
+    min-height:auto !important;
+    padding:32px 24px 38px !important;
+    text-align:center !important;
+    align-items:center !important;
+  }
+
+  .about-page .about-hero-copy h1{
+    font-size:clamp(2rem, 8.5vw, 3.1rem) !important;
+    max-width:100% !important;
+  }
+
+  .about-page .about-hero-copy p{
+    font-size:0.95rem !important;
+    line-height:1.66 !important;
+    max-width:100% !important;
+  }
+}
