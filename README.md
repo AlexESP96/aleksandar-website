@@ -19,3 +19,6 @@ Update 2026-05-13:
 - First blog post is now a separate clickable, indexable page: blog-workplace-inclusion-wellbeing.html.
 - Added APA 7 reference to the first blog post.
 - Added SEO metadata, Open Graph/Twitter metadata, JSON-LD structured data, robots.txt, and sitemap.xml.
+
+
+Credibility upgrade added: media/public work page, speaking/workshops page, collaboration PDF, updated positioning, methodology, trust indicators, and pricing removed from public pages.
