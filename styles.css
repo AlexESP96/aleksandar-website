@@ -7418,3 +7418,36 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
 @media (max-width:900px){
   .statement-grid,.counselling-place-project,.external-links{grid-template-columns:1fr;}
 }
+
+
+/* V9 counselling project cleanup */
+.counselling-place-project{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:start;
+}
+.project-feedback{
+  background:#fffaf2;
+  border:1px solid rgba(47,56,43,.12);
+  border-radius:22px;
+  padding:26px;
+}
+.project-feedback h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.8rem;
+  line-height:1.05;
+  margin:0 0 18px;
+  color:#2f382b;
+}
+.project-feedback article{
+  padding:14px 0;
+  border-top:1px solid rgba(47,56,43,.12);
+  line-height:1.55;
+  color:rgba(47,56,43,.78);
+}
+.project-feedback article:first-of-type{border-top:0;}
+.project-copy a{color:#2f382b;font-weight:600;}
+@media (max-width:900px){
+  .counselling-place-project{grid-template-columns:1fr;}
+}
