@@ -7431,3 +7431,40 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
     height:240px !important;
   }
 }
+
+
+/* Home correction pass */
+.hero-inner{max-width:620px;}
+.hero-subcopy{font-size:16px;line-height:1.62;max-width:520px;margin:0 auto;color:rgba(246,239,230,.86);}
+.collab-strip{align-items:center!important;}
+.collab-strip .primary-button,.collab-strip .dark-green-button,.collab-strip a[href*="contact"]{margin-top:0!important;flex:0 0 auto;align-self:center;}
+.footer-main{align-items:flex-start;}
+.footer-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.footer-nav a{display:inline-flex;align-items:center;line-height:1.2;}
+.footer-contact-icons{display:flex;align-items:flex-start;gap:14px;flex-direction:column;}
+@media(max-width:1000px){
+  .collab-strip{display:flex!important;flex-direction:column;text-align:center;align-items:center!important;}
+  .collab-strip p{margin-left:auto;margin-right:auto;}
+  .collab-strip .primary-button,.collab-strip .dark-green-button,.collab-strip a[href*="contact"]{margin-top:18px!important;}
+}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr!important;height:auto!important;}
+  .hero-image{min-height:360px!important;}
+  .hero-panel{min-height:auto!important;padding:46px 22px!important;overflow:visible!important;}
+  .hero-mark{width:86px!important;margin-bottom:10px!important;}
+  .hero-name{font-size:28px!important;}
+  .hero-role{font-size:10px!important;letter-spacing:.28em!important;}
+  .headline{font-size:38px!important;line-height:1.02!important;margin-bottom:18px!important;}
+  .hero-subcopy{font-size:15px!important;}
+  .home-proof-strip,.cards,.media-preview-grid,.testimonial-grid-long{grid-template-columns:1fr!important;}
+  .service-card,.home-proof-strip article{border-right:0!important;border-bottom:1px solid rgba(30,30,26,.10);}
+  .footer-main{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;gap:24px!important;}
+  .footer-nav{justify-content:center!important;gap:16px!important;}
+  .footer-contact-icons{align-items:center!important;}
+  .footer-bottom{text-align:center!important;}
+}
+@media(max-width:420px){
+  .headline{font-size:34px!important;}
+  .hero-panel{padding:40px 18px!important;}
+  .collab-strip h2{font-size:2rem!important;}
+}
