@@ -7393,3 +7393,41 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
   .callout-image-stack img{height:240px}
   .callout-image-stack img:nth-child(2){margin-top:0}
 }
+
+
+/* Final home/testimonial/language corrections */
+.language-flags{
+  gap:7px !important;
+  padding:6px 8px !important;
+}
+.language-flags a{
+  font-size:17px !important;
+  line-height:1 !important;
+  text-decoration:none !important;
+  padding:6px 7px !important;
+  border-radius:999px !important;
+}
+.language-flags a.lang-active{
+  background:rgba(155,133,88,.18) !important;
+}
+.media-preview-two{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  max-width:920px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.media-preview-two figure img{
+  height:300px !important;
+  object-fit:cover !important;
+}
+.testimonial-grid-long article p{
+  text-align:left;
+}
+@media (max-width:760px){
+  .media-preview-two{
+    grid-template-columns:1fr !important;
+  }
+  .media-preview-two figure img{
+    height:240px !important;
+  }
+}
