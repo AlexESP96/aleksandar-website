@@ -38,7 +38,7 @@
 <article><strong>Zasnovano na istraživanju</strong><span>Doktorsko istraživanje iz psihologije usmereno na dobrobit i rad.</span></article>
 </section>
 <section class="method-section reveal">
-<div><p class="eyebrow">How I work</p><h2>Psychological support that is emotionally grounded and practical.</h2></div>
+<div><p class="eyebrow">How I work</p><h2>Psihološka podrška sa emocionalnom dubinom i praktičnim pristupom.</h2></div>
 <div class="method-grid">
 <article><h3>Start with what feels difficult</h3><p>We slow things down enough to understand what you are carrying and how it is affecting daily life.</p></article>
 <article><h3>Understand the context</h3><p>Stress is explored in relation to work, relationships, identity, responsibility, and the environments people live in.</p></article>
@@ -112,5 +112,43 @@
 </footer>
 </main>
 <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body>
 </html>

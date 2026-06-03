@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Blog | Aleksandar Plavsic</title><meta content="Artículos y reflexiones sobre psicología, trabajo, bienestar e inclusión." name="description"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="styles.css" rel="stylesheet"/>
-<link href="https://aleksandarplavsic.com/blog-es.html" rel="canonical">
-<meta content="index, follow, max-image-preview:large" name="robots"/></link></head><body class="blog-page"><main class="site-shell"><header class="header"><a aria-label="Aleksandar Plavsic home" class="brand" href="index-es.html"><span class="brand-name">Aleksandar Plavsic</span><span class="brand-role">Psicólogo</span></a><nav aria-label="Main navigation" class="nav">
+<link href="https://aleksandarplavsic.com/blog-es.html" rel="canonical"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/></head><body class="blog-page"><main class="site-shell"><header class="header"><a aria-label="Aleksandar Plavsic home" class="brand" href="index-es.html"><span class="brand-name">Aleksandar Plavsic</span><span class="brand-role">Psicólogo</span></a><nav aria-label="Main navigation" class="nav">
 <a href="index-es.html">Inicio</a>
 <a href="about-es.html">Sobre mí</a>
 <a href="work-with-me-es.html">Trabaja conmigo</a>
@@ -18,4 +18,42 @@
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body></html>

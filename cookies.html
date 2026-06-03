@@ -10,9 +10,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
-<link href="https://aleksandarplavsic.com/cookies.html" rel="canonical">
+<link href="https://aleksandarplavsic.com/cookies.html" rel="canonical"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
-</link></head>
+</head>
 <body class="legal-page">
 <div class="page-shell">
 <header class="header">
@@ -81,5 +81,43 @@
 </div>
 </footer>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body>
 </html>

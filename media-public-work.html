@@ -33,7 +33,6 @@
 <div class="short-rule centered"></div>
 <p>Selected previous work includes media appearances, interviews, public discussions, community initiatives, and conversations connected to mental health awareness, burnout prevention, work stress, wellbeing, and psychological support.</p>
 </section>
-
 <section class="media-gallery reveal">
 <figure><img alt="Aleksandar Plavsic on N1 television" src="assets/media-n1-studio.jpg"/><figcaption><strong>N1 television</strong><span>CNN affiliate for the Western Balkans. Discussion related to mental health, stress, burnout, and public wellbeing.</span></figcaption></figure>
 <figure><img alt="Aleksandar Plavsic at Press Center" src="assets/media-press-conference.jpg"/><figcaption><strong>Public discussion</strong><span>Participation in public conversations connected to mental health, work stress, burnout prevention, and support systems.</span></figcaption></figure>
@@ -74,5 +73,43 @@
 </footer>
 </main>
 <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body>
 </html>

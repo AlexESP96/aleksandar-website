@@ -37,7 +37,7 @@
 <h1>Let’s start a<br/>conversation.</h1>
 <div class="contact-rule"></div>
 <p>Whether you are an individual seeking support, a clinic exploring collaboration, or an organization looking to build mentally healthier workplaces, I am open to a conversation.</p>
-<p>Reach out and we can explore how to work together.</p>
+<p>Javi se i možemo istražiti kako možemo sarađivati.</p>
 </div>
 <div aria-hidden="true" class="contact-hero-visual"></div>
 </section>
@@ -132,5 +132,43 @@
 </div>
 </footer>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body>
 </html>

@@ -29,7 +29,7 @@
 <a class="nav-button" href="work-with-me.html">Book a session <span aria-hidden="true">↗</span></a>
 </header>
 <section class="blog-hero reveal"><p class="eyebrow">Blog</p><h1>Resources for psychology, work, and wellbeing.</h1><div class="short-rule centered-rule"></div><p>Articles, public work, collaboration resources, and reflections on pressure, burnout, emotional wellbeing, and healthier organizations.</p></section>
-<section aria-label="Blog articles" class="blog-menu-section reveal"><div class="blog-menu-head"><p class="section-kicker">Articles</p><h2>Recent and upcoming articles.</h2><p>Short, practical reflections based on psychology research and professional experience.</p></div><div class="blog-card-grid"><a class="blog-index-card featured-blog-card" href="blog-workplace-inclusion-wellbeing.html"><span class="blog-category">Research overview</span><h3>What helps people feel included and well at work?</h3><p>Based on a co-authored Social Sciences article on organizational context, inclusion, basic psychological needs, and wellbeing at work.</p><small>Read article ↗</small></a><article class="blog-index-card coming-soon"><span class="blog-category">Coming soon</span><h3>What gets in the way of inclusion at work?</h3><p>A future article on the family, social, and workplace factors that shape access to meaningful work and genuine inclusion.</p></article><article class="blog-index-card coming-soon"><span class="blog-category">Coming soon</span><h3>How leadership shapes autonomy and workplace attitudes</h3><p>A future article on how inclusive leadership, autonomy, and everyday team dynamics can influence openness to working with different people.</p></article><a class="blog-index-card" href="media-public-work.html"><span class="blog-category">Public work</span><h3>Media appearances and public mental health initiatives</h3><p>Selected discussions, interviews, and initiatives connected to emotional wellbeing, suicide prevention, and psychological support.</p><small>View public work ↗</small></a><a class="blog-index-card" href="speaking-workshops.html"><span class="blog-category">Workshops</span><h3>Psychological wellbeing under pressure</h3><p>Workshop and speaking themes for organizations, clinics, coworkings, and professional communities.</p><small>Explore topics ↗</small></a></div></section>
+<section aria-label="Blog articles" class="blog-menu-section reveal"><div class="blog-menu-head"><p class="section-kicker">Articles</p><h2>Recent and upcoming articles.</h2><p>Short, practical reflections based on psychology research and professional experience.</p></div><div class="blog-card-grid"><a class="blog-index-card featured-blog-card" href="blog-workplace-inclusion-wellbeing.html"><span class="blog-category">Research overview</span><h3>What helps people feel included and well at work?</h3><p>Based on a co-authored Social Sciences article on organizational context, inclusion, basic psychological needs, and wellbeing at work.</p><small>Read article ↗</small></a><article class="blog-index-card coming-soon"><h3>What gets in the way of inclusion at work?</h3><p>A future article on the family, social, and workplace factors that shape access to meaningful work and genuine inclusion.</p></article><article class="blog-index-card coming-soon"><h3>How leadership shapes autonomy and workplace attitudes</h3><p>A future article on how inclusive leadership, autonomy, and everyday team dynamics can influence openness to working with different people.</p></article><a class="blog-index-card" href="media-public-work.html"><span class="blog-category">Public work</span><h3>Media appearances and public mental health initiatives</h3><p>Selected discussions, interviews, and initiatives connected to emotional wellbeing, suicide prevention, and psychological support.</p><small>View public work ↗</small></a><a class="blog-index-card" href="speaking-workshops.html"><span class="blog-category">Workshops</span><h3>Psychological wellbeing under pressure</h3><p>Workshop and speaking themes for organizations, clinics, coworkings, and professional communities.</p><small>Explore topics ↗</small></a></div></section>
 <footer class="footer unified-footer">
 <div class="footer-main">
 <div class="footer-slogan"><span class="psi">Ψ</span><span>Science-based.<br/>Practical. Human.</span></div>
@@ -52,5 +52,43 @@
 </div>
 </footer>
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const current = document.documentElement.lang || 'en';
+  localStorage.setItem('siteLang', current);
+
+  document.querySelectorAll('.language-switch a').forEach(a => {
+    a.addEventListener('click', function() {
+      const href = this.getAttribute('href');
+      if (href.includes('-es')) localStorage.setItem('siteLang','es');
+      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
+      else localStorage.setItem('siteLang','en');
+    });
+  });
+
+  const lang = localStorage.getItem('siteLang');
+  if (!lang) return;
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+    if (lang === 'es') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-es.html'));
+      }
+    } else if (lang === 'sr') {
+      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
+        a.setAttribute('href', href.replace('.html', '-sr.html'));
+      }
+    } else {
+      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
+    }
+  });
+
+  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
+});
+</script>
 </body>
 </html>
