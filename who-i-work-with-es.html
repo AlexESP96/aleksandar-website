@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Who I Work With | Aleksandar Plavsic</title>
+<title>Con quién trabajo | Aleksandar Plavsic</title>
 <meta content="Who Aleksandar Plavsic works with: professionals, individuals, leaders, and organizations." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -16,7 +16,7 @@
 <body class="who-page">
 <main class="site-shell">
 <header class="header">
-<a aria-label="Aleksandar Plavsic home" class="brand" href="index.html">
+<a aria-label="Aleksandar Plavsic home" class="brand" href="index-es.html">
 <span class="brand-name">Aleksandar Plavsic</span>
 <span class="brand-role">Psicólogo</span>
 </a>
@@ -27,20 +27,20 @@
 <a href="blog-es.html">Blog</a>
 <a href="contact-es.html">Contacto</a>
 </nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a href="who-i-work-with.html" title="English">🇺🇸</a><a class="lang-active" href="who-i-work-with-es.html" title="Español">🇪🇸</a><a href="who-i-work-with-sr.html" title="Srpski">🇷🇸</a></div>
-<a class="nav-button" href="work-with-me.html">Book a session <span aria-hidden="true">↗</span></a>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" href="who-i-work-with-es.html">🇺🇸</a><a aria-label="Español" class="lang-active" href="who-i-work-with-es.html">🇪🇸</a><a aria-label="Srpski" href="who-i-work-with-es.html">🇷🇸</a></div>
+<a class="nav-button" href="work-with-me-es.html">Reservar sesión <span aria-hidden="true">↗</span></a>
 </header>
 <section class="who-hero reveal">
-<p class="eyebrow">Who I Work With</p>
-<h1>Support for people and teams navigating pressure, change, and demanding environments.</h1>
+<p class="eyebrow">Con quién trabajo</p>
+<h1>Apoyo para personas y equipos que atraviesan presión, cambio y entornos exigentes.</h1>
 <div class="short-rule centered"></div>
-<p>I work with individuals, professionals, leaders, and organizations looking for psychologically informed support that is practical, structured, and human.</p>
+<p>Trabajo con personas, profesionales, líderes y organizaciones que buscan apoyo psicológico práctico, estructurado y humano.</p>
 </section>
 <section class="audience-grid reveal">
 <article>
 <h2>Individuals</h2>
-<p>For people who want to understand their emotions, manage pressure, improve decision-making, and build healthier habits.</p>
-<ul><li>Stress and overwhelm</li><li>Emotional clarity</li><li>Personal transitions</li><li>Confidence and self-understanding</li></ul>
+<p>Para personas que quieren entender sus emociones, gestionar la presión, mejorar la toma de decisiones y construir hábitos más sanos.</p>
+<ul><li>Estrés y sobrecarga</li><li>Emotional clarity</li><li>Personal transitions</li><li>Confianza y autoconocimiento</li></ul>
 </article>
 <article>
 <h2>Professionals</h2>
@@ -63,7 +63,7 @@
 <h2>This may be a good fit if you want...</h2>
 <p>clearer thinking, better emotional awareness, more sustainable routines, and support that connects wellbeing with real-life work and personal demands.</p>
 </div>
-<a class="cta-dark" href="work-with-me.html">Explore ways to work together ↗</a>
+<a class="cta-dark" href="work-with-me-es.html">Explore ways to work together ↗</a>
 </section>
 <section class="not-fit-section reveal">
 <h2>When another form of support may be better</h2>
@@ -86,7 +86,7 @@
 </div>
 <div class="footer-bottom">
 <p>© 2026 Aleksandar Plavsic. Todos los derechos reservados.</p>
-<p><a href="faq.html">FAQ</a> <span>|</span> <a href="terms.html">Términos y condiciones</a> <span>|</span> <a href="privacy.html">Privacidad y RGPD</a> <span>|</span> <a href="cookies.html">Política de cookies</a></p>
+<p><a href="faq-es.html">FAQ</a> <span>|</span> <a href="terms-es.html">Términos y condiciones</a> <span>|</span> <a href="privacy-es.html">Privacidad y RGPD</a> <span>|</span> <a href="cookies-es.html">Política de cookies</a></p>
 </div>
 </footer>
 </main>
@@ -99,43 +99,5 @@
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>

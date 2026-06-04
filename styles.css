@@ -7613,3 +7613,97 @@ body{background:#f8f3ea!important;}
   .work-copy-centered h1{font-size:38px!important;}
   .uniform-reference-grid{grid-template-columns:1fr!important;}
 }
+
+
+/* V12 requested fixes */
+.selected-experience-strip{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+.selected-experience-strip div{
+  min-height:132px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.selected-experience-strip strong{
+  min-height:40px;
+}
+.beige-button{
+  background:#d8cbb7!important;
+  color:#202719!important;
+  border:1px solid rgba(32,39,25,.18)!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.10);
+}
+.pdf-download-button{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  min-width:220px;
+  line-height:1.2!important;
+}
+.workshop-themes .pdf-download-button,
+.workshop-themes a[href$=".pdf"]{
+  display:flex!important;
+  width:max-content!important;
+  margin:32px auto 0!important;
+}
+.work-copy-centered{
+  text-align:center!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.work-copy-centered .eyebrow,
+.work-copy-centered h1,
+.work-copy-centered .work-intro{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+@media(max-width:1100px){
+  .site-shell{width:100%!important;max-width:none!important;}
+  .header{gap:18px!important;padding-left:24px!important;padding-right:24px!important;}
+  .nav{gap:24px!important;}
+  .selected-experience-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .footer-main{grid-template-columns:1fr!important;text-align:center!important;gap:22px!important;}
+  .footer-nav{flex-wrap:wrap!important;justify-content:center!important;gap:22px!important;}
+  .footer-slogan,.footer-contact,.socials{margin-left:auto!important;margin-right:auto!important;justify-content:center!important;}
+}
+@media(max-width:760px){
+  body{overflow-x:hidden!important;}
+  .site-shell{width:100%!important;max-width:none!important;}
+  .header{height:auto!important;flex-direction:column!important;padding:18px!important;}
+  .brand-name{font-size:21px!important;}
+  .nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:14px!important;}
+  .nav a{font-size:13px!important;}
+  .nav-button{height:auto!important;min-height:42px!important;padding:10px 18px!important;}
+  .language-switch{order:3;}
+  .hero,.about-hero,.work-hero,.companies-hero,.public-proof-callout,.method-section,.about-story,.counselling-place-project{
+    grid-template-columns:1fr!important;
+  }
+  .hero-image,.about-hero-image,.work-photo,.companies-visual{min-height:320px!important;}
+  .hero-panel,.about-hero-copy,.work-copy,.companies-copy{
+    padding:42px 22px!important;
+    min-height:auto!important;
+  }
+  .headline,.about-hero-copy h1,.work-copy h1,.media-hero h1{
+    font-size:clamp(34px,10vw,44px)!important;
+    line-height:1.08!important;
+  }
+  .home-proof-strip,.cred-strip,.selected-experience-strip,.cards,.media-gallery,.media-preview-grid,.theme-grid,.statement-grid,.external-link-grid,.uniform-reference-grid{
+    grid-template-columns:1fr!important;
+  }
+  .home-proof-strip article,.cred-strip div,.selected-experience-strip div{
+    text-align:center!important;
+    border-right:0!important;
+    border-bottom:1px solid rgba(47,56,43,.12)!important;
+    min-height:auto!important;
+  }
+  .service-card{border-right:0!important;border-bottom:1px solid rgba(30,30,26,.12)!important;}
+  .collab-strip{display:flex!important;flex-direction:column!important;text-align:center!important;}
+  .footer-main{padding:28px 20px!important;}
+  .footer-bottom{flex-direction:column!important;gap:8px!important;text-align:center!important;}
+}

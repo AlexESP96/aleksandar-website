@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Terms &amp; Conditions for Aleksandar Plavsic psychology and workplace wellbeing services." name="description"/>
-<title>Terms &amp; Conditions</title>
+<title>Uslovi korišćenja</title>
 <link href="styles.css" rel="stylesheet"/>
 <link href="https://aleksandarplavsic.com/terms-sr.html" rel="canonical"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
@@ -13,7 +13,7 @@
 <body class="legal-page">
 <div class="page-shell">
 <header class="site-header legal-header">
-<a class="brand" href="index.html">
+<a class="brand" href="index-sr.html">
 <span class="brand-name">ALEKSANDAR PLAVSIC</span>
 <span class="brand-subtitle">PSYCHOLOGIST</span>
 </a>
@@ -24,28 +24,28 @@
 <a href="blog-sr.html">Blog</a>
 <a href="contact-sr.html">Kontakt</a>
 </nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a href="terms.html" title="English">🇺🇸</a><a href="terms-es.html" title="Español">🇪🇸</a><a class="lang-active" href="terms-sr.html" title="Srpski">🇷🇸</a></div>
-<a class="nav-button legal-top-button" href="contact.html">Kontakt ↗</a>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" href="terms-sr.html">🇺🇸</a><a aria-label="Español" href="terms-sr.html">🇪🇸</a><a aria-label="Srpski" class="lang-active" href="terms-sr.html">🇷🇸</a></div>
+<a class="nav-button legal-top-button" href="contact-sr.html">Kontakt ↗</a>
 </header>
 <main class="legal-main">
 <section class="legal-hero">
-<p class="legal-eyebrow">TERMS &amp; CONDITIONS</p>
-<h1>Professional terms and policies.</h1>
-<p>Important information regarding sessions, cancellations, communication, and use of this website.</p>
+<p class="legal-eyebrow">USLOVI KORIŠĆENJA</p>
+<h1>Profesionalni uslovi i pravila.</h1>
+<p>Važne informacije o sesijama, otkazivanjima, komunikaciji i korišćenju ovog sajta.</p>
 </section>
 <section class="legal-content">
-<article><h2>Services</h2><p>Services may include individual sessions, workshops, wellbeing support, leadership support, and consulting services.</p></article>
-<article><h2>Pricing</h2><p>Fees are confirmed before booking depending on the format, setting, and type of support. Organizational workshops and collaborations are scoped individually.</p></article>
-<article><h2>Cancellation policy</h2><p>Sessions may be canceled or rescheduled with at least 24 hours notice. Late cancellations or missed sessions may be charged in full.</p></article>
+<article><h2>Services</h2><p>Usluge mogu uključivati individualne sesije, radionice, podršku dobrobiti, podršku liderima i konsultantske usluge.</p></article>
+<article><h2>Pricing</h2><p>Cene se potvrđuju pre zakazivanja, u zavisnosti od formata, okruženja i vrste podrške. Organizacione radionice i saradnje se definišu pojedinačno.</p></article>
+<article><h2>Cancellation policy</h2><p>Sesije se mogu otkazati ili pomeriti najmanje 24 sata unapred. Kasna otkazivanja ili propuštene sesije mogu biti naplaćene u celosti.</p></article>
 <article><h2>Communication</h2><p>Responses are generally provided within one business day.</p></article>
 <article><h2>Confidentiality</h2><p>Information shared during sessions is treated confidentially, subject to applicable legal obligations.</p></article>
-<article><h2>Privacy &amp; GDPR</h2><p>Personal data is processed in accordance with applicable privacy laws and GDPR. Please review the <a href="privacy.html">Privatnost i GDPR</a>.</p></article>
+<article><h2>Privatnost i GDPR</h2><p>Personal data is processed in accordance with applicable privacy laws and GDPR. Please review the <a href="privacy-sr.html">Privatnost i GDPR</a>.</p></article>
 </section>
 </main>
 <footer class="footer">
 <div class="footer-bottom">
 <p>© 2026 Aleksandar Plavsic. Sva prava zadržana.</p>
-<p><a href="faq.html">FAQ</a> <span>|</span> <a href="terms.html">Uslovi korišćenja</a> <span>|</span> <a href="privacy.html">Privatnost i GDPR</a> <span>|</span> <a href="cookies.html">Politika kolačića</a></p>
+<p><a href="faq-sr.html">FAQ</a> <span>|</span> <a href="terms-sr.html">Uslovi korišćenja</a> <span>|</span> <a href="privacy-sr.html">Privatnost i GDPR</a> <span>|</span> <a href="cookies-sr.html">Politika kolačića</a></p>
 </div>
 </footer>
 </div>
@@ -58,43 +58,5 @@
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>

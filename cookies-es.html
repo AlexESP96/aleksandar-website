@@ -16,7 +16,7 @@
 <body class="legal-page">
 <div class="page-shell">
 <header class="site-header legal-header">
-<a aria-label="Aleksandar Plavsic home" class="brand" href="index.html">
+<a aria-label="Aleksandar Plavsic home" class="brand" href="index-es.html">
 <span class="brand-name">ALEKSANDAR PLAVSIC</span>
 <span class="brand-subtitle">PSYCHOLOGIST</span>
 </a>
@@ -27,26 +27,26 @@
 <a href="blog-es.html">Blog</a>
 <a href="contact-es.html">Contacto</a>
 </nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a href="cookies.html" title="English">🇺🇸</a><a class="lang-active" href="cookies-es.html" title="Español">🇪🇸</a><a href="cookies-sr.html" title="Srpski">🇷🇸</a></div>
-<a class="nav-button legal-top-button" href="contact.html">Contacto <span aria-hidden="true">↗</span></a>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" href="cookies-es.html">🇺🇸</a><a aria-label="Español" class="lang-active" href="cookies-es.html">🇪🇸</a><a aria-label="Srpski" href="cookies-es.html">🇷🇸</a></div>
+<a class="nav-button legal-top-button" href="contact-es.html">Contacto <span aria-hidden="true">↗</span></a>
 </header>
 <main class="legal-main">
 <section class="legal-hero">
 <p class="legal-eyebrow">COOKIE POLICY</p>
-<h1>How cookies are used.</h1>
-<p>This page explains what cookies are and how they may be used on this website.</p>
+<h1>Cómo se utilizan las cookies.</h1>
+<p>Esta página explica qué son las cookies y cómo pueden utilizarse en este sitio web.</p>
 </section>
 <section class="legal-content">
 <article>
-<h2>1. What are cookies?</h2>
-<p>Cookies are small text files stored on your device when you visit a website. They help websites function, remember preferences, and understand how visitors use the site.</p>
+<h2>1. ¿Qué son las cookies?</h2>
+<p>Las cookies son pequeños archivos de texto que se guardan en tu dispositivo cuando visitas una web. Ayudan a que el sitio funcione, recuerde preferencias y entienda cómo se utiliza.</p>
 </article>
 <article>
-<h2>2. Types of cookies this website may use</h2>
+<h2>2. Tipos de cookies que puede utilizar este sitio web</h2>
 <ul>
-<li>Strictly necessary cookies: used for core website functionality and security.</li>
-<li>Preference cookies: used to remember choices such as display or consent preferences.</li>
-<li>Analytics cookies: used only if analytics tools are enabled, to understand general website usage.</li>
+<li>Cookies estrictamente necesarias: se utilizan para el funcionamiento básico y la seguridad del sitio.</li>
+<li>Cookies de preferencias: se utilizan para recordar elecciones como visualización o consentimiento.</li>
+<li>Cookies analíticas: se usan solo si las herramientas de análisis están activadas, para entender el uso general del sitio.</li>
 <li>Third-party cookies: may be set by embedded services such as booking, payment, or analytics providers if those tools are added.</li>
 </ul>
 </article>
@@ -71,7 +71,7 @@
 <footer class="footer">
 <div class="footer-bottom">
 <p>© 2026 Aleksandar Plavsic. Todos los derechos reservados.</p>
-<p><a href="faq.html">FAQ</a> <span>|</span> <a href="terms.html">Términos y condiciones</a> <span>|</span> <a href="privacy.html">Privacidad y RGPD</a> <span>|</span> <a href="cookies.html">Política de cookies</a></p>
+<p><a href="faq-es.html">FAQ</a> <span>|</span> <a href="terms-es.html">Términos y condiciones</a> <span>|</span> <a href="privacy-es.html">Privacidad y RGPD</a> <span>|</span> <a href="cookies-es.html">Política de cookies</a></p>
 </div>
 </footer>
 </div>
@@ -84,43 +84,5 @@
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>

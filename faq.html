@@ -27,7 +27,7 @@
 <header class="header">
 <a aria-label="Aleksandar Plavsic home" class="brand" href="index.html"><span class="brand-name">Aleksandar Plavsic</span><span class="brand-role">Psychologist</span></a>
 <nav aria-label="Main navigation" class="nav"><a class="active" href="index.html">Home</a><a class="" href="about.html">About</a><a class="" href="work-with-me.html">Work With Me</a><a class="" href="speaking-workshops.html">Workshops</a><a class="" href="blog.html">Resources</a><a class="" href="contact.html">Contact</a></nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a class="lang-active" href="faq.html" title="English">🇺🇸</a><a href="faq-es.html" title="Español">🇪🇸</a><a href="faq-sr.html" title="Srpski">🇷🇸</a></div>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" class="lang-active" href="faq.html">🇺🇸</a><a aria-label="Español" href="faq.html">🇪🇸</a><a aria-label="Srpski" href="faq.html">🇷🇸</a></div>
 <a class="nav-button" href="work-with-me.html">Book a session <span aria-hidden="true">↗</span></a>
 </header>
 <section class="faq-page-hero reveal">
@@ -79,43 +79,5 @@
 </div>
 </footer>
 </main>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>

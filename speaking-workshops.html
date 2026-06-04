@@ -24,7 +24,7 @@
 <header class="header">
 <a aria-label="Aleksandar Plavsic home" class="brand" href="index.html"><span class="brand-name">Aleksandar Plavsic</span><span class="brand-role">Psychologist</span></a>
 <nav aria-label="Main navigation" class="nav"><a class="" href="index.html">Home</a><a class="" href="about.html">About</a><a class="" href="work-with-me.html">Work With Me</a><a class="active" href="speaking-workshops.html">Workshops</a><a class="" href="blog.html">Resources</a><a class="" href="contact.html">Contact</a></nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" class="lang-active" href="speaking-workshops.html">🇺🇸</a><a aria-label="Español" href="speaking-workshops-es.html">🇪🇸</a><a aria-label="Srpski" href="speaking-workshops-sr.html">🇷🇸</a></div>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" class="lang-active" href="speaking-workshops.html">🇺🇸</a><a aria-label="Español" href="speaking-workshops.html">🇪🇸</a><a aria-label="Srpski" href="speaking-workshops.html">🇷🇸</a></div>
 <a class="nav-button" href="work-with-me.html">Book a session <span aria-hidden="true">↗</span></a>
 </header>
 <section class="media-hero workshop-hero reveal">
@@ -47,7 +47,7 @@
 <article><h3>Communication under stress</h3><p>How pressure changes conversations, conflict, trust, and emotional safety in groups.</p></article>
 <article><h3>Psychological sustainability</h3><p>Building work patterns that support performance without disconnecting from wellbeing.</p></article>
 </div>
-<a class="cta-beige pdf-download-button centered-link" href="workplace-wellbeing-collaboration-deck.pdf">Download brochure ↗</a>
+<a class="cta-beige beige-button pdf-download-button centered-link" href="workplace-wellbeing-collaboration-deck.pdf">Download brochure ↗</a>
 </section>
 <section class="public-proof-callout reveal">
 <div><p class="eyebrow">Why this works</p><h2>Emotional depth meets professional reality.</h2><p>The sessions are not generic wellness talks. They connect psychological insight with the real pressure people experience in work, leadership, responsibility, uncertainty, identity, and demanding environments.</p></div>
@@ -88,43 +88,5 @@
 </footer>
 </main>
 <script src="script.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>

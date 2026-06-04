@@ -16,7 +16,7 @@
 <body class="legal-page">
 <div class="page-shell">
 <header class="site-header legal-header">
-<a aria-label="Aleksandar Plavsic home" class="brand" href="index.html">
+<a aria-label="Aleksandar Plavsic home" class="brand" href="index-sr.html">
 <span class="brand-name">ALEKSANDAR PLAVSIC</span>
 <span class="brand-subtitle">PSYCHOLOGIST</span>
 </a>
@@ -27,19 +27,19 @@
 <a href="blog-sr.html">Blog</a>
 <a href="contact-sr.html">Kontakt</a>
 </nav>
-<div aria-label="Language switcher" class="language-switch language-flags"><a href="privacy.html" title="English">🇺🇸</a><a href="privacy-es.html" title="Español">🇪🇸</a><a class="lang-active" href="privacy-sr.html" title="Srpski">🇷🇸</a></div>
-<a class="nav-button legal-top-button" href="contact.html">Kontakt <span aria-hidden="true">↗</span></a>
+<div aria-label="Language switcher" class="language-switch language-flags"><a aria-label="English" href="privacy-sr.html">🇺🇸</a><a aria-label="Español" href="privacy-sr.html">🇪🇸</a><a aria-label="Srpski" class="lang-active" href="privacy-sr.html">🇷🇸</a></div>
+<a class="nav-button legal-top-button" href="contact-sr.html">Kontakt <span aria-hidden="true">↗</span></a>
 </header>
 <main class="legal-main">
 <section class="legal-hero">
-<p class="legal-eyebrow">PRIVACY &amp; GDPR</p>
+<p class="legal-eyebrow">PRIVATNOST I GDPR</p>
 <h1>How your data is handled.</h1>
-<p>This page explains how personal data is collected, used, protected, and retained when you contact me or use this website.</p>
+<p>Ova stranica objašnjava kako se lični podaci prikupljaju, koriste, štite i čuvaju kada me kontaktiraš ili koristiš ovaj sajt.</p>
 </section>
 <section class="legal-content">
 <article>
 <h2>1. Data controller</h2>
-<p>The data controller is Aleksandar Plavsic. You can contact me at <a href="mailto:info@aleksandarplavsic.com">info@aleksandarplavsic.com</a>.</p>
+<p>Rukovalac podacima je Aleksandar Plavsic. Možeš me kontaktirati na <a href="mailto:info@aleksandarplavsic.com">info@aleksandarplavsic.com</a>.</p>
 </article>
 <article>
 <h2>2. Personal data collected</h2>
@@ -87,7 +87,7 @@
 <footer class="footer">
 <div class="footer-bottom">
 <p>© 2026 Aleksandar Plavsic. Sva prava zadržana.</p>
-<p><a href="faq.html">FAQ</a> <span>|</span> <a href="terms.html">Uslovi korišćenja</a> <span>|</span> <a href="privacy.html">Privatnost i GDPR</a> <span>|</span> <a href="cookies.html">Politika kolačića</a></p>
+<p><a href="faq-sr.html">FAQ</a> <span>|</span> <a href="terms-sr.html">Uslovi korišćenja</a> <span>|</span> <a href="privacy-sr.html">Privatnost i GDPR</a> <span>|</span> <a href="cookies-sr.html">Politika kolačića</a></p>
 </div>
 </footer>
 </div>
@@ -100,43 +100,5 @@
 </div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){var m=document.querySelector('.construction-modal');var b=document.querySelector('.construction-close');if(!m||!b)return; b.addEventListener('click',function(){m.classList.add('is-hidden');}); m.addEventListener('click',function(e){if(e.target===m)m.classList.add('is-hidden');});});</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const current = document.documentElement.lang || 'en';
-  localStorage.setItem('siteLang', current);
-
-  document.querySelectorAll('.language-switch a').forEach(a => {
-    a.addEventListener('click', function() {
-      const href = this.getAttribute('href');
-      if (href.includes('-es')) localStorage.setItem('siteLang','es');
-      else if (href.includes('-sr')) localStorage.setItem('siteLang','sr');
-      else localStorage.setItem('siteLang','en');
-    });
-  });
-
-  const lang = localStorage.getItem('siteLang');
-  if (!lang) return;
-
-  document.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('#')) return;
-
-    if (lang === 'es') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-es.html'));
-      }
-    } else if (lang === 'sr') {
-      if (href.endsWith('.html') && !href.includes('-es') && !href.includes('-sr')) {
-        a.setAttribute('href', href.replace('.html', '-sr.html'));
-      }
-    } else {
-      a.setAttribute('href', href.replace('-es.html','.html').replace('-sr.html','.html'));
-    }
-  });
-
-  document.querySelectorAll('.construction-banner,.under-construction,.lang-coming-soon').forEach(el=>el.remove());
-});
-</script>
 </body>
 </html>
