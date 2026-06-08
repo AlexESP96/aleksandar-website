@@ -7845,3 +7845,147 @@ a.nav-button{
     margin-top:18px!important;
   }
 }
+
+
+/* V15 global button repair */
+a.nav-button,
+a.primary-button,
+a.secondary-button,
+a.dark-green-button,
+a.beige-button,
+a.booking-button,
+a.companies-cta,
+a.cta-beige,
+a.centered-link,
+a.pdf-download-button,
+button,
+input[type="submit"]{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  gap:8px !important;
+  min-height:48px !important;
+  padding:0 24px !important;
+  border-radius:999px !important;
+  text-decoration:none !important;
+  line-height:1.15 !important;
+  font-weight:600 !important;
+  font-size:14px !important;
+  letter-spacing:0 !important;
+  white-space:nowrap !important;
+  width:auto !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+a.nav-button,
+a.dark-green-button,
+a.companies-cta{
+  background:#202719 !important;
+  color:#f8f3ea !important;
+  border:1px solid rgba(248,243,234,.18) !important;
+  box-shadow:0 12px 28px rgba(32,39,25,.18) !important;
+}
+
+a.primary-button,
+a.beige-button,
+a.booking-button,
+a.cta-beige,
+a.pdf-download-button,
+a.centered-link{
+  background:#d8cbb7 !important;
+  color:#202719 !important;
+  border:1px solid rgba(32,39,25,.18) !important;
+  box-shadow:0 12px 28px rgba(32,39,25,.12) !important;
+}
+
+a.secondary-button{
+  background:transparent !important;
+  color:inherit !important;
+  border:1px solid currentColor !important;
+}
+
+a.nav-button:hover,
+a.primary-button:hover,
+a.secondary-button:hover,
+a.dark-green-button:hover,
+a.beige-button:hover,
+a.booking-button:hover,
+a.companies-cta:hover,
+a.cta-beige:hover,
+a.centered-link:hover,
+a.pdf-download-button:hover{
+  transform:translateY(-1px) !important;
+  opacity:.94 !important;
+}
+
+.pathway-card a,
+.option-card a,
+.work-pathways a,
+.booking-card a,
+.workshop-themes a[href$=".pdf"],
+.pdf-download-button{
+  margin-top:28px !important;
+}
+
+.work-pathways .pathway-card,
+.work-pathways .option-card{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
+
+.work-pathways .pathway-card a,
+.work-pathways .option-card a{
+  align-self:center !important;
+}
+
+.workshop-themes .pdf-download-button,
+.workshop-themes a[href$=".pdf"]{
+  display:flex !important;
+  width:max-content !important;
+  margin:32px auto 0 !important;
+}
+
+.collab-strip a,
+.contact-hero a,
+.booking-card a{
+  align-self:center !important;
+}
+
+.language-switch a,
+.language-flags a{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:30px !important;
+  height:30px !important;
+  border-radius:999px !important;
+  text-decoration:none !important;
+  font-size:16px !important;
+  padding:0 !important;
+}
+
+.language-switch .lang-active,
+.language-flags .lang-active{
+  background:rgba(32,39,25,.12) !important;
+}
+
+@media(max-width:760px){
+  a.nav-button,
+  a.primary-button,
+  a.secondary-button,
+  a.dark-green-button,
+  a.beige-button,
+  a.booking-button,
+  a.companies-cta,
+  a.cta-beige,
+  a.centered-link,
+  a.pdf-download-button{
+    min-height:46px !important;
+    padding:0 20px !important;
+    font-size:13px !important;
+    white-space:normal !important;
+  }
+}
