@@ -7989,3 +7989,227 @@ a.pdf-download-button:hover{
     white-space:normal !important;
   }
 }
+
+
+/* V16 homepage CTA and responsive formatting polish */
+.collab-strip{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:32px !important;
+}
+.collab-strip > div{
+  flex:1 1 auto !important;
+}
+.collab-strip > a,
+.collab-strip .cta-beige,
+.collab-strip .primary-button,
+.collab-strip .beige-button{
+  flex:0 0 auto !important;
+  margin:0 !important;
+  align-self:center !important;
+}
+
+.home-hero-two-line,
+.positioned-hero-copy{
+  text-align:center !important;
+}
+.hero-inner,
+.positioned-hero-copy{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
+.hero-inner .nav-button,
+.hero-inner .primary-button,
+.hero-inner .beige-button,
+.hero-inner a[class*="button"]{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.header{
+  max-width:none !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.nav-button{
+  flex-shrink:0 !important;
+}
+.language-switch,
+.language-flags{
+  flex-shrink:0 !important;
+}
+
+a.nav-button,
+a.primary-button,
+a.secondary-button,
+a.dark-green-button,
+a.beige-button,
+a.booking-button,
+a.companies-cta,
+a.cta-beige,
+a.centered-link,
+a.pdf-download-button{
+  box-sizing:border-box !important;
+  text-decoration:none !important;
+}
+
+.cards .service-card,
+.home-proof-strip article,
+.work-pathways .pathway-card,
+.work-pathways .option-card,
+.booking-card,
+.theme-grid article,
+.media-gallery figure{
+  box-sizing:border-box !important;
+}
+
+@media(max-width:1180px){
+  .header{
+    padding-left:28px !important;
+    padding-right:28px !important;
+    gap:20px !important;
+  }
+  .nav{
+    gap:22px !important;
+  }
+  .nav a{
+    font-size:13px !important;
+  }
+}
+
+@media(max-width:980px){
+  .header{
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    height:auto !important;
+    padding-top:18px !important;
+    padding-bottom:18px !important;
+  }
+  .brand{
+    width:100% !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+  .nav{
+    order:2 !important;
+    width:100% !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:16px !important;
+  }
+  .language-switch,
+  .language-flags{
+    order:3 !important;
+  }
+  .nav-button{
+    order:4 !important;
+  }
+  .collab-strip{
+    flex-direction:column !important;
+    text-align:center !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+  .collab-strip > div{
+    width:100% !important;
+    max-width:760px !important;
+  }
+  .collab-strip > a,
+  .collab-strip .cta-beige,
+  .collab-strip .primary-button,
+  .collab-strip .beige-button{
+    margin:4px auto 0 !important;
+  }
+}
+
+@media(max-width:760px){
+  .site-shell{
+    width:100% !important;
+    max-width:none !important;
+    overflow-x:hidden !important;
+  }
+  body{
+    overflow-x:hidden !important;
+  }
+  .hero,
+  .work-hero,
+  .about-hero,
+  .companies-hero{
+    grid-template-columns:1fr !important;
+    height:auto !important;
+  }
+  .hero-panel,
+  .work-copy,
+  .about-hero-copy,
+  .companies-copy{
+    padding:42px 22px !important;
+    min-height:auto !important;
+    overflow:visible !important;
+  }
+  .headline,
+  .positioned-hero-copy .headline{
+    font-size:34px !important;
+    line-height:1.08 !important;
+    max-width:100% !important;
+  }
+  .hero-subcopy,
+  .positioned-hero-copy .hero-subcopy,
+  .work-intro{
+    font-size:15px !important;
+    line-height:1.6 !important;
+    max-width:100% !important;
+  }
+  .home-proof-strip,
+  .cards,
+  .media-preview-grid,
+  .media-gallery,
+  .theme-grid,
+  .work-pathways,
+  .service-options,
+  .cred-strip,
+  .selected-experience-strip{
+    grid-template-columns:1fr !important;
+  }
+  .home-proof-strip article,
+  .cards .service-card,
+  .cred-strip div,
+  .selected-experience-strip div{
+    text-align:center !important;
+    border-right:0 !important;
+    border-bottom:1px solid rgba(47,56,43,.12) !important;
+  }
+  a.nav-button,
+  a.primary-button,
+  a.secondary-button,
+  a.dark-green-button,
+  a.beige-button,
+  a.booking-button,
+  a.companies-cta,
+  a.cta-beige,
+  a.centered-link,
+  a.pdf-download-button{
+    min-height:44px !important;
+    padding:0 18px !important;
+    white-space:normal !important;
+    max-width:280px !important;
+    width:auto !important;
+  }
+  .footer-main{
+    grid-template-columns:1fr !important;
+    text-align:center !important;
+    justify-items:center !important;
+    gap:22px !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+  .footer-nav{
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:18px !important;
+  }
+}
