@@ -8310,3 +8310,31 @@ a.pdf-download-button{
     max-width:100%;
   }
 }
+
+
+/* V24 polish */
+.booking-hero,
+.booking-hero *{
+  text-align:center !important;
+}
+
+.references-grid,
+.selected-references,
+.references-wrapper{
+  justify-content:center !important;
+}
+
+.references-grid .reference-card,
+.selected-references .reference-card{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+@media(max-width:760px){
+  .references-grid,
+  .selected-references{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+  }
+}
