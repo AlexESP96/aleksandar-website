@@ -8685,3 +8685,64 @@ button{
     max-width:100%;
   }
 }
+
+
+/* V35 homepage title and workshop card polish */
+.balanced-home-title{
+  max-width:760px !important;
+  text-wrap:balance;
+  hyphens:none;
+}
+@media(max-width:760px){
+  .balanced-home-title{
+    max-width:100% !important;
+    text-wrap:balance;
+  }
+}
+
+
+/* V35 uniform workshop cards */
+.theme-grid article .workshop-outcomes{
+  list-style:none;
+  padding:0;
+  margin:20px 0 0;
+  display:grid;
+  gap:9px;
+  font-size:14px;
+  color:rgba(47,56,43,.76);
+  text-align:left;
+}
+.theme-grid article .workshop-outcomes li{
+  position:relative;
+  padding-left:24px;
+  line-height:1.45;
+}
+.theme-grid article .workshop-outcomes li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  font-weight:700;
+  color:#2f382b;
+}
+.theme-grid article .workshop-outcomes .outcomes-heading{
+  padding-left:0;
+  text-align:center;
+  font-weight:700;
+  color:#2f382b;
+}
+.theme-grid article .workshop-outcomes .outcomes-heading::before{
+  content:"";
+}
+.theme-grid article{
+  display:flex;
+  flex-direction:column;
+}
+.theme-grid article p{
+  flex:0 0 auto;
+}
+@media(max-width:760px){
+  .theme-grid article .workshop-outcomes{
+    font-size:13px;
+  }
+}
