@@ -8338,3 +8338,350 @@ a.pdf-download-button{
     align-items:center !important;
   }
 }
+
+
+/* V25 organizational buyer-facing upgrade */
+.org-premium-intro{
+  max-width:980px;
+  margin:72px auto 42px;
+  text-align:center;
+  padding:0 24px;
+}
+.org-premium-intro h2{
+  font-family:"Cormorant Garamond",serif;
+  color:#2f382b;
+  font-size:clamp(2rem,4vw,3.1rem);
+  line-height:1.05;
+  margin:0 auto 18px;
+  max-width:860px;
+}
+.org-premium-intro p{
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(47,56,43,.74);
+  line-height:1.7;
+}
+.org-detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  max-width:1180px;
+  margin:0 auto 72px;
+  padding:0 24px;
+}
+.org-detail-card{
+  background:#fffaf2;
+  border:1px solid rgba(47,56,43,.12);
+  border-radius:24px;
+  padding:30px;
+  box-shadow:0 18px 50px rgba(47,56,43,.07);
+}
+.org-detail-card h2{
+  font-family:"Cormorant Garamond",serif;
+  color:#2f382b;
+  font-size:1.9rem;
+  line-height:1.08;
+  margin:0 0 18px;
+}
+.org-detail-card ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+.org-detail-card li{
+  position:relative;
+  padding-left:24px;
+  line-height:1.55;
+  color:rgba(47,56,43,.76);
+}
+.org-detail-card li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#2f382b;
+  font-weight:700;
+}
+.company-pillars .company-pillar h2{
+  min-height:54px;
+}
+.company-pillars .company-pillar p{
+  min-height:120px;
+}
+@media(max-width:900px){
+  .org-detail-grid{
+    grid-template-columns:1fr;
+  }
+  .company-pillars .company-pillar h2,
+  .company-pillars .company-pillar p{
+    min-height:0;
+  }
+}
+@media(max-width:760px){
+  .org-premium-intro{
+    margin:52px auto 32px;
+    padding:0 20px;
+  }
+  .org-detail-grid{
+    padding:0 20px;
+    margin-bottom:52px;
+  }
+  .org-detail-card{
+    padding:24px;
+    border-radius:20px;
+  }
+  .org-detail-card h2{
+    font-size:1.65rem;
+  }
+}
+
+
+/* V26 executive refinement */
+.section-kicker,
+.eyebrow,
+.section-label{
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.82;
+}
+
+.hero h1,
+.companies-hero h1,
+.org-premium-intro h2{
+  letter-spacing:-0.03em;
+  text-wrap:balance;
+}
+
+.hero p,
+.companies-lead,
+.section-intro,
+.org-premium-intro p{
+  max-width:72ch;
+}
+
+.company-banner h2,
+.cta-banner h2{
+  line-height:1.08;
+  letter-spacing:-0.02em;
+}
+
+.org-detail-card,
+.company-pillar,
+.service-card,
+.pathway-card{
+  box-shadow:0 18px 50px rgba(20,24,18,.05);
+}
+
+.company-pillar h2,
+.org-detail-card h2,
+.service-card h2{
+  line-height:1.08;
+}
+
+.company-pillar p,
+.org-detail-card p,
+.org-detail-card li{
+  color:rgba(47,56,43,.74);
+}
+
+.nav a{
+  letter-spacing:.01em;
+}
+
+.gold-button,
+.dark-button,
+.nav-button,
+.beige-button,
+button{
+  font-weight:600;
+  letter-spacing:.01em;
+}
+
+.footer-slogan{
+  opacity:.92;
+}
+
+@media(max-width:760px){
+  .hero h1,
+  .companies-hero h1{
+    line-height:.98;
+  }
+
+  .org-detail-card{
+    padding:22px;
+  }
+}
+
+
+/* V27 commercial clarity refinement */
+.buyer-clarity-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  max-width:1180px;
+  margin:48px auto 56px;
+  padding:0 24px;
+}
+
+.buyer-clarity-card{
+  background:#fffaf2;
+  border:1px solid rgba(47,56,43,.1);
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 16px 40px rgba(47,56,43,.05);
+}
+
+.buyer-clarity-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.8rem;
+  line-height:1.08;
+  color:#2f382b;
+  margin:0 0 14px;
+  letter-spacing:-0.02em;
+}
+
+.buyer-clarity-card p{
+  margin:0;
+  line-height:1.7;
+  color:rgba(47,56,43,.74);
+}
+
+.clarity-banner{
+  max-width:1180px;
+  margin:0 auto 80px;
+  padding:44px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#243021,#33412f);
+  color:#f3eadc;
+  text-align:center;
+}
+
+.clarity-banner h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.05;
+  margin:0 0 16px;
+  letter-spacing:-0.03em;
+}
+
+.clarity-banner p{
+  max-width:760px;
+  margin:0 auto;
+  line-height:1.7;
+  opacity:.9;
+}
+
+@media(max-width:900px){
+  .buyer-clarity-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:760px){
+  .buyer-clarity-grid{
+    padding:0 20px;
+    margin:40px auto 44px;
+  }
+
+  .buyer-clarity-card{
+    padding:24px;
+    border-radius:20px;
+  }
+
+  .clarity-banner{
+    margin:0 20px 56px;
+    padding:32px 24px;
+    border-radius:22px;
+  }
+}
+
+
+/* V31 CIPD content update */
+.article-image{
+  margin:34px auto;
+  max-width:920px;
+}
+.article-image img,
+.blog-card-thumb{
+  width:100%;
+  display:block;
+  border-radius:22px;
+  object-fit:cover;
+  box-shadow:0 18px 46px rgba(47,56,43,.08);
+}
+.article-featured-image img{
+  max-height:620px;
+  object-fit:cover;
+  object-position:center;
+}
+.article-image figcaption{
+  margin-top:10px;
+  font-size:13px;
+  color:rgba(47,56,43,.62);
+  text-align:center;
+}
+.blog-card-thumb{
+  height:220px;
+  margin:16px 0 18px;
+}
+.professional-engagements{
+  padding-top:36px;
+}
+.professional-engagements figure{
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.professional-engagements .reference-card{
+  display:inline-flex;
+  margin-top:18px;
+}
+.workshop-outcomes{
+  list-style:none;
+  padding:0;
+  margin:18px 0 0;
+  display:grid;
+  gap:9px;
+  font-size:14px;
+  color:rgba(47,56,43,.76);
+}
+.workshop-outcomes li{
+  position:relative;
+  padding-left:22px;
+  line-height:1.45;
+}
+.workshop-outcomes li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  font-weight:700;
+  color:#2f382b;
+}
+.workshop-outcomes .outcomes-heading{
+  padding-left:0;
+  font-weight:700;
+  color:#2f382b;
+}
+.workshop-outcomes .outcomes-heading::before{
+  content:"";
+}
+.media-gallery .section-heading-centered{
+  grid-column:1/-1;
+}
+@media(max-width:760px){
+  .article-image{
+    margin:26px auto;
+  }
+  .article-featured-image img{
+    max-height:460px;
+  }
+  .blog-card-thumb{
+    height:180px;
+  }
+  .professional-engagements figure{
+    max-width:100%;
+  }
+}
