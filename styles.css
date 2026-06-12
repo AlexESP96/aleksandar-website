@@ -8746,3 +8746,37 @@ button{
     font-size:13px;
   }
 }
+
+
+/* V37 brochure system integration */
+.brochure-download-block{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  margin:28px auto 0;
+  text-align:center;
+}
+.brochure-download-block .brochure-download-label{
+  flex-basis:100%;
+  margin:0 0 2px;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(47,56,43,.66);
+}
+.brochure-download-block .brochure-download-button{
+  min-width:220px;
+}
+@media(max-width:760px){
+  .brochure-download-block{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+  .brochure-download-block .brochure-download-button{
+    width:100%;
+    min-width:0;
+  }
+}
