@@ -9329,3 +9329,123 @@ button{
     width:calc(100% - 36px) !important;
   }
 }
+
+
+/* v52 homepage practice cards and blog media preview polish */
+.home-public-workshop-preview .home-practice-grid.media-preview-two{
+  max-width:1040px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:32px !important;
+  align-items:stretch !important;
+  justify-content:center !important;
+}
+.home-public-workshop-preview .home-practice-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100% !important;
+  min-height:520px !important;
+  padding:0 0 34px !important;
+  overflow:hidden !important;
+}
+.home-public-workshop-preview .home-practice-card img{
+  display:block !important;
+  width:100% !important;
+  height:310px !important;
+  min-height:310px !important;
+  max-height:310px !important;
+  border-radius:0 !important;
+}
+.home-public-workshop-preview .home-workshop-card img{
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fffaf2 !important;
+  padding:24px !important;
+  box-sizing:border-box !important;
+}
+.home-public-workshop-preview .home-speaking-card img{
+  object-fit:cover !important;
+  object-position:center 42% !important;
+  background:#fffaf2 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+}
+.home-public-workshop-preview .home-practice-card figcaption{
+  min-height:96px !important;
+  padding:22px 34px 12px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  line-height:1.55 !important;
+  box-sizing:border-box !important;
+}
+.home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+  margin:18px auto 0 !important;
+  min-width:230px !important;
+  max-width:280px !important;
+  height:48px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  align-self:center !important;
+}
+.blog-index-card.media-public-card .media-public-thumb{
+  height:240px !important;
+  width:100% !important;
+  object-fit:cover !important;
+  object-position:center 42% !important;
+  border-radius:18px !important;
+  margin:16px 0 18px !important;
+}
+.blog-index-card.inclusion-blog-card .inclusion-card-thumb{
+  border-radius:18px !important;
+}
+@media(max-width:900px){
+  .home-public-workshop-preview .home-practice-grid.media-preview-two{
+    grid-template-columns:1fr !important;
+    max-width:560px !important;
+    gap:26px !important;
+  }
+  .home-public-workshop-preview .home-practice-card{
+    min-height:0 !important;
+    padding-bottom:28px !important;
+  }
+  .home-public-workshop-preview .home-practice-card img{
+    height:clamp(220px, 54vw, 320px) !important;
+    min-height:0 !important;
+    max-height:none !important;
+  }
+  .home-public-workshop-preview .home-workshop-card img{
+    padding:14px !important;
+  }
+  .home-public-workshop-preview .home-practice-card figcaption{
+    min-height:0 !important;
+    padding:18px 22px 12px !important;
+  }
+  .home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+    width:calc(100% - 48px) !important;
+    max-width:320px !important;
+    min-width:0 !important;
+    margin-top:14px !important;
+  }
+  .blog-index-card.media-public-card .media-public-thumb{
+    height:auto !important;
+    max-height:360px !important;
+    object-fit:cover !important;
+  }
+}
+@media(max-width:520px){
+  .home-public-workshop-preview .home-practice-card img{
+    height:clamp(190px, 58vw, 260px) !important;
+  }
+  .home-public-workshop-preview .home-practice-card figcaption{
+    padding:16px 18px 10px !important;
+  }
+  .home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+    width:calc(100% - 36px) !important;
+  }
+}
