@@ -8949,3 +8949,41 @@ button{
   .recent-workshop-poster{max-width:100%;}
   .audience-pathway-card{padding:32px 24px !important;}
 }
+
+
+/* v47 targeted polishing: homepage cards, wider hero bands and centered workshop card */
+.audience-pathways{max-width:1260px !important;}
+.audience-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px !important;align-items:stretch;}
+.audience-pathway-card{min-height:350px !important;display:flex !important;align-items:center !important;text-align:center !important;padding:42px 42px !important;}
+.audience-pathway-card .service-icon{margin:0 auto 24px !important;}
+.audience-pathway-card .section-kicker{white-space:nowrap !important;text-align:center !important;margin:0 auto 12px !important;line-height:1.1 !important;}
+.audience-pathway-card h3{max-width:500px !important;min-height:76px !important;display:flex !important;align-items:center !important;justify-content:center !important;text-align:center !important;margin:0 auto 18px !important;}
+.audience-pathway-card p:not(.section-kicker){max-width:500px !important;min-height:88px !important;display:flex !important;align-items:center !important;justify-content:center !important;text-align:center !important;margin:0 auto 28px !important;}
+.audience-pathway-card .beige-button{margin:0 auto !important;}
+.organizations-hub-page .hub-hero,.individuals-hub-page .hub-hero{width:calc(100% - 64px) !important;max-width:none !important;margin:52px auto 38px !important;padding-top:70px !important;padding-bottom:70px !important;}
+.organizations-hub-page .hub-hero h1,.individuals-hub-page .hub-hero h1{max-width:1180px !important;}
+.organizations-hub-page .hub-hero p,.individuals-hub-page .hub-hero p{max-width:980px !important;}
+.organizations-hub-page .hub-overview,.organizations-hub-page .buyer-questions-section,.individuals-hub-page .hub-overview,.individuals-hub-page .buyer-questions-section{max-width:1180px !important;}
+.work-page .clean-work-hero{max-width:none !important;width:100% !important;padding:0 32px !important;margin:48px auto 26px !important;}
+.work-page .clean-work-hero .work-copy{max-width:none !important;width:100% !important;padding-top:64px !important;padding-bottom:64px !important;}
+.work-page .clean-work-hero .work-copy h1{max-width:1180px !important;margin-left:auto !important;margin-right:auto !important;}
+.work-page .clean-work-hero .work-copy p{max-width:980px !important;margin-left:auto !important;margin-right:auto !important;}
+.work-page .theme-grid .balanced-hr-workshop-card{grid-column:2 / span 1 !important;}
+.blog-index-card .blog-card-thumb{margin:16px 0 14px;border-radius:18px;border:1px solid rgba(155,133,88,.22);box-shadow:0 14px 30px rgba(32,40,28,.08);}
+@media(max-width:1000px){
+  .work-page .theme-grid .balanced-hr-workshop-card{grid-column:auto !important;}
+  .audience-pathway-card h3,.audience-pathway-card p:not(.section-kicker){min-height:auto !important;}
+}
+@media(max-width:780px){
+  .audience-pathways{max-width:100% !important;}
+  .audience-pathway-grid{grid-template-columns:1fr !important;}
+  .audience-pathway-card{min-height:auto !important;padding:32px 24px !important;}
+  .organizations-hub-page .hub-hero,.individuals-hub-page .hub-hero,.work-page .clean-work-hero{width:calc(100% - 40px) !important;padding-left:0 !important;padding-right:0 !important;}
+  .work-page .clean-work-hero .work-copy{padding:48px 24px !important;}
+}
+
+/* v47 mobile correction for full-width hero panels */
+@media(max-width:780px){
+  .organizations-hub-page .hub-hero,.individuals-hub-page .hub-hero{width:calc(100% - 40px) !important;padding:48px 24px !important;}
+  .work-page .clean-work-hero{width:100% !important;padding:0 20px !important;}
+}
