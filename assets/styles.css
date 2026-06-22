@@ -1,0 +1,82 @@
+
+/* v50 targeted formatting fixes */
+.home-public-workshop-preview .home-practice-grid{
+  align-items:stretch;
+  justify-content:center;
+  max-width:980px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.home-public-workshop-preview .home-practice-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.home-public-workshop-preview .home-practice-card img{
+  height:300px;
+}
+.home-public-workshop-preview .home-workshop-card img{
+  object-fit:contain;
+  background:#fffaf2;
+  padding:18px;
+}
+.home-public-workshop-preview .home-speaking-card img{
+  object-fit:contain;
+  object-position:center center;
+  background:#fffaf2;
+}
+.home-public-workshop-preview .home-practice-card figcaption{
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+  margin:0 auto 24px!important;
+  min-width:220px;
+  text-align:center;
+}
+.home-public-workshop-preview .home-media-actions{
+  display:none!important;
+}
+.blog-index-card.inclusion-blog-card .inclusion-card-thumb{
+  object-fit:contain;
+  object-position:center center;
+  background:#fffaf2;
+  padding:10px;
+}
+.article-feature-image.inclusion-feature-image{
+  max-width:1180px;
+  margin:clamp(28px,4vw,52px) auto 0;
+  padding:0 clamp(20px,5vw,60px);
+}
+.article-feature-image.inclusion-feature-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:28px;
+  border:1px solid rgba(155,133,88,.24);
+  box-shadow:0 26px 60px rgba(32,40,28,.10);
+  background:#fffaf2;
+}
+@media (max-width: 860px){
+  .home-public-workshop-preview .home-practice-grid{
+    grid-template-columns:1fr!important;
+    max-width:540px;
+  }
+  .home-public-workshop-preview .home-practice-card img{
+    height:auto;
+    max-height:none;
+  }
+  .home-public-workshop-preview .home-workshop-card img{
+    padding:12px;
+  }
+  .home-public-workshop-preview .home-practice-card figcaption{
+    min-height:0;
+  }
+  .home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+    width:calc(100% - 48px)!important;
+    max-width:320px;
+  }
+}
