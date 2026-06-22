@@ -9169,3 +9169,49 @@ button{
   .booking-page .booking-main,
   .booking-page .booking-note{padding-left:20px !important;padding-right:20px !important;}
 }
+
+/* v49 targeted formatting refinements */
+.home-practice-grid.media-preview-two{
+  max-width:1050px;
+  margin:0 auto;
+  display:grid!important;
+  grid-template-columns:1.1fr .9fr!important;
+  gap:28px!important;
+  align-items:stretch;
+}
+.home-practice-grid figure{height:100%;display:flex;flex-direction:column;}
+.home-practice-grid .home-workshop-highlight img{height:420px!important;object-fit:contain!important;background:#f8f3ea;padding:10px;}
+.home-practice-grid figure:not(.home-workshop-highlight) img{height:420px!important;object-fit:cover!important;}
+.home-practice-grid figcaption{flex:1;text-align:center;display:flex;align-items:center;justify-content:center;}
+.home-media-actions{display:flex!important;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:30px;}
+.home-media-actions .centered-link,.home-media-actions .beige-button{margin:0!important;width:auto!important;min-width:210px;text-align:center;}
+
+.barcelona-workshop-showcase{max-width:1120px;margin:0 auto;}
+.barcelona-poster-rectangle{margin:0 auto 30px;border-radius:28px;overflow:hidden;border:1px solid rgba(155,133,88,.22);box-shadow:0 24px 54px rgba(32,40,28,.12);background:#fffaf2;max-width:980px;}
+.barcelona-poster-rectangle img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;background:#f8f3ea;}
+.barcelona-workshop-detail-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch;}
+.barcelona-workshop-detail-grid .recent-workshop-copy{height:100%;box-sizing:border-box;}
+.barcelona-workshop-detail-grid .recent-workshop-photo{max-width:none!important;margin:0!important;height:100%;}
+.barcelona-workshop-detail-grid .recent-workshop-photo img{height:100%!important;min-height:430px;object-fit:cover;object-position:center center;}
+
+.blog-card-thumb.workshop-poster-thumb{object-fit:contain!important;object-position:center center!important;background:#f8f3ea;padding:8px;height:260px!important;}
+.public-work-blog-card .blog-card-thumb{object-position:center center;}
+
+.centered-cipd-engagement{display:block!important;text-align:center;}
+.centered-cipd-engagement figure{max-width:760px;margin:0 auto!important;text-align:left;}
+.centered-cipd-engagement figure img{height:420px!important;object-fit:cover;object-position:center center;}
+.links-panel .uniform-reference-grid{max-width:900px;margin:26px auto 0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;}
+.links-panel .uniform-reference-grid .reference-card{display:flex;align-items:center;justify-content:center;text-align:center;min-height:78px;margin:0!important;}
+
+@media(max-width:900px){
+  .home-practice-grid.media-preview-two,.barcelona-workshop-detail-grid{grid-template-columns:1fr!important;}
+  .home-practice-grid .home-workshop-highlight img,.home-practice-grid figure:not(.home-workshop-highlight) img{height:auto!important;max-height:520px;}
+  .barcelona-workshop-detail-grid .recent-workshop-photo img{height:auto!important;min-height:0;}
+  .links-panel .uniform-reference-grid{grid-template-columns:1fr!important;max-width:620px;}
+}
+@media(max-width:640px){
+  .home-media-actions{flex-direction:column;gap:12px;}
+  .home-media-actions .beige-button{width:100%!important;max-width:320px;}
+  .barcelona-poster-rectangle{border-radius:22px;}
+  .blog-card-thumb.workshop-poster-thumb{height:220px!important;}
+}
