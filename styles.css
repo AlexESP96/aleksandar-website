@@ -8876,3 +8876,76 @@ button{
   .recent-workshop-section{padding-left:20px;padding-right:20px;}
   .recent-workshop-photo img{max-height:none;}
 }
+
+/* v46 targeted refinements: homepage pathway cards and workshop section only */
+.audience-pathway-card{
+  align-items:center !important;
+  text-align:center !important;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(255,252,246,.98), rgba(245,238,225,.96)) !important;
+  border:1px solid rgba(47,56,43,.22) !important;
+  box-shadow:0 22px 54px rgba(28,32,24,.11) !important;
+  padding:40px 36px !important;
+}
+.audience-pathway-card .service-icon{
+  margin:0 auto 22px !important;
+}
+.audience-pathway-card .section-kicker{
+  text-align:center !important;
+  color:#2F382B !important;
+  opacity:1 !important;
+  width:100%;
+}
+.audience-pathway-card h3{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  max-width:420px;
+}
+.audience-pathway-card p:not(.section-kicker){
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  max-width:430px;
+}
+.audience-pathway-card .beige-button{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.recent-workshop-section .section-heading{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.recent-workshop-grid{
+  grid-template-columns:1.15fr .85fr !important;
+  gap:42px !important;
+}
+.recent-workshop-poster{
+  max-width:680px;
+  justify-self:center;
+}
+.recent-workshop-copy{
+  align-self:center;
+}
+.theme-grid .balanced-hr-workshop-card{
+  align-items:center;
+  text-align:center !important;
+  justify-content:center;
+}
+.theme-grid .balanced-hr-workshop-card p{
+  max-width:430px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.theme-grid .balanced-hr-workshop-card ul{
+  max-width:360px;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+@media(max-width:900px){
+  .recent-workshop-grid{grid-template-columns:1fr !important;}
+  .recent-workshop-poster{max-width:100%;}
+  .audience-pathway-card{padding:32px 24px !important;}
+}
