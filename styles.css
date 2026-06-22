@@ -8987,3 +8987,185 @@ button{
   .organizations-hub-page .hub-hero,.individuals-hub-page .hub-hero{width:calc(100% - 40px) !important;padding:48px 24px !important;}
   .work-page .clean-work-hero{width:100% !important;padding:0 20px !important;}
 }
+
+
+/* v48 requested refinement: clearer homepage cards, workshop/public proof, full-width hero bands, booking centering and mobile polish */
+.audience-pathway-card h3{
+  font-size:clamp(1.6rem,2.15vw,2.25rem) !important;
+  line-height:1.08 !important;
+  letter-spacing:.01em !important;
+  min-height:0 !important;
+  max-width:520px !important;
+  margin-bottom:18px !important;
+}
+.audience-pathway-card .section-kicker{
+  font-size:clamp(1.18rem,1.75vw,1.6rem) !important;
+  letter-spacing:.18em !important;
+  line-height:1.08 !important;
+  margin-bottom:16px !important;
+}
+.audience-pathway-card p:not(.section-kicker){
+  min-height:96px !important;
+  max-width:500px !important;
+  align-items:flex-start !important;
+}
+.audience-pathway-card{
+  min-height:368px !important;
+  justify-content:center !important;
+}
+.home-public-workshop-preview .compact-public-heading h2{
+  font-size:clamp(2.15rem,3.8vw,4.2rem) !important;
+}
+.media-preview-three{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  max-width:1220px !important;
+  gap:24px !important;
+}
+.media-preview-three figure{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.media-preview-three img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+.media-preview-three .featured-workshop-preview img{
+  object-fit:contain;
+  background:#071d35;
+  padding:0;
+}
+.home-media-actions{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+.home-media-actions .home-media-cta-centered{
+  margin:0 !important;
+}
+.organizations-hub-page .hub-hero,
+.individuals-hub-page .hub-hero{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 0 44px !important;
+  border-radius:0 !important;
+  padding:70px clamp(26px,7vw,96px) !important;
+  box-sizing:border-box !important;
+}
+.work-page .clean-work-hero{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 0 38px !important;
+  padding:0 !important;
+}
+.work-page .clean-work-hero .work-copy{
+  width:100% !important;
+  max-width:none !important;
+  border-radius:0 !important;
+  box-sizing:border-box !important;
+  padding:64px clamp(26px,7vw,96px) !important;
+}
+.workshop-feature-redesigned{
+  padding-top:clamp(64px,7vw,104px) !important;
+}
+.workshop-feature-layout{
+  max-width:1240px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:minmax(360px,1.18fr) minmax(320px,.82fr);
+  grid-template-areas:"poster copy" "poster photo";
+  gap:28px;
+  align-items:stretch;
+}
+.workshop-poster-primary{
+  grid-area:poster;
+  max-width:none !important;
+  justify-self:stretch !important;
+  align-self:stretch;
+}
+.workshop-poster-primary img{
+  height:100%;
+  min-height:620px;
+  object-fit:contain;
+  background:#061d35;
+}
+.workshop-feature-copy{
+  grid-area:copy;
+  align-self:stretch !important;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.workshop-photo-secondary{
+  grid-area:photo;
+  max-width:none !important;
+  margin:0 !important;
+  align-self:stretch;
+}
+.workshop-photo-secondary img{
+  height:100% !important;
+  min-height:300px;
+  max-height:none !important;
+  object-fit:cover;
+  object-position:center center;
+}
+.booking-page .booking-hero,
+.booking-page .booking-main,
+.booking-page .booking-note{
+  max-width:1180px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+.booking-page .booking-copy{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+  align-items:center !important;
+}
+.booking-page .booking-rule{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.booking-page .booking-event-options{
+  justify-items:stretch !important;
+}
+.booking-page .package-info-panel{
+  max-width:760px;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center;
+}
+@media(max-width:1000px){
+  .media-preview-three{grid-template-columns:1fr !important;max-width:640px !important;}
+  .media-preview-three img{height:auto;max-height:420px;}
+  .workshop-feature-layout{grid-template-columns:1fr;grid-template-areas:"poster" "copy" "photo";max-width:760px;}
+  .workshop-poster-primary img{min-height:0;height:auto;}
+  .workshop-photo-secondary img{height:auto !important;min-height:0;}
+}
+@media(max-width:780px){
+  .audience-pathway-card h3{font-size:1.75rem !important;}
+  .audience-pathway-card .section-kicker{font-size:1.18rem !important;white-space:normal !important;}
+  .audience-pathway-card p:not(.section-kicker){min-height:0 !important;}
+  .organizations-hub-page .hub-hero,
+  .individuals-hub-page .hub-hero,
+  .work-page .clean-work-hero,
+  .work-page .clean-work-hero .work-copy{
+    width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+  .organizations-hub-page .hub-hero,
+  .individuals-hub-page .hub-hero,
+  .work-page .clean-work-hero .work-copy{
+    padding:48px 22px !important;
+  }
+  .recent-workshop-copy{padding:28px 22px !important;}
+  .booking-page .booking-hero,
+  .booking-page .booking-main,
+  .booking-page .booking-note{padding-left:20px !important;padding-right:20px !important;}
+}
