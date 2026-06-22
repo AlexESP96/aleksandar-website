@@ -9215,3 +9215,117 @@ button{
   .barcelona-poster-rectangle{border-radius:22px;}
   .blog-card-thumb.workshop-poster-thumb{height:220px!important;}
 }
+
+
+/* v51 homepage and blog thumbnail polish */
+.home-public-workshop-preview .home-practice-grid.media-preview-two{
+  max-width:1040px !important;
+  gap:34px !important;
+  align-items:stretch !important;
+}
+.home-public-workshop-preview .home-practice-card{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  min-height:0 !important;
+  padding-bottom:30px !important;
+  box-sizing:border-box !important;
+}
+.home-public-workshop-preview .home-practice-card img{
+  width:100% !important;
+  height:315px !important;
+  display:block !important;
+}
+.home-public-workshop-preview .home-workshop-card img{
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fffaf2 !important;
+  padding:16px !important;
+}
+.home-public-workshop-preview .home-speaking-card img{
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fffaf2 !important;
+  padding:0 !important;
+}
+.home-public-workshop-preview .home-practice-card figcaption{
+  flex:0 0 auto !important;
+  min-height:78px !important;
+  padding:18px 26px 10px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  line-height:1.55 !important;
+}
+.home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:8px auto 0 !important;
+  min-width:220px !important;
+  width:max-content !important;
+  text-align:center !important;
+}
+.blog-index-card.inclusion-blog-card .inclusion-card-thumb{
+  height:220px !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  background:#fffaf2 !important;
+  padding:0 !important;
+  border-radius:18px !important;
+}
+.blog-index-card .blog-card-thumb.workshop-poster-thumb{
+  height:240px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#071d35 !important;
+  padding:6px !important;
+  border-radius:18px !important;
+}
+@media(max-width:900px){
+  .home-public-workshop-preview .home-practice-grid.media-preview-two{
+    grid-template-columns:1fr !important;
+    max-width:580px !important;
+    gap:24px !important;
+  }
+  .home-public-workshop-preview .home-practice-card{
+    padding-bottom:28px !important;
+  }
+  .home-public-workshop-preview .home-practice-card img{
+    height:auto !important;
+    max-height:none !important;
+  }
+  .home-public-workshop-preview .home-workshop-card img{
+    padding:12px !important;
+  }
+  .home-public-workshop-preview .home-speaking-card img{
+    padding:0 !important;
+  }
+  .home-public-workshop-preview .home-practice-card figcaption{
+    min-height:0 !important;
+    padding:18px 22px 12px !important;
+  }
+  .home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+    width:calc(100% - 48px) !important;
+    max-width:320px !important;
+    min-width:0 !important;
+  }
+  .blog-index-card.inclusion-blog-card .inclusion-card-thumb,
+  .blog-index-card .blog-card-thumb.workshop-poster-thumb{
+    height:auto !important;
+    max-height:360px !important;
+  }
+}
+@media(max-width:520px){
+  .home-public-workshop-preview .home-practice-card{
+    border-radius:22px !important;
+    padding-bottom:24px !important;
+  }
+  .home-public-workshop-preview .home-practice-card figcaption{
+    padding:16px 18px 12px !important;
+  }
+  .home-public-workshop-preview .home-practice-card .home-media-cta-centered{
+    width:calc(100% - 36px) !important;
+  }
+}
