@@ -8802,3 +8802,21 @@ button{
 .hr-workshop-card li:not(.outcomes-heading)::before{content:'✓';margin-right:10px;color:#2F382B;font-weight:700;}
 .hr-workshop-card .outcomes-heading{font-family:inherit;font-weight:600;color:#2F382B;margin-bottom:10px;}
 .hr-workshop-card .outcomes-heading::before{content:'';margin:0;}
+
+
+/* v44 strategic refinement: audience pathways and hub pages */
+.audience-pathways{max-width:1120px;margin:56px auto 34px;padding:0 32px;}
+.audience-pathway-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px;}
+.audience-pathway-card{border:1px solid rgba(47,56,43,.14);border-radius:28px;background:rgba(255,252,246,.82);padding:34px 32px;box-shadow:0 18px 44px rgba(28,32,24,.07);display:flex;flex-direction:column;align-items:flex-start;min-height:320px;}
+.audience-pathway-card .service-icon{margin-bottom:20px;}
+.audience-pathway-card h3{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.02;color:#2F382B;margin:0 0 14px;}
+.audience-pathway-card p:not(.section-kicker){color:rgba(47,56,43,.78);line-height:1.7;margin-bottom:24px;}
+.audience-pathway-card .beige-button{margin-top:auto;}
+.hub-hero{max-width:980px;margin:50px auto 34px;padding-left:28px;padding-right:28px;}
+.hub-overview,.buyer-questions-section{max-width:1120px;margin:48px auto;padding:0 32px;}
+.compact-org-grid{margin-top:24px;}
+.organizations-hub-page .experience-grid article,.individuals-hub-page .experience-grid article{min-height:132px;}
+@media(max-width:780px){.audience-pathway-grid{grid-template-columns:1fr}.audience-pathways,.hub-overview,.buyer-questions-section{padding-left:22px;padding-right:22px}.audience-pathway-card{padding:28px 24px}.audience-pathway-card h3{font-size:30px}}
+
+/* v44 photo balance: reduce repeated personal portrait use on service entry page */
+.work-page .work-photo{background-image:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.50)),url('assets/companies-office-final-exact.png') !important;background-position:center center !important;}
