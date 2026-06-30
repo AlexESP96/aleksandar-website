@@ -9449,3 +9449,69 @@ button{
     width:calc(100% - 36px) !important;
   }
 }
+
+
+/* v53 research article and visual formatting */
+.article-feature-image.inclusion-feature-image,
+.article-feature-image.research-visual-feature,
+.article-feature-image.research-visual-inline{
+  max-width:1120px;
+  margin:42px auto 48px;
+  padding:0 24px;
+  border-radius:0 !important;
+  overflow:visible !important;
+}
+.article-feature-image.inclusion-feature-image img,
+.article-feature-image.research-visual-feature img,
+.article-feature-image.research-visual-inline img{
+  display:block;
+  width:100%;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  border-radius:24px !important;
+  border:1px solid rgba(155,133,88,.20);
+  box-shadow:0 22px 55px rgba(32,40,28,.12);
+  background:#F8F3EA;
+}
+.article-section-card{
+  margin:34px 0;
+  padding:28px 30px;
+  border:1px solid rgba(155,133,88,.20);
+  border-radius:24px;
+  background:#F8F3EA;
+  box-shadow:0 16px 38px rgba(32,40,28,.06);
+}
+.article-section-card h2{margin-top:0;}
+.article-section-card ul{margin:14px 0 0 22px;}
+.article-section-card li{margin:9px 0;}
+.article-section-card .article-feature-image{padding:0;margin:24px 0 4px;}
+.blog-index-card.inclusion-blog-card .inclusion-card-thumb,
+.blog-index-card.inclusive-leadership-card .inclusive-leadership-thumb{
+  width:100% !important;
+  height:260px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  border-radius:18px !important;
+  background:#F8F3EA !important;
+  padding:8px !important;
+}
+@media(max-width:900px){
+  .article-feature-image.inclusion-feature-image,
+  .article-feature-image.research-visual-feature,
+  .article-feature-image.research-visual-inline{padding:0 16px;margin:30px auto 36px;}
+  .article-feature-image.inclusion-feature-image img,
+  .article-feature-image.research-visual-feature img,
+  .article-feature-image.research-visual-inline img{border-radius:18px !important;}
+  .article-section-card{padding:22px 20px;border-radius:20px;}
+  .blog-index-card.inclusion-blog-card .inclusion-card-thumb,
+  .blog-index-card.inclusive-leadership-card .inclusive-leadership-thumb{height:220px !important;}
+}
+@media(max-width:560px){
+  .article-feature-image.inclusion-feature-image,
+  .article-feature-image.research-visual-feature,
+  .article-feature-image.research-visual-inline{padding:0 12px;margin:24px auto 30px;}
+  .blog-index-card.inclusion-blog-card .inclusion-card-thumb,
+  .blog-index-card.inclusive-leadership-card .inclusive-leadership-thumb{height:190px !important;}
+}
