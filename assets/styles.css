@@ -146,3 +146,14 @@
   .blog-index-card.inclusion-blog-card .inclusion-card-thumb,
   .blog-index-card.inclusive-leadership-card .inclusive-leadership-thumb{height:190px !important;}
 }
+
+
+/* v54 strategic positioning polish */
+.professional-background-section,.why-different-section{max-width:1120px;margin:64px auto;padding:0 32px;}
+.professional-background-section .section-heading-centered,.why-different-section .section-heading-centered{max-width:860px;margin-left:auto;margin-right:auto;}
+.why-different-section .experience-grid article,.professional-background-section .experience-grid article{min-height:150px;}
+.professional-background-section + .why-different-section{margin-top:36px;}
+.org-detail-card p{line-height:1.7;color:rgba(47,56,43,.78);}
+.referral-process-section .section-heading-centered p + p{margin-top:12px;}
+.article-feature-image.inclusion-feature-image img,.article-feature-image.research-visual-feature img,.article-feature-image.research-visual-inline img{border-radius:18px!important;object-fit:contain!important;width:100%!important;height:auto!important;}
+@media(max-width:780px){.professional-background-section,.why-different-section{margin:42px auto;padding:0 22px}.professional-background-section .experience-grid,.why-different-section .experience-grid{grid-template-columns:1fr!important}.org-detail-grid.compact-org-grid{grid-template-columns:1fr!important}}
