@@ -10037,3 +10037,40 @@ button{
   }
 }
 /* ===== end v63 targeted homepage/favicon final adjustments ===== */
+
+
+/* v64 favicon/hero polish: centered 3-line homepage subtitle */
+@media (min-width: 901px){
+  .home-hero-restored.hero-inner,
+  .positioned-hero-copy.hero-inner{
+    max-width: 660px !important;
+  }
+  .home-hero-restored .hero-subcopy,
+  .positioned-hero-copy .hero-subcopy{
+    max-width: 640px !important;
+    width: 640px !important;
+    margin: 0 auto !important;
+    transform: translateX(-22px) !important;
+    text-align: center !important;
+    line-height: 1.55 !important;
+    font-size: 16px !important;
+    white-space: normal !important;
+  }
+  .home-hero-restored .headline,
+  .positioned-hero-copy .headline{
+    margin-bottom: 22px !important;
+  }
+  .hero-panel{
+    padding-bottom: 44px !important;
+  }
+}
+@media (max-width: 900px){
+  .home-hero-restored .hero-subcopy,
+  .positioned-hero-copy .hero-subcopy{
+    width: auto !important;
+    max-width: 92vw !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+  .desktop-hero-break{display:none !important;}
+}
