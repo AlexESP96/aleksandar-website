@@ -1,0 +1,61 @@
+Technical CSS refactor report
+==============================
+
+Before
+- !important declarations: 3486
+- @media query blocks: 132
+- duplicated selector occurrences: 314
+- style rule blocks counted: 1540
+
+After
+- !important declarations: 0
+- @media query blocks: 23
+- duplicated selector occurrences: 0
+- style rule blocks counted: 1132
+
+Improvements
+- !important declarations reduced by: 3486
+- @media query blocks reduced by: 109
+- duplicated selector occurrences reduced by: 314
+- repeated selector rule blocks consolidated/removed: 513
+- CSS files removed/merged: assets/styles.css
+- head/meta duplicate lines removed: 0
+
+Duplicated selectors consolidated (top):
+- .contact-hero-visual: 8 → 1 occurrences
+- .contact-hero-copy: 7 → 1 occurrences
+- .contact-hero-visual::before: 6 → 1 occurrences
+- .embedded-companies-hero .companies-copy: 6 → 1 occurrences
+- .embedded-companies-hero .companies-visual::before: 6 → 1 occurrences
+- .pathway-card: 5 → 1 occurrences
+- .embedded-companies-hero .companies-visual: 5 → 1 occurrences
+- .embedded-companies-hero .companies-copy::after: 5 → 1 occurrences
+- .hero-subcopy: 5 → 1 occurrences
+- .audience-pathway-card: 5 → 1 occurrences
+- .nav a: 4 → 1 occurrences
+- .footer-main: 4 → 1 occurrences
+- .footer-nav: 4 → 1 occurrences
+- .about-page .about-hero-image: 4 → 1 occurrences
+- .about-page .about-hero-copy: 4 → 1 occurrences
+- .pathway-card ul: 4 → 1 occurrences
+- .pathway-meta: 4 → 1 occurrences
+- .pathway-meta span: 4 → 1 occurrences
+- .about-page .about-hero-copy h1: 4 → 1 occurrences
+- .about-page .about-hero-copy p: 4 → 1 occurrences
+- .collab-strip: 4 → 1 occurrences
+- .audience-pathway-card .service-icon: 4 → 1 occurrences
+- .audience-pathway-card h3: 4 → 1 occurrences
+- .audience-pathway-card p:not(.section-kicker): 4 → 1 occurrences
+- .audience-pathway-card .section-kicker: 4 → 1 occurrences
+- body: 3 → 1 occurrences
+- .site-shell: 3 → 1 occurrences
+- .nav-button: 3 → 1 occurrences
+- .service-card p: 3 → 1 occurrences
+- .companies-copy: 3 → 1 occurrences
+
+Notes
+- Consolidated repeated @media blocks by identical breakpoint condition.
+- Consolidated repeated selector blocks within each CSS context.
+- Removed unused secondary CSS file `assets/styles.css`; pages already link root `styles.css`.
+- Removed unnecessary !important declarations to make the cascade less brittle.
+- No intentional redesign, content, navigation-label, brochure, colour, or typography changes were made.
