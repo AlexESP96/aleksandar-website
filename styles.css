@@ -9968,3 +9968,72 @@ button{
     text-align:center !important;
   }
 }
+
+/* ===== v63 targeted homepage/favicon final adjustments ===== */
+/* Desktop hero subtitle: three intentional balanced lines without reducing type size. */
+@media (min-width: 900px){
+  .home-hero-restored.positioned-hero-copy .hero-subcopy,
+  .home-hero-two-line.positioned-hero-copy .hero-subcopy,
+  .home-hero-restored .hero-subcopy,
+  .positioned-hero-copy .hero-subcopy{
+    max-width: 760px !important;
+    width: min(760px, calc(100vw - 80px)) !important;
+    font-size: 16.5px !important;
+    line-height: 1.62 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  .desktop-hero-break{display:block !important;}
+}
+@media (max-width: 899px){
+  .desktop-hero-break{display:none !important;}
+  .home-hero-restored.positioned-hero-copy .hero-subcopy,
+  .home-hero-two-line.positioned-hero-copy .hero-subcopy,
+  .home-hero-restored .hero-subcopy,
+  .positioned-hero-copy .hero-subcopy{
+    max-width: calc(100vw - 44px) !important;
+    width: auto !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+/* Mobile homepage card-title centering and discoverable wrapped navigation. */
+@media (max-width: 780px){
+  .home-proof-strip,
+  .audience-grid,
+  .blog-grid,
+  .media-preview-grid{
+    justify-content:center !important;
+    justify-items:center !important;
+  }
+  .home-proof-strip article,
+  .audience-card,
+  .audience-card *,
+  .home-proof-strip strong,
+  .home-proof-strip span,
+  .method-section > div:first-child,
+  .method-section > div:first-child *{
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .site-header .nav,
+  .header .nav{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    overflow:visible !important;
+    white-space:normal !important;
+    max-width:520px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .site-header .nav a,
+  .header .nav a{
+    flex:0 0 auto !important;
+  }
+}
+/* ===== end v63 targeted homepage/favicon final adjustments ===== */
