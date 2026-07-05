@@ -7194,6 +7194,8 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
 }
 
 
+/* FINAL ABOUT HERO FIT FIX
+   Full width preserved. Hero is slightly taller, text is smaller, and clipping is removed. */
 .about-page .about-hero{
   width:100% !important;
   max-width:none !important;
@@ -7517,6 +7519,7 @@ body.contact-page .send-button svg{stroke:var(--brand-dark-green) !important;}
 }
 
 
+/* V10 final requested formatting */
 .site-shell{max-width:none!important;width:100%!important;}
 body{background:#f8f3ea!important;}
 .home-hero-two-line .headline{
@@ -7612,6 +7615,7 @@ body{background:#f8f3ea!important;}
 }
 
 
+/* V12 requested fixes */
 .selected-experience-strip{
   display:grid!important;
   grid-template-columns:repeat(4,minmax(0,1fr))!important;
@@ -7705,6 +7709,7 @@ body{background:#f8f3ea!important;}
 }
 
 
+/* V13 positioning and button polish */
 .positioned-hero-copy .headline{
   font-size:clamp(44px,5vw,72px)!important;
   line-height:1.04!important;
@@ -7842,6 +7847,7 @@ a.nav-button{
 }
 
 
+/* V15 global button repair */
 a.nav-button,
 a.primary-button,
 a.secondary-button,
@@ -7985,6 +7991,7 @@ a.pdf-download-button:hover{
 }
 
 
+/* V16 homepage CTA and responsive formatting polish */
 .collab-strip{
   display:flex !important;
   align-items:center !important;
@@ -8208,6 +8215,7 @@ a.pdf-download-button{
 }
 
 
+/* V17 final homepage CTA polish */
 .home-media-preview .home-media-cta-centered,
 .home-media-preview a[href*="media-public-work"]{
   display:flex !important;
@@ -8239,6 +8247,7 @@ a.pdf-download-button{
 }
 
 
+/* V18 premium positioning text stability */
 .positioned-hero-copy .headline,
 .home-hero-two-line .headline{
   max-width:780px !important;
@@ -8262,6 +8271,7 @@ a.pdf-download-button{
 }
 
 
+/* V21 premium hierarchy polish */
 .hero p,
 .section-intro,
 .service-card p,
@@ -8302,6 +8312,7 @@ a.pdf-download-button{
 }
 
 
+/* V24 polish */
 .booking-hero,
 .booking-hero *{
   text-align:center !important;
@@ -8329,6 +8340,7 @@ a.pdf-download-button{
 }
 
 
+/* V25 organizational buyer-facing upgrade */
 .org-premium-intro{
   max-width:980px;
   margin:72px auto 42px;
@@ -8426,6 +8438,7 @@ a.pdf-download-button{
 }
 
 
+/* V26 executive refinement */
 .section-kicker,
 .eyebrow,
 .section-label{
@@ -8502,6 +8515,7 @@ button{
 }
 
 
+/* V27 commercial clarity refinement */
 .buyer-clarity-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -8584,6 +8598,7 @@ button{
 }
 
 
+/* V31 CIPD content update */
 .article-image{
   margin:34px auto;
   max-width:920px;
@@ -8672,6 +8687,7 @@ button{
 }
 
 
+/* V35 homepage title and workshop card polish */
 .balanced-home-title{
   max-width:760px !important;
   text-wrap:balance;
@@ -8685,6 +8701,7 @@ button{
 }
 
 
+/* V35 uniform workshop cards */
 .theme-grid article .workshop-outcomes{
   list-style:none;
   padding:0;
@@ -8731,6 +8748,7 @@ button{
 }
 
 
+/* V37 brochure system integration */
 .brochure-download-block{
   display:flex;
   flex-wrap:wrap;
@@ -8775,6 +8793,7 @@ button{
 .featured-hr-offer .section-kicker{margin-bottom:10px;}
 @media (max-width:780px){.referral-process-section,.organizational-process-section{padding:34px 24px;margin:36px 20px}.step-flow{grid-template-columns:1fr}.step-flow article:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-25px;transform:translateX(-50%);}}
 
+/* v43 refinement: make referral flow mirror organizational flow and keep HR workshop card uniform */
 .referral-process-section .section-heading-centered{margin-bottom:34px;}
 .referral-process-section .step-flow article{min-height:172px;}
 .hr-workshop-card{border-color:rgba(155,133,88,.24)!important;box-shadow:0 18px 40px rgba(32,40,28,.07)!important;}
@@ -8785,6 +8804,7 @@ button{
 .hr-workshop-card .outcomes-heading::before{content:'';margin:0;}
 
 
+/* v44 strategic refinement: audience pathways and hub pages */
 .audience-pathways{max-width:1120px;margin:56px auto 34px;padding:0 32px;}
 .audience-pathway-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px;}
 .audience-pathway-card{border:1px solid rgba(47,56,43,.14);border-radius:28px;background:rgba(255,252,246,.82);padding:34px 32px;box-shadow:0 18px 44px rgba(28,32,24,.07);display:flex;flex-direction:column;align-items:flex-start;min-height:320px;}
@@ -8798,8 +8818,10 @@ button{
 .organizations-hub-page .experience-grid article,.individuals-hub-page .experience-grid article{min-height:132px;}
 @media(max-width:780px){.audience-pathway-grid{grid-template-columns:1fr}.audience-pathways,.hub-overview,.buyer-questions-section{padding-left:22px;padding-right:22px}.audience-pathway-card{padding:28px 24px}.audience-pathway-card h3{font-size:30px}}
 
+/* v44 photo balance: reduce repeated personal portrait use on service entry page */
 .work-page .work-photo{background-image:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.50)),url('assets/companies-office-final-exact.png') !important;background-position:center center !important;}
 
+/* v45 targeted refinements: card contrast, clean hubs, workshop case study and mobile polish */
 .audience-pathway-card{
   background:linear-gradient(180deg,#fffdf8 0%,#f7f0e6 100%) !important;
   border:1px solid rgba(47,56,43,.24) !important;
@@ -8855,6 +8877,7 @@ button{
   .recent-workshop-photo img{max-height:none;}
 }
 
+/* v46 targeted refinements: homepage pathway cards and workshop section only */
 .audience-pathway-card{
   align-items:center !important;
   text-align:center !important;
@@ -8928,6 +8951,7 @@ button{
 }
 
 
+/* v47 targeted polishing: homepage cards, wider hero bands and centered workshop card */
 .audience-pathways{max-width:1260px !important;}
 .audience-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px !important;align-items:stretch;}
 .audience-pathway-card{min-height:350px !important;display:flex !important;align-items:center !important;text-align:center !important;padding:42px 42px !important;}
@@ -8958,12 +8982,14 @@ button{
   .work-page .clean-work-hero .work-copy{padding:48px 24px !important;}
 }
 
+/* v47 mobile correction for full-width hero panels */
 @media(max-width:780px){
   .organizations-hub-page .hub-hero,.individuals-hub-page .hub-hero{width:calc(100% - 40px) !important;padding:48px 24px !important;}
   .work-page .clean-work-hero{width:100% !important;padding:0 20px !important;}
 }
 
 
+/* v48 requested refinement: clearer homepage cards, workshop/public proof, full-width hero bands, booking centering and mobile polish */
 .audience-pathway-card h3{
   font-size:clamp(1.6rem,2.15vw,2.25rem) !important;
   line-height:1.08 !important;
@@ -9144,6 +9170,7 @@ button{
   .booking-page .booking-note{padding-left:20px !important;padding-right:20px !important;}
 }
 
+/* v49 targeted formatting refinements */
 .home-practice-grid.media-preview-two{
   max-width:1050px;
   margin:0 auto;
@@ -9190,6 +9217,7 @@ button{
 }
 
 
+/* v51 homepage and blog thumbnail polish */
 .home-public-workshop-preview .home-practice-grid.media-preview-two{
   max-width:1040px !important;
   gap:34px !important;
@@ -9303,6 +9331,7 @@ button{
 }
 
 
+/* v52 homepage practice cards and blog media preview polish */
 .home-public-workshop-preview .home-practice-grid.media-preview-two{
   max-width:1040px !important;
   margin-left:auto !important;
@@ -9422,6 +9451,7 @@ button{
 }
 
 
+/* v53 research article and visual formatting */
 .article-feature-image.inclusion-feature-image,
 .article-feature-image.research-visual-feature,
 .article-feature-image.research-visual-inline{
@@ -9487,6 +9517,7 @@ button{
 }
 
 
+/* v54 strategic positioning polish */
 .professional-background-section,.why-different-section{max-width:1120px;margin:64px auto;padding:0 32px;}
 .professional-background-section .section-heading-centered,.why-different-section .section-heading-centered{max-width:860px;margin-left:auto;margin-right:auto;}
 .why-different-section .experience-grid article,.professional-background-section .experience-grid article{min-height:150px;}
@@ -9497,6 +9528,7 @@ button{
 @media(max-width:780px){.professional-background-section,.why-different-section{margin:42px auto;padding:0 22px}.professional-background-section .experience-grid,.why-different-section .experience-grid{grid-template-columns:1fr!important}.org-detail-grid.compact-org-grid{grid-template-columns:1fr!important}}
 
 
+/* v55 consistency, booking, legal, referrals and language modal refinements */
 .center-last-card{justify-content:center;}
 @media (min-width: 861px){
   .center-last-card > article:last-child:nth-child(odd){grid-column:2;}
@@ -9553,6 +9585,7 @@ button{
 }
 
 
+/* v56 targeted consistency, centering, booking and legal polish */
 :root{--ap-olive:#2F382B;--ap-beige-soft:#D8CBB7;}
 /* Center single cards below full rows across major card grids */
 @media (min-width: 821px){
@@ -9892,6 +9925,7 @@ button{
 
   .desktop-hero-break{display:none !important;}
 
+  /* Mobile homepage: center cards, titles, proof strip and method title. */
   .audience-pathways,
   .why-different-section,
   .method-section,
@@ -9964,175 +9998,100 @@ button{
   }
 }
 
+/* Desktop/tablet wrapped final-card centering: one final item should sit centered, not left-aligned. */
+@media (min-width: 781px){
+  .experience-grid.center-last-card > article:last-child:nth-child(3n+1),
+  .collaboration-grid.center-last-card > article:last-child:nth-child(3n+1),
+  .referral-value-grid > article:last-child:nth-child(3n+1){
+    grid-column:2;
+  }
+  .home-proof-strip article{
+    min-width:0;
+  }
+}
 
-/* ===== Stabilized shared layout system ===== */
-:root{
-  --site-max:1180px;
-  --site-pad:clamp(18px,4vw,64px);
+/* Small-mobile refinement. */
+@media (max-width: 420px){
+  .brand-name{font-size:20px !important;letter-spacing:.12em !important;}
+  .brand-role{font-size:9px !important;letter-spacing:.36em !important;}
+  .nav{gap:7px 12px !important;}
+  .nav a{font-size:11.5px !important;}
+  .hero-panel{padding-left:20px !important;padding-right:20px !important;}
+  .headline,
+  .hero h1,
+  .section-heading-centered h2{
+    text-align:center !important;
+  }
 }
-.page-container,
-.section-inner,
-.content-container,
-.legal-content,
-.booking-options,
-.booking-support-grid{
-  width:min(var(--site-max), calc(100% - (var(--site-pad) * 2)));
-  margin-left:auto;
-  margin-right:auto;
+
+
+
+/* Global mobile hero/container stabilization */
+@media (max-width: 780px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden;}
+  .site-shell,.page-shell{width:100%;max-width:100%;overflow-x:hidden;}
+  .hero,.work-hero,.companies-hero,.contact-hero,.booking-hero,.legal-hero,.media-hero{
+    width:100vw!important;
+    max-width:100vw!important;
+    margin-left:calc(50% - 50vw)!important;
+    margin-right:calc(50% - 50vw)!important;
+    box-sizing:border-box!important;
+  }
+  .hero-panel,.work-copy,.companies-copy,.contact-hero-copy,.booking-copy,.legal-hero > *, .media-hero > *{
+    text-align:center!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
 }
-.card-grid,
-.audience-grid,
-.experience-grid,
-.collaboration-grid,
-.method-grid,
-.theme-grid,
-.media-preview-grid,
-.blog-grid,
-.referral-value-grid,
-.booking-options,
-.booking-support-grid,
-.home-proof-strip{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:stretch;
-  gap:clamp(18px,2.5vw,32px);
-  margin-left:auto;
-  margin-right:auto;
-}
-.card-grid > *,
-.audience-grid > *,
-.experience-grid > *,
-.collaboration-grid > *,
-.method-grid > *,
-.theme-grid > *,
-.media-preview-grid > *,
-.blog-grid > *,
-.referral-value-grid > *,
-.booking-options > *,
-.booking-support-grid > *,
-.home-proof-strip > *{
-  margin-left:auto;
-  margin-right:auto;
-}
-.hero,
-.work-hero,
-.companies-hero,
-.contact-hero,
-.booking-hero,
-.blog-hero,
-.who-hero,
-.media-hero,
-.legal-hero{
-  box-sizing:border-box;
-}
-.hero-inner,
-.work-copy,
-.companies-copy,
-.contact-hero-copy,
-.booking-copy,
-.blog-hero-copy,
-.who-hero-copy,
-.media-hero-copy,
-.legal-hero-copy{
-  margin-left:auto;
-  margin-right:auto;
-}
-.home-hero-restored,
-.positioned-hero-copy{
-  width:min(690px,100%);
-  max-width:690px;
+/* ===== v65 stable favicon/hero/mobile-nav refinements ===== */
+/* Homepage hero subtitle: stable 3-line desktop layout without fragile transforms. */
+.hero-inner.home-hero-restored,
+.hero-inner.positioned-hero-copy{
+  max-width: 690px;
+  width: min(690px, 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-subcopy{
-  width:min(690px,100%);
-  max-width:690px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-  color:rgba(246,239,230,.92);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: rgba(246,239,230,.92);
 }
-@media (min-width:901px){
+@media (min-width: 901px){
+  .hero-inner.home-hero-restored,
+  .hero-inner.positioned-hero-copy{
+    max-width: 690px;
+  }
   .home-hero-restored .hero-subcopy,
   .positioned-hero-copy .hero-subcopy{
-    font-size:16px;
-    line-height:1.55;
-    white-space:normal;
-    transform:none;
+    width: min(690px, 100%);
+    max-width: 690px;
+    font-size: 16px;
+    line-height: 1.55;
+    transform: none;
+    white-space: normal;
   }
   .home-hero-restored .headline,
-  .positioned-hero-copy .headline{margin-bottom:20px;}
-  .hero-panel{padding-bottom:38px;}
+  .positioned-hero-copy .headline{
+    margin-bottom: 20px;
+  }
+  .hero-panel{
+    padding-bottom: 38px;
+  }
   .desktop-hero-break{display:block;}
 }
-@media (max-width:900px){
+@media (max-width: 900px){
   .desktop-hero-break{display:none;}
   .home-hero-restored .hero-subcopy,
   .positioned-hero-copy .hero-subcopy{
-    width:auto;
-    max-width:min(92vw,560px);
-    transform:none;
+    width: auto;
+    max-width: min(92vw, 560px);
+    transform: none;
   }
 }
-@media (max-width:780px){
-  html,body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden;
-  }
-  .site-shell,.page-shell,main{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden;
-  }
-  .hero,
-  .work-hero,
-  .companies-hero,
-  .contact-hero,
-  .booking-hero,
-  .blog-hero,
-  .who-hero,
-  .media-hero,
-  .legal-hero{
-    width:100vw;
-    max-width:100vw;
-    margin-left:calc(50% - 50vw);
-    margin-right:calc(50% - 50vw);
-  }
-  .hero-panel,
-  .work-copy,
-  .companies-copy,
-  .contact-hero-copy,
-  .booking-copy,
-  .blog-hero-copy,
-  .who-hero-copy,
-  .media-hero-copy,
-  .legal-hero-copy,
-  .section-heading-centered,
-  .audience-pathways,
-  .method-section,
-  .why-different-section,
-  .home-media-preview,
-  .feedback-section,
-  .booking-intro,
-  .legal-content{
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .headline,
-  .hero h1,
-  .work-copy h1,
-  .companies-copy h1,
-  .contact-hero-copy h1,
-  .booking-copy h1,
-  .blog-hero-copy h1,
-  .who-hero-copy h1,
-  .media-hero-copy h1,
-  .legal-hero-copy h1,
-  .section-heading-centered h2,
-  .section-heading-centered p{
-    text-align:center;
-  }
+/* Mobile homepage heading/card centering and mobile nav discoverability. */
+@media (max-width: 780px){
   .header .nav,
   .site-header .nav{
     display:flex;
@@ -10142,7 +10101,7 @@ button{
     gap:8px 16px;
     white-space:normal;
     overflow:visible;
-    max-width:min(100%,540px);
+    max-width:min(100%, 540px);
     margin-left:auto;
     margin-right:auto;
   }
@@ -10151,66 +10110,70 @@ button{
     flex:0 0 auto;
     text-align:center;
   }
+  .audience-pathways,
+  .method-section,
+  .why-different-section,
+  .home-media-preview,
+  .feedback-section{
+    text-align:center;
+  }
   .audience-grid,
-  .experience-grid,
-  .collaboration-grid,
   .home-proof-strip,
   .method-grid,
-  .theme-grid,
   .media-preview-grid,
-  .blog-grid,
-  .referral-value-grid,
-  .booking-options,
-  .booking-support-grid{
-    width:100%;
-    max-width:100%;
+  .blog-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:stretch;
     gap:18px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
   }
-  .audience-grid > *,
-  .experience-grid > *,
-  .collaboration-grid > *,
-  .home-proof-strip > *,
-  .method-grid > *,
-  .theme-grid > *,
-  .media-preview-grid > *,
-  .blog-grid > *,
-  .referral-value-grid > *,
-  .booking-options > *,
-  .booking-support-grid > *{
-    flex:1 1 min(100%,330px);
+  .audience-card,
+  .home-proof-strip article,
+  .method-grid article,
+  .media-preview-grid article,
+  .blog-grid article{
+    flex:1 1 min(100%, 330px);
     max-width:360px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+  .audience-card,
+  .audience-card *,
+  .home-proof-strip article,
+  .home-proof-strip strong,
+  .home-proof-strip span,
+  .method-section h2,
+  .method-section p,
+  .method-grid h3,
+  .method-grid p{
     text-align:center;
   }
   .audience-card,
   .method-grid article,
-  .home-proof-strip article,
-  .booking-card{
+  .home-proof-strip article{
     align-items:center;
   }
-  .audience-card *,
-  .home-proof-strip strong,
-  .home-proof-strip span,
-  .method-grid h3,
-  .method-grid p,
-  .booking-card,
-  .booking-card *{
-    text-align:center;
-  }
-  .beige-button,
-  .dark-button,
-  .primary-button,
+  .audience-card .beige-button,
+  .method-section .beige-button,
   .centered-link,
-  .pdf-download-button,
-  .booking-card a{
+  .pdf-download-button{
     margin-left:auto;
     margin-right:auto;
-    white-space:normal;
-    text-align:center;
   }
 }
-@media (max-width:420px){
+@media (max-width: 420px){
   .header{padding-left:16px;padding-right:16px;}
   .brand-name{font-size:20px;letter-spacing:.12em;}
   .brand-role{font-size:9px;letter-spacing:.36em;}
+  .headline,
+  .hero h1,
+  .section-heading-centered h2{
+    text-align:center;
+  }
 }
-/* ===== End stabilized shared layout system ===== */
+/* ===== end v65 refinements ===== */
