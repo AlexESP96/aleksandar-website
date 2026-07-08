@@ -10177,3 +10177,31 @@ button{
   }
 }
 /* ===== end v65 refinements ===== */
+
+/* Contact page informational note */
+.contact-note {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(47, 56, 43, 0.16);
+  border-radius: 18px;
+  background: rgba(216, 203, 183, 0.18);
+}
+.contact-note p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.contact-note .contact-short-button {
+  justify-self: start;
+  margin-top: 0.15rem;
+}
+@media (max-width: 760px) {
+  .contact-note {
+    text-align: center;
+  }
+  .contact-note .contact-short-button {
+    justify-self: center;
+  }
+}
