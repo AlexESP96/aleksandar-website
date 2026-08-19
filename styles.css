@@ -9264,3 +9264,75 @@ button{
     text-align:center;
   }
 }
+
+/* ============================================================
+   v67 — workshop imagery, proof blocks and pricing note
+   Replaces the old centre-crop behaviour that cut posters and
+   framed the Barcelona photo across the facilitator's face.
+   ============================================================ */
+
+/* Designed posters are artwork: never crop them. */
+.callout-image-stack img.poster-contain{
+  object-fit:contain;
+  background:#f1ece2;
+  height:auto;
+  max-height:620px;
+}
+
+/* Landscape workshop photographs: source files are now pre-cropped
+   to 16:10, so the container simply follows the image. */
+.barcelona-workshop-detail-grid .recent-workshop-photo img{
+  height:auto;
+  min-height:0;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  object-position:center center;
+}
+.recent-workshop-photo img{max-height:none;}
+
+/* Poster panel: contain, so nothing is clipped at any width. */
+.barcelona-poster-rectangle img{max-height:560px;object-fit:contain;}
+
+.workshop-outcome{
+  margin-top:18px;
+  padding:16px 20px;
+  border-left:3px solid var(--ap-gold,#9b8558);
+  background:rgba(155,133,88,.08);
+  border-radius:0 14px 14px 0;
+}
+
+.engagement-quote{
+  margin:26px 0 0;
+  padding:22px 26px;
+  border-left:3px solid rgba(216,203,183,.55);
+  background:rgba(248,243,234,.06);
+  border-radius:0 16px 16px 0;
+}
+.engagement-quote p{margin:0 0 10px;font-style:italic;}
+.engagement-quote cite{
+  font-style:normal;
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:rgba(248,243,234,.7);
+}
+
+.hub-hero-price{
+  margin:18px auto 0;
+  max-width:620px;
+  font-size:.95rem;
+  opacity:.9;
+}
+
+@media(max-width:640px){
+  .callout-image-stack img.poster-contain{height:auto;max-height:460px;}
+  .engagement-quote{padding:18px 20px;}
+}
+
+.review-invite{
+  margin:14px auto 0;
+  max-width:620px;
+  font-size:.92rem;
+  opacity:.85;
+}
+.review-invite a{color:inherit;text-decoration:underline;text-underline-offset:3px;}

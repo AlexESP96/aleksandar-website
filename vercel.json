@@ -1,0 +1,56 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/companies.html",
+      "destination": "/organizations.html",
+      "permanent": true
+    },
+    {
+      "source": "/companies-es.html",
+      "destination": "/organizations-es.html",
+      "permanent": true
+    },
+    {
+      "source": "/companies-sr.html",
+      "destination": "/organizations-sr.html",
+      "permanent": true
+    },
+    {
+      "source": "/who-i-work-with.html",
+      "destination": "/work-with-me.html",
+      "permanent": true
+    },
+    {
+      "source": "/who-i-work-with-es.html",
+      "destination": "/work-with-me-es.html",
+      "permanent": true
+    },
+    {
+      "source": "/who-i-work-with-sr.html",
+      "destination": "/work-with-me-sr.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|ico|webmanifest)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
