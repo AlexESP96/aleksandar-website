@@ -9736,3 +9736,39 @@ button{
 @media(max-width:680px){
   .booking-note-grid > article{flex:1 1 100%;min-width:0;}
 }
+
+/* ============================================================
+   v70 — booking note legibility + pathway meta alignment
+   ============================================================ */
+
+/* "Before you book" sits on the dark panel: the heading was dark
+   green on dark green, and the card body text inherited cream on
+   a cream card. Both are now set explicitly. */
+.booking-note h2{color:var(--ap-cream) !important;}
+.booking-note-grid > article h3{color:var(--ap-green) !important;}
+.booking-note-grid > article p,
+.booking-note-grid > article li{color:rgba(47,56,43,.82) !important;}
+.booking-note-grid > article a{color:var(--ap-green) !important;text-decoration:underline;text-underline-offset:3px;}
+.insurance-note{color:rgba(248,243,234,.82) !important;}
+
+/* Pathway meta chips: three to a row in both cards, never wrapping
+   mid-item, so the two columns read as a matched pair. */
+.work-pathways .pathway-meta{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  align-items:start;
+  justify-content:center;
+  text-align:center;
+}
+.work-pathways .pathway-meta span{
+  display:block;
+  font-size:.7rem;
+  letter-spacing:.05em;
+  line-height:1.35;
+  text-transform:uppercase;
+  color:rgba(47,56,43,.62);
+}
+@media(max-width:520px){
+  .work-pathways .pathway-meta{grid-template-columns:1fr;gap:6px;}
+}
