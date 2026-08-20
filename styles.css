@@ -9500,3 +9500,239 @@ button{
 }
 .work-pathways .pathway-card > a.beige-button{margin-top:auto;}
 .work-pathways .brochure-download-block{margin-top:12px;}
+
+/* ============================================================
+   v69 — card ("cloud") layout: incomplete rows centre instead of
+   left-aligning. Flex wrapping replaces fixed grid tracks so a
+   5-of-3 or 3-of-4 group centres its final row automatically.
+   ============================================================ */
+
+.experience-grid,
+.testimonial-grid-long,
+.referral-value-grid,
+.theme-grid,
+.org-detail-grid,
+.not-for-grid,
+.feedback-grid,
+.step-flow,
+.process-grid{
+  display:flex !important;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* per-group column widths (subtracting the gap) */
+.experience-grid > *,
+.testimonial-grid-long > *,
+.referral-value-grid > *,
+.theme-grid > *,
+.not-for-grid > *,
+.feedback-grid > *,
+.step-flow > *,
+.process-grid > *{
+  flex:0 1 calc((100% - 2 * 20px) / 3);
+  min-width:260px;
+  margin:0;
+}
+.org-detail-grid > *{
+  flex:0 1 calc((100% - 20px) / 2);
+  min-width:300px;
+  margin:0;
+}
+
+/* consistent internal rhythm so every card reads the same way */
+.experience-grid > article,
+.referral-value-grid > article,
+.theme-grid > article,
+.not-for-grid > article,
+.org-detail-grid > article{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:center;
+  align-items:center;
+}
+.experience-grid > article > span,
+.referral-value-grid > article > span,
+.org-detail-grid > article > p{
+  line-height:1.65;
+}
+.experience-grid > article > strong,
+.referral-value-grid > article > strong{
+  font-size:1.02rem;
+  line-height:1.35;
+}
+.org-detail-grid > article > h2,
+.org-detail-grid > article > h3{
+  text-align:center;
+  margin:0 0 6px;
+}
+
+/* testimonials stay left-read (quotes), but the row itself centres */
+.testimonial-grid-long > article{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:14px;
+  text-align:left;
+}
+.testimonial-grid-long > article > span{
+  align-self:flex-start;
+}
+
+@media(max-width:1000px){
+  .experience-grid > *,
+  .testimonial-grid-long > *,
+  .referral-value-grid > *,
+  .theme-grid > *,
+  .not-for-grid > *,
+  .feedback-grid > *,
+  .step-flow > *,
+  .process-grid > *{flex:0 1 calc((100% - 20px) / 2);}
+}
+@media(max-width:680px){
+  .experience-grid,
+  .testimonial-grid-long,
+  .referral-value-grid,
+  .theme-grid,
+  .org-detail-grid,
+  .not-for-grid,
+  .feedback-grid,
+  .step-flow,
+  .process-grid{gap:16px;}
+  .experience-grid > *,
+  .testimonial-grid-long > *,
+  .referral-value-grid > *,
+  .theme-grid > *,
+  .not-for-grid > *,
+  .feedback-grid > *,
+  .step-flow > *,
+  .process-grid > *,
+  .org-detail-grid > *{flex:1 1 100%;min-width:0;}
+}
+
+/* Workshop / theme cards: centred titles and body. */
+.theme-grid article.centered-card,
+.experience-grid article.centered-card{
+  text-align:center;
+  align-items:center;
+}
+.theme-grid article.centered-card > *,
+.experience-grid article.centered-card > *{
+  text-align:center;
+  width:100%;
+}
+
+/* Resources: the placeholder card sits alone on the final row, centred. */
+.blog-menu-section{
+  display:flex !important;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:22px;
+  max-width:1180px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.blog-menu-section > .blog-index-card{
+  flex:0 1 calc((100% - 2 * 22px) / 3);
+  min-width:280px;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+}
+.blog-menu-section > .blog-index-card.blog-card-full{
+  flex:0 1 calc((100% - 2 * 22px) / 3);
+  justify-content:center;
+  text-align:center;
+}
+@media(max-width:1000px){
+  .blog-menu-section > .blog-index-card{flex:0 1 calc((100% - 22px) / 2);}
+}
+@media(max-width:680px){
+  .blog-menu-section > .blog-index-card,
+  .blog-menu-section > .blog-index-card.blog-card-full{flex:1 1 100%;min-width:0;}
+}
+
+/* Work With Me pathway cards: fully centred, consistent rhythm. */
+.work-pathways .pathway-card{
+  text-align:center;
+  align-items:center;
+}
+.work-pathways .pathway-card > *{width:100%;}
+.work-pathways .pathway-card .section-kicker{
+  margin:0 0 8px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  color:var(--ap-gold);
+}
+.work-pathways .pathway-card h2{margin:0 0 12px;}
+.work-pathways .pathway-card > p{
+  max-width:46ch;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.65;
+}
+.work-pathways .pathway-card ul{
+  max-width:44ch;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+.work-pathways .pathway-meta{justify-content:center;}
+.work-pathways .pathway-card > a.beige-button,
+.work-pathways .brochure-download-block{
+  width:max-content;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Booking: "Before you book" notes as three even, centred cards. */
+.booking-note-grid{
+  display:flex !important;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:20px;
+  max-width:1040px;
+  margin:26px auto 0;
+}
+.booking-note-grid > article{
+  flex:0 1 calc((100% - 2 * 20px) / 3);
+  min-width:250px;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  text-align:center;
+  padding:26px 24px;
+  border:1px solid rgba(155,133,88,.24);
+  border-radius:20px;
+  background:var(--ap-cream);
+}
+.booking-note-grid > article h3{
+  margin:0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;
+  color:var(--ap-green);
+}
+.booking-note-grid > article p{margin:0;line-height:1.6;}
+.booking-note h2{text-align:center;}
+.insurance-note{
+  max-width:58ch;
+  margin:26px auto 0;
+  text-align:center;
+  font-size:.92rem;
+  opacity:.85;
+}
+@media(max-width:1000px){
+  .booking-note-grid > article{flex:0 1 calc((100% - 20px) / 2);}
+}
+@media(max-width:680px){
+  .booking-note-grid > article{flex:1 1 100%;min-width:0;}
+}
