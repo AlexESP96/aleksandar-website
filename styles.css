@@ -9772,3 +9772,12 @@ button{
 @media(max-width:520px){
   .work-pathways .pathway-meta{grid-template-columns:1fr;gap:6px;}
 }
+
+.capacity-note{
+  max-width:56ch;
+  margin:18px auto 0;
+  text-align:center;
+  font-size:.93rem;
+  line-height:1.6;
+  color:var(--ap-gold);
+}
