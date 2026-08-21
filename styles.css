@@ -9757,3 +9757,184 @@ button{
   text-decoration:underline;
   text-underline-offset:4px;
 }
+
+/* ============================================================
+   v77 — one button system, corrected booking palette,
+   navigation state and motion polish
+   ============================================================ */
+
+/* ---- 1. One button system -------------------------------------------------
+   Several button classes had only margin rules, so their label sat wherever
+   the inline flow put it instead of centred. Everything that looks like a
+   button now centres its label the same way. */
+.beige-button,
+.cta-beige,
+.outline-button,
+.centered-link,
+.nav-button,
+.send-button,
+.contact-short-button,
+.booking-button,
+.primary-button,
+.hero-book-button,
+.book-button,
+.inline-case-link.button-style{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  text-align:center;
+  line-height:1.2;
+  box-sizing:border-box;
+  text-decoration:none;
+}
+/* keep the arrow glyph optically aligned with the label */
+.beige-button .button-arrow,
+.cta-beige .button-arrow,
+.send-button .button-arrow{display:inline-flex;align-items:center;}
+
+.contact-short-button{
+  min-height:48px;
+  min-width:210px;
+  padding:13px 26px;
+  margin-inline:auto;
+}
+
+/* ---- 2. "Before you book": beige on green, matching the homepage ----------
+   Previously a dark panel with cream cards, which sat outside the palette
+   used everywhere else. Now the same green-to-beige pairing as the
+   homepage strips, with contrast checked in both directions. */
+.booking-note{
+  background:linear-gradient(135deg,var(--ap-dark),var(--ap-green));
+  color:var(--ap-cream);
+  border-radius:28px;
+}
+.booking-note h2{color:var(--ap-cream);}
+.booking-note > p{color:rgba(248,243,234,.86);}
+.booking-note-grid > article{
+  background:var(--ap-beige);
+  border:1px solid rgba(32,40,28,.14);
+  box-shadow:0 10px 26px rgba(32,40,28,.12);
+}
+.booking-note-grid > article h3{color:var(--ap-dark);}
+.booking-note-grid > article p,
+.booking-note-grid > article li{color:rgba(32,40,28,.82);}
+.booking-note-grid > article a{color:var(--ap-dark);text-decoration:underline;text-underline-offset:3px;}
+.insurance-note{color:rgba(248,243,234,.82);}
+
+/* ---- 3. Navigation: show where you are ------------------------------------ */
+.nav a{
+  position:relative;
+  padding-bottom:4px;
+  transition:color .2s ease, opacity .2s ease;
+}
+.nav a::after{
+  content:"";
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:2px;
+  border-radius:2px;
+  background:currentColor;
+  opacity:0;
+  transform:scaleX(.4);
+  transform-origin:center;
+  transition:opacity .22s ease, transform .22s ease;
+}
+.nav a:hover::after,
+.nav a:focus-visible::after{opacity:.55;transform:scaleX(1);}
+.nav a.active::after{opacity:1;transform:scaleX(1);background:var(--ap-gold);}
+.nav a.active{color:var(--ap-green);font-weight:600;}
+.nav .nav-button::after{display:none;}
+
+/* ---- 4. Motion polish ----------------------------------------------------- */
+html{scroll-behavior:smooth;}
+
+a,button{transition:color .2s ease, background-color .2s ease,
+                    border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
+
+.beige-button:hover,
+.cta-beige:hover,
+.nav-button:hover,
+.contact-short-button:hover,
+.send-button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(32,40,28,.18);}
+.beige-button:active,
+.cta-beige:active,
+.nav-button:active,
+.contact-short-button:active,
+.send-button:active{transform:translateY(0);box-shadow:none;}
+
+.service-card,
+.blog-index-card,
+.pathway-card,
+.org-detail-card{transition:transform .25s ease, box-shadow .25s ease;}
+.blog-index-card:hover,
+.service-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(32,40,28,.13);}
+
+/* the reveal-on-scroll animation, made smoother and less abrupt */
+.reveal{opacity:0;transform:translateY(16px);
+        transition:opacity .6s cubic-bezier(.22,.61,.36,1),
+                   transform .6s cubic-bezier(.22,.61,.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+
+/* visible keyboard focus everywhere, which was missing entirely */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--ap-gold);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* anchored sections shouldn't hide behind the sticky header */
+[id]{scroll-margin-top:96px;}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .reveal{opacity:1;transform:none;}
+}
+
+/* ---- 5. Palette: one source of truth --------------------------------------
+   A legacy --brand-* set duplicated the --ap-* palette with identical values.
+   Rather than rewrite every usage, the legacy names now alias the canonical
+   tokens, so changing a colour in one place changes it everywhere. */
+:root{
+  --brand-deep-green:var(--ap-dark);
+  --brand-dark-green:var(--ap-green);
+  --brand-ink:var(--ap-green);
+  --brand-light-olive:var(--ap-light);
+  --brand-gold:var(--ap-gold);
+  --brand-beige:var(--ap-beige);
+  --brand-cream:var(--ap-cream);
+  --brand-paper:var(--ap-cream);
+}
+
+/* ---- 6. Booking panel, at the specificity the page actually uses -----------
+   .booking-page .booking-note … (0,2,1) was outranking the plain selectors,
+   which is why the recolour above did not take effect. */
+.booking-page .booking-note{
+  background:linear-gradient(135deg,var(--ap-dark),var(--ap-green));
+  color:var(--ap-cream);
+  border-radius:28px;
+}
+.booking-page .booking-note h2{color:var(--ap-cream);}
+.booking-page .booking-note > p{color:rgba(248,243,234,.86);}
+.booking-page .booking-note-grid article{
+  background:var(--ap-beige);
+  border:1px solid rgba(32,40,28,.14);
+  box-shadow:0 10px 26px rgba(32,40,28,.12);
+}
+.booking-page .booking-note-grid article h3{color:var(--ap-dark);}
+.booking-page .booking-note-grid article p,
+.booking-page .booking-note-grid article li{color:rgba(32,40,28,.82);}
+.booking-page .booking-note-grid article a{color:var(--ap-dark);}
+.booking-page .insurance-note{color:rgba(248,243,234,.82);}
